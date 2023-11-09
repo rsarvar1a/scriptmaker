@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head lang="EN">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="file://data/template/style.css">
+    </head>
+
+    <body>
+
+        {# PAGE 1: character sheet #}
+
+        <h1 class="script-title">{{ title }}</h1> 
+        <div class="separator"></div>       
+
+        {% set meta = characters.pop('_meta', None) %}
+
+        <div class="reference">
+            {%- for type in types_1 %}
+                {% if characters[type] %}
+                    {%- set pluralized = type + 's' if type != 'townsfolk' and type != 'fabled' else type %}         
+                    <h2 class="character-type name-{{ type }}">{{ pluralized | upper }}</h2>         
+                    <div class="cols-2">
+                        {%- for character in characters[type] %}
+                            <div class="character">
+                                <img src="file://{{ character['image'] }}" class="icon"/>
+                                <div class="character-name name-{{ type }}">
+                                    {{ character["name"] }}
+                                    {%- if active_jinxes[character["id"]] %} 
+                                        <div class="jinxes name-fabled">
+                                            <span></span>
+                                            {%- for jinx in active_jinxes[character["id"]] %}
+                                                <img src="file://{{ by_id[jinx['id']]['image'] }}" class="icon-jinx"/>
+                                            {%- endfor %}
+                                        </div>
+                                    {%- endif %}
+                                </div>
+                                <div class="character-ability">{{ character["ability"] }}</div>
+                            </div>
+                        {%- endfor %}
+                    </div>
+                    {%- if needs_spacer[type] %}
+                        <div class="not-enough-characters-of-type"></div>
+                    {%- endif %}
+                {%- endif %}
+            {%- endfor %}
+        </div>
+
+        <div class="not-first-night">* not the first night</div>
+
+        {%- if has_second_page %}
+
+            <p style="page-break-before: always" ></p>
+
+            {# PAGE 2: night order and jinxes #}
+
+            <h1 class="script-title">{{ title }}</h1>
+            <div class="separator"></div>       
+
+            <div class="reference">
+                {%- for type in types_2 %}
+                    {% if characters[type] %}
+                        {%- set pluralized = type + 's' if type != 'townsfolk' and type != 'fabled' else type %}         
+                        <h2 class="character-type name-{{ type }}">{{ pluralized | upper }}</h2>         
+                        <div class="cols-2">
+                            {%- for character in characters[type] %}
+                                <div class="character">
+                                    <img src="file://{{ character['image'] }}" class="icon"/>
+                                    <div class="character-name name-{{ type }}">
+                                        {{ character["name"] }}
+                                        {%- if active_jinxes[character["id"]] %} 
+                                            <div class="jinxes name-fabled">
+                                                <span></span>
+                                                {%- for jinx in active_jinxes[character["id"]] %}
+                                                    <img src="file://{{ by_id[jinx['id']]['image'] }}" class="icon-jinx"/>
+                                                {%- endfor %}
+                                            </div>
+                                        {%- endif %}
+                                    </div>
+                                    <div class="character-ability">{{ character["ability"] }}</div>
+                                </div>
+                            {%- endfor %}
+                        </div>
+                        {%- if needs_spacer[type] %}
+                            <div class="not-enough-characters-of-type"></div>
+                        {%- endif %}
+                    {%- endif %}
+                {%- endfor %}
+            </div>
+
+            <div class="not-first-night">* not the first night</div>
+
+        {%- endif %}
+
+        {%- if has_jinxes %}
+            <h2 class="character-type name-fabled">{{ 'jinxes' | upper }}</h2>         
+            <div class="jinx-box align justify">
+                <div class="jinx-enclosing-c align justify">
+                    {%- for id1 in active_jinxes %}
+                        {%- for jinx in active_jinxes[id1] %}
+                            <div class="jinx-enclosing-r align">
+                                <div class="icon-jinx-pair">
+                                    <img src="file://{{ by_id[id1]['image'] }}" class="icon-jinx-in-pair"/>
+                                    <img src="file://{{ by_id[jinx['id']]['image'] }}" class="icon-jinx-in-pair"/>
+                                </div>
+                                <div class="spacer align"></div>
+                                <div class="reason align">{{ jinx['reason'] }}</div>
+                            </div>
+                        {%- endfor %}
+                    {%- endfor %}
+                </div>
+            </div>
+        {%- endif %}
+
+    </body>
+</html>

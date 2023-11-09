@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head lang="EN">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="file://data/template/style.css">
+    </head>
+
+    <body>
+
+        {# PAGE 3: night order #}
+
+        <h1 class="script-title centered">{{ title }}</h1>
+        <h1 class="script-title rotated">{{ title }}</h1>
+
+        <div class="order order-first">
+            <div class="order-c">
+                <h2 class="order-name">First Night</h2>
+                {%- for id in nightorder["first"] %}
+                    <div class="nightinfo align info-first">
+                        <img src="file://{{ by_id[id]['image'] }}" class="icon-night"/>
+                        <div class="align nightinfo-name name-{{ by_id[id]['team'] }}">{{ by_id[id]["name"] }}</div>
+                    </div>
+                {%- endfor %}
+            </div>
+        </div>
+
+        <div class="order order-other">
+            <div class="order-c">
+                <h2 class="order-name">Other Nights</h2>
+                {%- for id in nightorder["other"] %}
+                    <div class="nightinfo align info-other">
+                        <img src="file://{{ by_id[id]['image'] }}" class="icon-night"/>
+                        <div class="align nightinfo-name name-{{ by_id[id]['team'] }}">{{ by_id[id]["name"] }}</div>
+                    </div>
+                {%- endfor %}
+            </div>
+        </div>
+
+    </body>
+</html>

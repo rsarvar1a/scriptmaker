@@ -1,0 +1,398 @@
+@page 
+{
+    background-color: white;
+    margin: 5mm;
+    size: letter;
+}
+
+@font-face 
+{
+    font-family: dumbledor;
+    src: url("Dumbledor\ 1.ttf");
+}
+
+@font-face 
+{
+    font-family: abilitytext;
+    src: url(CormorantGaramond-Medium.ttf);
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+
+@font-face 
+{
+    font-family: abilitytextbold;
+    src: url(CormorantGaramond-Bold.ttf);
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+
+html 
+{
+    margin: 0;
+    padding: 0;
+}
+
+header 
+{
+    align-items: flex-start;
+    background-color: #2f4f4f;
+    color: #fff;
+    display: flexbox;
+    justify-content: space-between;
+}
+
+body 
+{
+    font-family: dumbledor;
+    font-size: 8pt;
+}
+
+/* PAGE 1: title */
+
+.author
+{
+    font-family: dumbledor;
+    font-size: 12pt;
+    font-weight: 300;
+    text-align: right;
+}
+.author-separator
+{
+    border: 0.5px solid #909090;
+    flex: 1;
+    margin-bottom: 2px;
+}
+.centered
+{
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    text-align: center;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+.cornered
+{
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    text-align: right;
+}
+.rotated
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    text-align: center;
+
+    transform: translateX(-50%) translateY(50%) rotate(180deg);
+    
+    transform-origin: center;
+}
+.script-title
+{
+    font-family: dumbledor;
+    font-size: 20pt;
+    font-weight: 900;
+    text-align: right;
+    padding: 0;
+    padding-bottom: 12px;
+    margin: 0;
+}
+.separator
+{
+    border-bottom: 0.5px solid #909090;
+    flex: 1;
+    margin-bottom: 12px;
+}
+
+/* GLOBAL: colours */
+
+.name-townsfolk
+{
+    border-color: #005DA9;
+    color: #005DA9;
+}
+.name-outsider
+{
+    border-color: #009AC9;
+    color: #009AC9;
+}
+.name-minion, .name-demon
+{
+    border-color: #780c0f;
+    color: #780c0f;
+}
+.name-fabled
+{
+    border-color: #BD7300;
+    color: #BD7300;
+}
+.name-traveler
+{
+    border-color: #8E5AAF;
+    color: #8E5AAF;
+}
+
+.not-first-night 
+{
+    bottom: 0;
+    color: #000;
+    font-size: 8pt;
+    right: 0;
+    position: absolute;
+    text-align: right;
+}
+
+/* PAGE 1: teams */
+
+.character-type
+{
+    border-top: 2px solid;
+    font-family: dumbledor;
+    font-size: 14px;
+    font-weight: 300;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    transform: rotate(90deg) translateX(-10%) translateY(-25%);
+    transform-origin: top left;
+}
+
+/* PAGE 1: character blocks */
+
+.cols-2 
+{
+    display: flexbox;
+    flex-direction: column;
+    column-count: 2;
+    column-gap: 1%;
+    margin-bottom: -25px;
+    vertical-align: top;
+}
+.character 
+{
+    break-inside: avoid-column;
+    border: none;
+    min-height: 44px;
+    width: 100%;
+    margin: 0;
+    display: flexbox;
+    align-items: center;
+}
+.character-ability
+{
+    font-family: abilitytext;
+    font-size: 8pt;
+    color: #202024;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    text-align: justify;
+}
+.character-ability > b
+{
+    font-family: abilitytextbold;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    text-align: justify;
+}
+.character-name
+{
+    font-family: dumbledor;
+    font-size: 12pt;
+    font-weight: 800;
+}
+.icon
+{
+    border: none;
+    float: left;
+    height: 44px;
+    width: 44px;
+}
+.not-enough-characters-of-type
+{
+    min-height: 40px;
+}
+.reference > *
+{
+    display: flexbox;
+    flex-direction: row;
+}
+
+/* PAGE 1: floating jinxes */
+
+.jinxes
+{
+    border-top: 1px solid;
+    flex-direction: row-reverse;
+    float: right;
+    justify-content: flex-start;
+    padding: 0px;
+    vertical-align: center;
+    max-height: 15px;
+}
+.icon-jinx
+{
+    border: none;
+    float: right;
+    max-height: 15px;
+    max-width: 15px;
+    vertical-align: bottom;
+}
+
+/* PAGE 2: nightinfo */
+
+.nightinfo
+{
+    display: flex;
+    flex-direction: row;
+    min-height: 32px;
+    width: 100%;
+}
+.nightinfo-name
+{
+    font-size: 12pt;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.nightinfo-name-full
+{
+    font-size: 12pt;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: right;
+    width: 15%;
+}
+.nightinfo-reminder
+{
+    font-size: 8pt;
+    font-family: abilitytext;
+    vertical-align: middle;
+    text-align: justify;
+    width: 78%;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+.nightinfo-line
+{
+    height: 25px;
+    width: 1%;
+    border-right: 2px solid;
+}
+.nightinfo-spacer
+{
+    width: 1%;
+}
+.icon-night
+{
+    float: left;
+    max-height: 32px;
+    max-width: 32px;
+}
+.order
+{
+    width: 100%;
+}
+.order-full 
+{
+    padding-top: 4%;
+    width: 100%;
+}
+.order-c
+{
+    display: flexbox;
+    flex-direction: column;
+}
+.order-name
+{
+    font-size: 18pt;
+    font-weight: 800;
+}
+.order-name-full
+{
+    font-family: dumbledor;
+    font-size: 20pt;
+    font-weight: 900;
+
+    left: 0;
+    position: absolute;
+    top: 0;
+    text-align: left;
+
+    padding: 0;
+    padding-bottom: 15px;
+    margin: 0;
+}
+.order-first
+{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.order-other
+{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+    transform-origin: center;
+}
+
+/* PAGE 2: jinx pairs */
+
+.align 
+{
+    align-items: center;
+    align-content: center;
+}
+.justify
+{
+    justify-items: center;
+    justify-content: center;
+}
+.jinx-box 
+{
+    width: 100%;
+}
+.jinx-enclosing-c
+{
+    display: flexbox; 
+    flex-direction: column;
+}
+.jinx-enclosing-r
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+.icon-jinx-pair
+{
+    float: left;
+    min-width: 60px;
+}
+.icon-jinx-in-pair
+{
+    float: left;
+    max-height: 30px;
+    max-width: 30px;
+}
+.reason
+{
+    font-size: 8pt;
+    font-family: abilitytext;
+    vertical-align: middle;
+    max-width: 90%;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+.spacer
+{
+    width: 10px;
+}

@@ -1,0 +1,58 @@
+[
+    {
+        "ability": "",
+        "edition": "_meta",
+        "firstNight": 57,
+        "firstNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
+        "id": "DAWN",
+        "image": "data/upstream/icons/Icon_DAWN.png",
+        "name": "Dawn",
+        "otherNight": 74,
+        "otherNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
+        "reminders": [],
+        "setup": false,
+        "team": "_meta"
+    },
+    {
+        "ability": "",
+        "edition": "_meta",
+        "firstNight": 8,
+        "firstNightReminder": "If 7 or more players: wake up the Demon. Show the 'These are your minions' card. Point to each Minion. Show the 'These characters are not in play' card. Show 3 character tokens of Good characters that are not in play",
+        "id": "DEMON",
+        "image": "data/upstream/icons/Icon_DEMON.png",
+        "name": "Demon Info",
+        "otherNight": null,
+        "otherNightReminder": null,
+        "reminders": [],
+        "setup": false,
+        "team": "_meta"
+    },
+    {
+        "ability": "",
+        "edition": "_meta",
+        "firstNight": null,
+        "firstNightReminder": null,
+        "id": "DUSK",
+        "image": "data/upstream/icons/Icon_DUSK.png",
+        "name": "Dusk",
+        "otherNight": 1,
+        "otherNightReminder": "Check that all eyes are closed. Some travellers act.",
+        "reminders": [],
+        "setup": false,
+        "team": "_meta"
+    },
+    {
+        "ability": "",
+        "edition": "_meta",
+        "firstNight": 5,
+        "firstNightReminder": "If 7 or more players: wake up all of the Minions. They make eye contact with each other. Show the 'This is the Demon' card. Point to the Demon.",
+        "id": "MINION",
+        "image": "data/upstream/icons/Icon_MINION.png",
+        "name": "Minion Info",
+        "otherNight": null,
+        "otherNightReminder": null,
+        "reminders": [],
+        "setup": false,
+        "team": "_meta"
+    }
+]

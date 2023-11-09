@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head lang="EN">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="file://data/template/style.css">
+    </head>
+
+    <body>
+
+        {# PAGE 3: night order #}
+
+        <h1 class="script-title cornered">{{ title }}</h1>
+        <h1 class="order-name-full">First Night</h1>
+
+        <div class="order-full">
+            <div class="order-c">
+                {%- for id in nightorder["first"] %}
+                    <div class="nightinfo align info-first">
+                        <img src="file://{{ by_id[id]['image'] }}" class="icon-night"/>
+                        <div class="align nightinfo-name-full name-{{ by_id[id]['team'] }}">{{ by_id[id]["name"] }}</div>
+                        <div class="nightinfo-line name-{{ by_id[id]['team'] }}"></div>
+                        <div class="nightinfo-spacer"></div>
+                        <div class="nightinfo-reminder align">{{ by_id[id]["firstNightReminder"] }}</div>
+                    </div>
+                {%- endfor %}
+            </div>
+        </div>
+
+        <p style="page-break-before: always" ></p>
+        <h1 class="script-title cornered">{{ title }}</h1>
+        <h1 class="order-name-full">Other Nights</h1>
+        
+        <div class="order-full">
+            <div class="order-c">
+                {%- for id in nightorder["other"] %}
+                    <div class="nightinfo align info-other">
+                        <img src="file://{{ by_id[id]['image'] }}" class="icon-night"/>
+                        <div class="align nightinfo-name-full name-{{ by_id[id]['team'] }}">{{ by_id[id]["name"] }}</div>
+                        <div class="nightinfo-line name-{{ by_id[id]['team'] }}"></div>
+                        <div class="nightinfo-spacer"></div>
+                        <div class="nightinfo-reminder align">{{ by_id[id]["otherNightReminder"] }}</div>
+                    </div>
+                {%- endfor %}
+            </div>
+        </div>
+
+    </body>
+</html>

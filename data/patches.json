@@ -1,0 +1,10 @@
+{
+    "lunatic":
+    {
+        "firstNightReminder": "Simulate Demon Info and First Night for the Demon received by the Lunatic. If simulating a Lunatic, Marionette or King, wake the Lunatic. Wake the Demon. Show the real Demon's character token. Show them the Lunatic player, and their selections if applicable."
+    },
+    "magician":
+    {
+        "firstNightReminder": "Show the Magician as a Demon during Minion Info. Show the Magician as a Minion during Demon Info."
+    }
+}
