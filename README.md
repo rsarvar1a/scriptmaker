@@ -20,11 +20,56 @@ Significant credit goes to [chizmw](https://github.com/chizmw/botc-custom-script
 
 ## Trouble Brewing
 
+Here's scriptmaker's default output for the official Trouble Brewing script.
+
+<p float="left">
+  <a href="examples/Trouble Brewing/Standard/pdf/pages/Trouble_Brewing-script-1.png">
+    <img src="examples/Trouble Brewing/Standard/pdf/pages/Trouble_Brewing-script-1.png" width="32%">
+  </a>
+  <a href="examples/Trouble Brewing/Standard/pdf/pages/Trouble_Brewing-nights-1.png">
+    <img src="examples/Trouble Brewing/Standard/pdf/pages/Trouble_Brewing-nights-1.png" width="32%">
+  </a>
+  <a href="examples/Trouble Brewing/Standard/pdf/pages/Trouble_Brewing-nights-2.png">
+    <img src="examples/Trouble Brewing/Standard/pdf/pages/Trouble_Brewing-nights-2.png" width="32%">
+  </a>
+</p>
+
+You can also choose to generate simple nightorders.
+
+<p float="left">
+  <a href="examples/Trouble Brewing/Simple/pdf/pages/Trouble_Brewing-script-1.png">
+    <img src="examples/Trouble Brewing/Simple/pdf/pages/Trouble_Brewing-script-1.png" width="48%">
+  </a>
+  <a href="examples/Trouble Brewing/Simple/pdf/pages/Trouble_Brewing-nights-1.png">
+    <img src="examples/Trouble Brewing/Simple/pdf/pages/Trouble_Brewing-nights-1.png" width="48%">
+  </a>
+</p>
+
 ## Custom script & homebrew
+
+Homebrewed content and custom logos are also supported.
+
+<p float="left">
+  <a href="examples/Fall Of Rome/pdf/pages/Fall_of_Rome-script-1.png">
+    <img src="examples/Fall Of Rome/pdf/pages/Fall_of_Rome-script-1.png" width="32%">
+  </a>
+  <a href="examples/Fall Of Rome/pdf/pages/Fall_of_Rome-nights-1.png">
+    <img src="examples/Fall Of Rome/pdf/pages/Fall_of_Rome-nights-1.png" width="32%">
+  </a>
+  <a href="examples/Fall Of Rome/pdf/pages/Fall_of_Rome-nights-2.png">
+    <img src="examples/Fall Of Rome/pdf/pages/Fall_of_Rome-nights-2.png" width="32%">
+  </a>
+</p>
 
 # Usage
 
 ## Installation
+
+Scriptmaker requires the following non-Python dependencies:
+```
+ghostscript
+poppler-utils
+```
 
 Install the package with your package manager of choice.
 
@@ -49,7 +94,9 @@ scriptmaker <inputs> [outputs] [options]
         --nights path/to/nights.json
     
     outputs:
+        --compress
         --export
+        --pngify
         --save-to path/to/folder/
 
     options:
@@ -61,7 +108,7 @@ scriptmaker <inputs> [outputs] [options]
 
 0. Import everything you need.
 ```python
-from scriptmaker import Character, Datastore, Script, Render, ScriptmakerError
+from scriptmaker import Character, Datastore, Script, PDFTools, Renderer, ScriptmakerError
 ```
 
 1. Create a data store for your new script.
@@ -100,6 +147,13 @@ my_script.options.i18n_fallback = True
 ```python
 outputs = Renderer().render(my_script)
         # my_script.render()
+```
+
+5. Postprocess your PDFs.
+```python
+for _, path in outputs:
+  PDFTools.compress(path)
+  PDFTools.pngify(path)
 ```
 
 # Changelog
