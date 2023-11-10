@@ -25,12 +25,19 @@ class Icon ():
         Provides a b64 encoding of the image data.
         """
         buffer = io.BytesIO()
-        self.icon.save(buffer)
+        self.icon.save(buffer, format = 'png')
         return base64.b64encode(buffer.getvalue())
     
     
+    def path (self, dirname):
+        """ 
+        Hints the save path with the given dirname.
+        """
+        return Path(dirname, f"{self.id}.png")
+
+
     def save (self, dirname):
         """ 
         Saves the image to a path.
         """
-        self.icon.save(Path(dirname, f"{self.id}.png"))
+        self.icon.save(self.path(dirname))

@@ -1,0 +1,168 @@
+@page 
+{
+    background-color: white;
+    margin: 5mm;
+    size: letter;
+}
+
+@font-face 
+{
+    font-family: dumbledor;
+    src: url("Dumbledor\ 1.ttf");
+}
+
+@font-face 
+{
+    font-family: abilitytext;
+    src: url(CormorantGaramond-Medium.ttf);
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+
+@font-face 
+{
+    font-family: abilitytextbold;
+    src: url(CormorantGaramond-Bold.ttf);
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+
+html 
+{
+    margin: 0;
+    padding: 0;
+}
+
+header 
+{
+    align-items: flex-start;
+    background-color: #2f4f4f;
+    color: #fff;
+    display: flexbox;
+    justify-content: space-between;
+}
+
+body 
+{
+    font-family: dumbledor;
+    font-size: 8pt;
+}
+
+.align 
+{
+    align-items: center;
+    align-content: center;
+}
+.justify
+{
+    justify-items: center;
+    justify-content: center;
+}
+
+
+.author
+{
+    width: auto;
+    white-space: nowrap;
+    font-family: abilitytext;
+    font-size: 12pt;
+    font-weight: 300;
+    margin-top: -5px;
+}
+.header
+{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.header-centered
+{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;  
+}
+.header-text
+{
+    width: auto;
+    max-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.header-text-logo
+{
+    width: auto;
+    max-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-content: start;
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.script-logo
+{
+    height: 60px;
+    padding-right: 15px;
+}
+.script-logo-centered
+{
+    height: 60px;
+    padding-bottom: 10px;
+}
+.script-title
+{
+    width: auto;
+    white-space: nowrap;
+    font-family: dumbledor;
+    font-size: 20pt;
+    font-weight: 900;
+}
+.separator
+{
+    border-bottom: 0.5px solid #909090;
+    flex: 1;
+    margin-bottom: 12px;
+}
+
+/* GLOBAL: colours */
+
+.name-townsfolk
+{
+    border-color: #005DA9;
+    color: #005DA9;
+}
+.name-outsider
+{
+    border-color: #009AC9;
+    color: #009AC9;
+}
+.name-minion, .name-demon
+{
+    border-color: #780c0f;
+    color: #780c0f;
+}
+.name-fabled
+{
+    border-color: #BD7300;
+    color: #BD7300;
+}
+.name-traveler
+{
+    border-color: #8E5AAF;
+    color: #8E5AAF;
+}

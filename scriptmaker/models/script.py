@@ -1,9 +1,14 @@
+from __future__ import annotations
 
-from scriptmaker import constants
-from scriptmaker.data import Datastore
-from scriptmaker.models import Character, Jinx
-from scriptmaker.utilities import ScriptmakerValueError
+import io
+import tempfile
+import urllib.request
 
+import scriptmaker.constants as constants
+import scriptmaker.data as data
+import scriptmaker.models as models
+import scriptmaker.renderer as renderer
+import scriptmaker.utilities as utilities
 
 class ScriptMeta ():
     """ 
@@ -17,8 +22,26 @@ class ScriptMeta ():
         logo = None
     ):
         self.name = name 
-        self.author = author
+        self.author = author   
+        self.add_logo(logo)
+        
+        
+    def add_logo (self, logo):
+        """ 
+        Tries to set a logo.
+        """
         self.logo = logo
+        self.icon = None
+        
+        if self.logo:
+            try: 
+                with tempfile.NamedTemporaryFile() as tmpfile:
+                    urllib.request.urlretrieve(self.logo, tmpfile.name)
+                    self.icon = data.Icon('script_logo', tmpfile.read())
+            except utilities.ScriptmakerError as prev:
+                raise utilities.ScriptmakerDataError(f"failed to load script logo from '{self.logo}'")
+        else:
+            self.icon = None
 
 
 class ScriptOptions ():
@@ -42,7 +65,8 @@ class Script ():
     
     def __init__ (
         self, *,
-        data : Datastore, # Your datastore containing all relevant characters
+        data : data.Datastore, # Your datastore containing all relevant characters
+        nights = None, # An optional nightorder JSON
         meta = ScriptMeta(), # The _meta block from your custom script
         options = ScriptOptions() # Rendering options to attach to this script
     ):
@@ -53,10 +77,11 @@ class Script ():
         self.options = options
         self.data = data
         
-        self.by_team : dict[str, list[Character]] = {}
-        self.characters : list[Character] = []
-        self.jinxes : dict[str, list[Jinx]] = {}
+        self.by_team : dict[str, list[models.Character]] = {}
+        self.characters : list[models.Character] = []
+        self.jinxes : dict[str, list[models.Jinx]] = {}
         self.nightorder : dict[str, list[str]] = {}
+        self.nights = nights
                 
     
     def add (self, id):
@@ -64,7 +89,7 @@ class Script ():
         Adds a character to the script.
         """
         if id in self.characters:
-            raise ScriptmakerValueError(f"script already contains character '{id}'")
+            raise utilities.ScriptmakerValueError(f"script already contains character '{id}'")
         self.characters.append(self.data.get_character(id))
     
     
@@ -75,15 +100,22 @@ class Script ():
         self.__partition_by_teams()
         self.__calculate_jinxes()
         self.__calculate_nightorder()
-    
+
     
     def remove (self, id):
         """
         Removes a character from the script.
         """
         if id not in self.characters:
-            raise ScriptmakerValueError(f"character '{id}' is not on this script")
+            raise utilities.ScriptmakerValueError(f"character '{id}' is not on this script")
         self.characters.remove(self.data.get_character(id))
+    
+    
+    def render (self, **options):
+        """
+        Shortcut to rendering; see scriptmaker.Renderer.render().
+        """
+        renderer.Renderer().render(self, **options)
     
     
     def __calculate_jinxes (self):
@@ -93,7 +125,7 @@ class Script ():
         self.jinxes = {}
         all_ids = [ character.id for character in self.characters ]
         for character in self.characters:
-            active_jinxes = [ Jinx(character.id, jinx['id'], jinx['reason']) for jinx in character.jinxes if jinx['id'] in all_ids ]
+            active_jinxes = [ models.Jinx(character.id, jinx['id'], jinx['reason']) for jinx in character.jinxes if jinx['id'] in all_ids ]
             self.jinxes[character.id] = active_jinxes
     
     
@@ -105,9 +137,13 @@ class Script ():
             """
             Calculates the night order for a given night.
             """
-            acting_characters = [character for character in self.characters if character.nightinfo[night]['acts']]
-            in_order = sorted(acting_characters, key=lambda character: character.nightinfo[night]['position'])
-            return [ character.id for character in in_order ]
+            if not self.nights:
+                acting_characters = [character for character in self.characters if character.nightinfo[night]['acts']]
+                in_order = sorted(acting_characters, key=lambda character: character.nightinfo[night]['position'])
+                return [ character.id for character in in_order ]
+            else:
+                # Just trust it, honestly...
+                return self.nights[night]
             
         for nightmeta in constants.NIGHT_META:
             if nightmeta not in self.characters:

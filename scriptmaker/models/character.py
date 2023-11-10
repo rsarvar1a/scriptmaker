@@ -1,11 +1,11 @@
+from __future__ import annotations
 
 import json
 
-from scriptmaker.utilities import ScriptmakerValueError, KWArgPreparer, sanitize
-from scriptmaker import constants
+import scriptmaker.constants as constants
+import scriptmaker.utilities as utilities
 
-
-class CharacterError(ScriptmakerValueError):
+class CharacterError(utilities.ScriptmakerValueError):
     """
     Raises an exception when scriptmaker detects invalid properties during character creation.
     """
@@ -32,7 +32,7 @@ class Character ():
             self.__set_mandatory_properties(id, name, team, ability, image)
             self.__set_nightinfo(firstNight, firstNightReminder, otherNight, otherNightReminder)
             self.__set_jinxes(jinxes)
-        except ScriptmakerValueError as prev:
+        except utilities.ScriptmakerValueError as prev:
             raise CharacterError("failed to create character") from prev
     
     
@@ -41,15 +41,15 @@ class Character ():
         Returns the warnings produced for this character at creation.
         """
         return self.__warnings
-    
+
         
     @classmethod
     def from_dict (cls, character_dict):
         """
         Creates a new character from a character dictionary.
         """
-        prepared_arguments = KWArgPreparer.prepare(Character.__init__, character_dict)
-        return cls(prepared_arguments)
+        prepared_arguments = utilities.KWArgPreparer.prepare(Character.__init__, character_dict)
+        return cls(** prepared_arguments)
     
     
     @classmethod
@@ -72,22 +72,23 @@ class Character ():
         # Validate the generic parameters.
         for prop in ['id', 'name', 'ability']:
             prop_value = eval(prop)
-            if not isinstance(prop_value, str) or prop_value == "":
-                raise ScriptmakerValueError(f"expected a non-empty string for property '{prop}', but received {prop_value}")
+            if team != "_meta" and (not isinstance(prop_value, str) or prop_value == ""):
+                raise utilities.ScriptmakerValueError(f"expected a non-empty string for property '{prop}', but received {prop_value}")
         
         # Sanitize the character ID.
-        sanitized_id = sanitize.id(id)
+        sanitized_id = utilities.sanitize.id(id)
         if sanitized_id != id:
             self.__warnings.append(f"sanitized id '{id}' to '{sanitized_id}'")
         
         # Validate the team name.
-        sanitized_team = sanitize.team(team)
-        if sanitized_team not in constants.TEAMS:
-            raise ScriptmakerValueError(f"expected one of [{', '.join(constants.TEAMS)}], but received {sanitized_team}")
+        sanitized_team = utilities.sanitize.team(team)
+        if sanitized_team not in constants.TEAMS + ['_meta']:
+            raise utilities.ScriptmakerValueError(f"expected one of [{', '.join(constants.TEAMS)}], but received {sanitized_team}")
         if sanitized_team != team:
             self.__warnings.append(f"sanitized team '{team}' to '{sanitized_team}'")
 
         # Ensure we have at least one valid image URL; scripts for the official app might contain a list of images to use for various alignments.
+        image_err = None
         if isinstance(image, list):
             if len(image) == 0: image_err = f"expected a non-empty list for property 'image', received []"
             else: image_url = image[0]
@@ -95,7 +96,7 @@ class Character ():
             if image == "": image_err = f"expected a non-empty string for property 'image', received ''"
             else: image_url = image
         if image_err: 
-            raise ScriptmakerValueError(image_err)
+            raise utilities.ScriptmakerValueError(image_err)
         
         # Save our mandatory properties.
         self.id = sanitized_id
@@ -147,7 +148,7 @@ class Character ():
                         self.__warnings.append(f"invalid jinx {jinx} (missing prop '{prop}'); ignoring")
                         break
                 else:
-                    sanitized_target = sanitize.id(jinx['id'])
+                    sanitized_target = utilities.sanitize.id(jinx['id'])
                     if sanitized_target != jinx['id']:
                         self.__warnings.append(f"sanitized jinxed character '{jinx['id']}' to '{sanitized_target}")
                     self.jinxes.append({ 'id': sanitized_target, 'reason': jinx['reason'] })

@@ -38,17 +38,36 @@ poetry add scriptmaker
 ...
 ```
 
-## Creating a script
+## Using the CLI
+
+```
+scriptmaker <inputs> [outputs] [options]
+
+    inputs: (--url | --script)
+        --url https://url/to/script.json
+        --script path/to/script.json
+        --nights path/to/nights.json
+    
+    outputs:
+        --export
+        --save-to path/to/folder/
+
+    options:
+        --i18n-fallback
+        --simple-nightorder
+```
+
+## Using the package
 
 0. Import everything you need.
 ```python
-from scriptmaker import Character, Data, Script, ScriptmakerError
+from scriptmaker import Character, Datastore, Script, Render, ScriptmakerError
 ```
 
 1. Create a data store for your new script.
 ```python
 # Create a datastore (leaving it blank uses a temporary directory)
-my_datastore : Data = Data("my/output/directory")
+my_datastore : Datastore = Datastore("my/output/directory")
 
 # Load the official characters into it, if you want
 my_datastore.add_official_characters()
@@ -59,14 +78,19 @@ my_datastore.add_official_characters()
 with open("my/script.json", "r") as json_file:
     my_script_json = json.load(json_file)
 
+# Perhaps you have a custom nightorder.
+with open("my/nightorder.json", "r") as nightorder_file:
+    my_nightorder = json.load(nightorder_file)
+
 # Loads the characters into the datastore, then builds a script object too
-my_script : Script = my_datastore.load_script(my_script_json)
+my_script : Script = my_datastore.load_script(my_script_json, nightorder_json = my_nightorder)
 ```
 
 3. Set your desired options on the script if not already in the script.json.
 ```python
-# Metas are set if there was a _meta block in the script.json
+# Metas are automatically set if there was a _meta block in the script.json
 my_script.meta.author = "rsarvar1a"
+my_script.meta.add_logo("https://my/logo/url.png")
 
 # Options have defaults; see ScriptOptions()
 my_script.options.i18n_fallback = True
@@ -74,7 +98,8 @@ my_script.options.i18n_fallback = True
 
 4. Render it!
 ```python
-my_script.render()
+outputs = Renderer().render(my_script)
+        # my_script.render()
 ```
 
 # Changelog
@@ -82,8 +107,8 @@ my_script.render()
 ## 1.0.0 - packages are neat
 
 - Character updates:
-    - adds the Ojo
+    - adds all experimental characters up to the Ojo
 - Features:
-    - adds a fallback switch for translations that didn't play well with default style
+    - shows a script's author and logo if those properties are in the `_meta`
 - **Breaking changes**:
     - if you were using the (unpackaged) version of `scriptmaker`, you will need to write your own scripts

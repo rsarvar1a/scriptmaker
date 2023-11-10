@@ -1,0 +1,146 @@
+
+/* CHARACTERS */
+
+.character 
+{
+    break-inside: avoid-column;
+    border: none;
+    min-height: 44px;
+    width: 100%;
+    margin: 0;
+    display: flexbox;
+    align-items: center;
+}
+.character-ability
+{
+    font-family: abilitytext;
+    font-size: 8pt;
+    color: #202024;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    text-align: justify;
+}
+.character-ability > b
+{
+    font-family: abilitytextbold;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    text-align: justify;
+}
+.character-name
+{
+    font-family: dumbledor;
+    font-size: 12pt;
+    font-weight: 800;
+}
+.character-type
+{
+    border-top: 2px solid;
+    font-family: dumbledor;
+    font-size: 14px;
+    font-weight: 300;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    transform: rotate(90deg) translateX(-10%) translateY(-25%);
+    transform-origin: top left;
+}
+.cols-2 
+{
+    display: flexbox;
+    flex-direction: column;
+    column-count: 2;
+    column-gap: 1%;
+    margin-bottom: -30px;
+    vertical-align: top;
+}
+.icon
+{
+    border: none;
+    float: left;
+    height: 44px;
+    width: 44px;
+}
+.not-enough-characters-of-type
+{
+    min-height: 40px;
+}
+.not-first-night 
+{
+    bottom: 0;
+    color: #000;
+    font-size: 8pt;
+    right: 0;
+    position: absolute;
+    text-align: right;
+}
+.reference > *
+{
+    display: flexbox;
+    flex-direction: row;
+}
+.team-spacer
+{
+    padding-bottom: 60px;
+}
+
+/* JINXES */
+
+.jinxes
+{
+    border-top: 1px solid;
+    flex-direction: row-reverse;
+    float: right;
+    justify-content: flex-start;
+    padding: 0px;
+    vertical-align: center;
+    max-height: 15px;
+}
+.jinx-box 
+{
+    width: 100%;
+}
+.jinx-enclosing-c
+{
+    display: flexbox; 
+    flex-direction: column;
+}
+.jinx-enclosing-r
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+.icon-jinx
+{
+    border: none;
+    float: right;
+    max-height: 15px;
+    max-width: 15px;
+    vertical-align: bottom;
+}
+.icon-jinx-pair
+{
+    float: left;
+    min-width: 60px;
+}
+.icon-jinx-in-pair
+{
+    float: left;
+    max-height: 30px;
+    max-width: 30px;
+}
+.reason
+{
+    font-size: 8pt;
+    font-family: abilitytext;
+    vertical-align: middle;
+    max-width: 90%;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+.spacer
+{
+    width: 10px;
+}

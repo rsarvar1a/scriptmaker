@@ -1,11 +1,14 @@
 
+import inspect
+
+
 class KWArgPreparer ():
     """
     A wrapper for calling functions that accept keyword arguments with a single dictionary as an argument.
     """
         
     @classmethod
-    def call (cls, func, kwargs)
+    def call (cls, func, kwargs):
         """
         Calls a function safely with an arbitrary dictionary of arguments by inspecting that function's signature.
         """

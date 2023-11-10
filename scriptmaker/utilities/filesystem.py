@@ -3,7 +3,7 @@ import os
 
 from pathlib import Path 
 
-from scriptmaker.utilities import ScriptmakerError
+from .error import ScriptmakerError
 
 
 class ScriptmakerFSError(ScriptmakerError):

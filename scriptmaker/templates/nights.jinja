@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head lang="EN">
+        <title>{{ meta.name }}</title>
+        <link rel="stylesheet" href="file://common.css">
+        <link rel="stylesheet" href="file://nights.css">
+    </head>
+
+    <body>
+
+        {%- if options.simple_nightorder %}
+
+            <div class="header-centered centered">
+                {%- if meta.logo %}
+                    <img src="{{ logo }}" class="script-logo-centered"/>
+                {%- endif %}
+                <div class="header-text">
+                    <div class="script-title">{{ meta.name }}</div>
+                    {%- if meta.author %}
+                        <div class="author">by {{ meta.author }}</div>
+                    {%- endif %}
+                </div>
+            </div>
+
+            <div class="order order-first">
+                <div class="order-c">
+                    <h2 class="order-name">First Night</h2>
+                    {%- for id in nightorder["first"] %}
+                        <div class="nightinfo align info-first">
+                            <img src="{{ icons[id] }}" class="icon-night"/>
+                            <div class="align nightinfo-name name-{{ characters[id].team }}">{{ characters[id].name }}</div>
+                        </div>
+                    {%- endfor %}
+                </div>
+            </div>
+
+            <div class="order order-other">
+                <div class="order-c">
+                    <h2 class="order-name">Other Nights</h2>
+                    {%- for id in nightorder["other"] %}
+                        <div class="nightinfo align info-other">
+                            <img src="{{ icons[id] }}" class="icon-night"/>
+                            <div class="align nightinfo-name name-{{ characters[id].team }}">{{ characters[id].name }}</div>
+                        </div>
+                    {%- endfor %}
+                </div>
+            </div>
+
+        {%- else %}
+
+            <div class="header">
+                {%- if meta.logo %}
+                    <img src="{{ logo }}" class="script-logo"/>
+                {%- endif %}
+                <div class="header-text{{ '-logo' if meta.logo else '' }}">
+                    <div class="script-title">{{ meta.name }} - First Night</div>
+                    {%- if meta.author %}
+                        <div class="author">by {{ meta.author }}</div>
+                    {%- endif %}
+                </div>
+            </div>
+
+            <div class="order-full">
+                <div class="order-c">
+                    {%- for id in nightorder["first"] %}
+                        <div class="nightinfo align info-first">
+                            <img src="{{ icons[id] }}" class="icon-night"/>
+                            <div class="align nightinfo-name-full name-{{ characters[id].team }}">{{ characters[id].name }}</div>
+                            <div class="nightinfo-line name-{{ characters[id].team }}"></div>
+                            <div class="nightinfo-spacer"></div>
+                            <div class="nightinfo-reminder align">{{ characters[id].nightinfo['first']['reminder'] }}</div>
+                        </div>
+                    {%- endfor %}
+                </div>
+            </div>
+
+            <p style="page-break-before: always" ></p>
+            <div class="header">
+                {%- if meta.logo %}
+                    <img src="{{ logo }}" class="script-logo"/>
+                {%- endif %}
+                <div class="header-text{{ '-logo' if meta.logo else '' }}">
+                    <div class="script-title">{{ meta.name }} - Other Nights</div>
+                    {%- if meta.author %}
+                        <div class="author">by {{ meta.author }}</div>
+                    {%- endif %}
+                </div>
+            </div>
+            
+            <div class="order-full">
+                <div class="order-c">
+                    {%- for id in nightorder["other"] %}
+                        <div class="nightinfo align info-other">
+                            <img src="{{ icons[id] }}" class="icon-night"/>
+                            <div class="align nightinfo-name-full name-{{ characters[id].team }}">{{ characters[id].name }}</div>
+                            <div class="nightinfo-line name-{{ characters[id].team }}"></div>
+                            <div class="nightinfo-spacer"></div>
+                            <div class="nightinfo-reminder align">{{ characters[id].nightinfo['other']['reminder'] }}</div>
+                        </div>
+                    {%- endfor %}
+                </div>
+            </div>
+
+        {%- endif %}
+
+    </body>
+</html>

@@ -1,0 +1,129 @@
+
+.cornered
+{
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    text-align: right;
+}
+.centered
+{
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    text-align: center;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+.rotated
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    text-align: center;
+
+    transform: translateX(-50%) translateY(50%) rotate(180deg);
+    
+    transform-origin: center;
+}
+
+.nightinfo
+{
+    display: flex;
+    flex-direction: row;
+    min-height: 32px;
+    width: 100%;
+}
+.nightinfo-name
+{
+    font-size: 12pt;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.nightinfo-name-full
+{
+    font-size: 12pt;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: right;
+    width: 15%;
+}
+.nightinfo-reminder
+{
+    font-size: 8pt;
+    font-family: abilitytext;
+    vertical-align: middle;
+    text-align: justify;
+    width: 78%;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+.nightinfo-line
+{
+    height: 25px;
+    width: 1%;
+    border-right: 2px solid;
+}
+.nightinfo-spacer
+{
+    width: 1%;
+}
+.icon-night
+{
+    float: left;
+    max-height: 32px;
+    max-width: 32px;
+}
+.order
+{
+    width: 100%;
+}
+.order-full 
+{
+    padding-top: 2%;
+    width: 100%;
+}
+.order-c
+{
+    display: flexbox;
+    flex-direction: column;
+}
+.order-name
+{
+    font-size: 18pt;
+    font-weight: 800;
+}
+.order-name-full
+{
+    font-family: dumbledor;
+    font-size: 20pt;
+    font-weight: 900;
+
+    left: 0;
+    position: absolute;
+    top: 0;
+    text-align: left;
+
+    padding: 0;
+    padding-bottom: 15px;
+    margin: 0;
+}
+.order-first
+{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.order-other
+{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+    transform-origin: center;
+}
