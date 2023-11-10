@@ -51,7 +51,7 @@
     flex-direction: column;
     column-count: 2;
     column-gap: 1%;
-    margin-bottom: -30px;
+    margin-bottom: -25px;
     vertical-align: top;
 }
 .cols-2-spacered

@@ -1,0 +1,12 @@
+# Byte-compiled and C
+__pycache__/
+*.py[cod]
+*$py.class 
+*.so
+
+# Packaging and distribution
+build/
+dist/
+
+# Venvs
+.venv/
