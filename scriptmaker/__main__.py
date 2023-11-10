@@ -2,11 +2,12 @@
 import argparse 
 import io
 import json
+import pathlib
 import sys
 import tempfile
 import urllib.request
    
-from scriptmaker import Datastore, Script, Renderer
+from scriptmaker import Datastore, Script, PDFTools, Renderer
 
 
 def main ():
@@ -20,8 +21,10 @@ def main ():
     inputs.add_argument('--nights', default = None)
     
     output = parser.add_argument_group('output options')
-    output.add_argument('--save-to', default = None)
+    output.add_argument('--compress', action = 'store_true')
     output.add_argument('--export', action = 'store_true')
+    output.add_argument('--pngify', action = 'store_true')
+    output.add_argument('--save-to', default = None)
     
     options = parser.add_argument_group('script options')
     options.add_argument('--simple-nightorder', action = 'store_true')
@@ -58,9 +61,19 @@ def main ():
     if args.export:
         datastore.export()
     output_files = Renderer().render(script)
+    result = { "pdfs": { doc: str(path.resolve()) for doc, path in output_files.items() } }
+    
+    
+    # Postprocess the PDFs if desired.
+    for _, path in output_files.items():
+        p = path.resolve()
+        if args.compress: 
+            PDFTools.compress(p)
+        if args.pngify: 
+            result['pngs'] = list(map(lambda p: str(p), PDFTools.pngify(p)))
     
     # Success!
-    print(output_files)
+    print(json.dumps(result, indent=2))
     return 0
 
 

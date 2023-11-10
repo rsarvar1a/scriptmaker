@@ -54,6 +54,15 @@
     margin-bottom: -30px;
     vertical-align: top;
 }
+.cols-2-spacered
+{
+    display: flexbox;
+    flex-direction: column;
+    column-count: 2;
+    column-gap: 1%;
+    margin-bottom: 30px;
+    vertical-align: top;
+}
 .icon
 {
     border: none;
@@ -63,7 +72,7 @@
 }
 .not-enough-characters-of-type
 {
-    min-height: 40px;
+    min-height: 15px;
 }
 .not-first-night 
 {
@@ -81,7 +90,7 @@
 }
 .team-spacer
 {
-    padding-bottom: 60px;
+    margin-bottom: 65px;
 }
 
 /* JINXES */

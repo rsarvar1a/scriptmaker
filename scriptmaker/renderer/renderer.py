@@ -74,8 +74,9 @@ class Renderer ():
         
         # Separate out teams into page groups (including jinxes as a team). Follow a cramming heuristic.
         to_add = SimpleQueue()
-        for team in constants.TEAMS: 
-            to_add.put(team)
+        for team in script.by_team:
+            if len(script.by_team[team]) > 0:
+                to_add.put(team)
         
         page_groups = [{ "teams": [], "height": 0 }]
         
