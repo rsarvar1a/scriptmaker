@@ -131,25 +131,30 @@
 }
 .icon-jinx-pair
 {
-    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
     min-width: 60px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .icon-jinx-in-pair
 {
-    float: left;
     max-height: 30px;
     max-width: 30px;
+}
+.pre-jinx-spacer
+{
+    margin-top: 20px;
 }
 .reason
 {
     font-size: 8pt;
     font-family: abilitytext;
     vertical-align: middle;
-    max-width: 90%;
+    width: 90%;
     font-variant-ligatures: none;
     font-feature-settings: "liga" 0;
-}
-.spacer
-{
-    width: 10px;
 }

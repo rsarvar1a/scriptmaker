@@ -7,6 +7,9 @@
     </head>
 
     <body>
+
+        {# Characters #}
+
         {%- for page in pages %}
 
             {# Script title header on every page #}
@@ -24,7 +27,9 @@
             
             {# Character blocks #}
             <div class="reference">
-                {%- for team in page %}
+                {%- set last = "none" %}
+                {%- for team in page if team != "jinxes" %}
+                    {%- set last = team %}
                     {%- set pluralized = team + 's' if team != 'townsfolk' and team != 'fabled' else team %}
                     <h2 class="character-type name-{{ team }}">{{ pluralized | upper }}</h2>
                     <div class="cols-2{{ '-spacered' if spacers[team] else '' }}">
@@ -58,5 +63,30 @@
             {%- endif %}
 
         {%- endfor %}
+
+        {# Jinxes as a continutation of the last page #}
+
+        {%- if has_jinxes %}
+            {%- if last != "none" %}
+                <div class="pre-jinx-spacer"></div>
+            {%- endif %}
+            <h2 class="character-type name-fabled">{{ 'jinxes' | upper }}</h2>         
+            <div class="jinx-box align justify">
+                <div class="jinx-enclosing-c align justify">
+                    {%- for id in jinxes %}
+                        {%- for jinx in jinxes[id] %}
+                            <div class="jinx-enclosing-r align">
+                                <div class="icon-jinx-pair">
+                                    <img src="{{ icons[jinx.src_id] }}" class="icon-jinx-in-pair"/>
+                                    <img src="{{ icons[jinx.dst_id] }}" class="icon-jinx-in-pair"/>
+                                </div>
+                                <div class="reason align">{{ jinx.reason }}</div>
+                            </div>
+                        {%- endfor %}
+                    {%- endfor %} 
+                </div>
+            </div>
+        {%- endif %}
+
     </body>
 </html>

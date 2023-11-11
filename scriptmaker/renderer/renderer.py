@@ -70,13 +70,14 @@ class Renderer ():
                 members = len(script.by_team[team])
                 height = character_trailing + character_h * (members + 1) / 2
                 heights[team] = height
-        heights["jinxes"] = jinx_h * len(script.jinxes)
+        heights["jinxes"] = jinx_h * sum([ len(jinxes) for id, jinxes in script.jinxes.items() ])
         
         # Separate out teams into page groups (including jinxes as a team). Follow a cramming heuristic.
         to_add = SimpleQueue()
         for team in script.by_team:
             if len(script.by_team[team]) > 0:
                 to_add.put(team)
+        to_add.put('jinxes')
         
         page_groups = [{ "teams": [], "height": 0 }]
         
@@ -102,6 +103,7 @@ class Renderer ():
             "icons": { id: f"file://{icon.path(Path(workspace, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
             "logo": f"file://{script.meta.icon.path(Path(workspace, 'build').resolve())}" if script.meta.icon else "",
             "jinxes": script.jinxes,
+            "has_jinxes": sum([ len(jinxes) for id, jinxes in script.jinxes.items() ]) > 0,
             "meta": script.meta,
             "options": script.options
         }
