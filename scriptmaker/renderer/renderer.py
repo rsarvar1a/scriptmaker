@@ -49,16 +49,16 @@ class Renderer ():
         """
         
         # We are going to calculate some layouts, so we're gonna need a few numbers.
-        ppi = 200.
+        ppi = 144.
         page_w, page_h = ppi * 8.5, ppi * 11. 
         page_padding = 0.02
         page_content = (1 - 2 * page_padding)
-        header = 70.
+        header = 60.
         content_w, content_h = page_content * page_w, page_content * page_h - header
         column_gap = 0.02
         icon_size = 45.
         character_overflow = 15
-        character_trailing = 65.
+        character_trailing = 30.
         character_w, character_h = (1. - column_gap) / 2. * content_w, icon_size + character_overflow
         jinx_w, jinx_h = content_w, 30.
         
@@ -68,7 +68,7 @@ class Renderer ():
             if team not in script.by_team: heights[team] = 0. 
             else:
                 members = len(script.by_team[team])
-                height = character_trailing + character_h * (members + 1) / 2
+                height = character_trailing + character_h * int((members + 1) / 2)
                 heights[team] = height
         heights["jinxes"] = jinx_h * sum([ len(jinxes) for id, jinxes in script.jinxes.items() ])
         
