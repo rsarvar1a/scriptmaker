@@ -67,12 +67,15 @@ class Script ():
         self, *,
         data : data.Datastore, # Your datastore containing all relevant characters
         nights = None, # An optional nightorder JSON
-        meta = ScriptMeta(), # The _meta block from your custom script
-        options = ScriptOptions() # Rendering options to attach to this script
+        meta = None, # The _meta block from your custom script
+        options = None # Rendering options to attach to this script
     ):
         """
         Creates a new empty script.
         """
+        if not meta: meta = ScriptMeta()
+        if not options: options = ScriptOptions()
+        
         self.meta = meta 
         self.options = options
         self.data = data
