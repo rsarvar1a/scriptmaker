@@ -41,6 +41,14 @@ with open("data/patches.json", "r") as patches_file:
         for k, v in patch.items():
             output[id][k] = v
 
+# Fix all the official token reminders because this source condenses actually-needed copies of tokens...
+with open("data/physicalreminders.json") as patches_file:
+    patches : dict = json.load(patches_file)
+    for patch in patches:
+        id = patch['id']
+        for k in ['reminders', 'remindersGlobal']:
+            output[id][k] = patch[k]
+
 # Deal with inconsistent referencing in the old bra1n data.
 names_to_ids = { output[id]['name']: id for id in output }
 def to_id (id):

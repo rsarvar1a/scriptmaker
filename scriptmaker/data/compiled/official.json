@@ -30,7 +30,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/amnesiac.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "artist": {
     "ability": "Once per game, during the day, privately ask the Storyteller any yes/no question.",
@@ -42,11 +43,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/artist.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "atheist": {
     "ability": "The Storyteller can break the game rules & if executed, good wins, even if you are dead. [No evil characters]",
@@ -60,7 +62,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/atheist.png",
     "setup": true,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "balloonist": {
     "ability": "Each night, you learn 1 player of each character type, until there are no more types to learn. [+1 Outsider]",
@@ -80,7 +83,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/balloonist.png",
     "setup": true,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "bountyhunter": {
     "ability": "You start knowing 1 evil player. If the player you know dies, you learn another evil player tonight. [1 Townsfolk is evil]",
@@ -96,7 +100,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/bountyhunter.png",
     "setup": true,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "cannibal": {
     "ability": "You have the ability of the recently killed executee. If they are evil, you are poisoned until a good player dies by execution.",
@@ -113,7 +118,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/cannibal.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "chambermaid": {
     "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
@@ -128,6 +134,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/chambermaid.png",
     "setup": false,
     "team": "townsfolk",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "mathematician",
@@ -147,7 +154,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/chef.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "choirboy": {
     "ability": "If the Demon kills the King, you learn which player is the Demon. [+ the King]",
@@ -161,7 +169,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/choirboy.png",
     "setup": true,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "clockmaker": {
     "ability": "You start knowing how many steps from the Demon to its nearest Minion.",
@@ -175,7 +184,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/clockmaker.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "courtier": {
     "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.",
@@ -190,11 +200,12 @@
       "Drunk 3",
       "Drunk 2",
       "Drunk 1",
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/courtier.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "cultleader": {
     "ability": "Each night, you become the alignment of an alive neighbour. If all good players choose to join your cult, your team wins.",
@@ -208,7 +219,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/cultleader.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "dreamer": {
     "ability": "Each night, choose a player (not yourself or Travellers): you learn 1 good and 1 evil character, 1 of which is correct.",
@@ -222,7 +234,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/dreamer.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "empath": {
     "ability": "Each night, you learn how many of your 2 alive neighbours are evil.",
@@ -236,7 +249,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/empath.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "engineer": {
     "ability": "Once per game, at night, choose which Minions or which Demon is in play.",
@@ -248,11 +262,12 @@
     "otherNight": 5,
     "otherNightReminder": "The Engineer shows a 'no' head signal, or points to a Demon or points to the relevant number of Minions. If the Engineer chose characters, replace the Demon or Minions with the choices, then wake the relevant players and show them the 'You are' card and the relevant character tokens.",
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/engineer.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "exorcist": {
     "ability": "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight.",
@@ -268,7 +283,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/exorcist.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "farmer": {
     "ability": "If you die at night, an alive good player becomes a Farmer.",
@@ -282,7 +298,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/farmer.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "fisherman": {
     "ability": "Once per game, during the day, visit the Storyteller for some advice to help you win.",
@@ -294,11 +311,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/fisherman.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "flowergirl": {
     "ability": "Each night*, you learn if a Demon voted today.",
@@ -310,12 +328,13 @@
     "otherNight": 59,
     "otherNightReminder": "Nod 'yes' or shake head 'no' for whether the Demon voted today. Place the 'Demon not voted' marker (remove 'Demon voted', if any).",
     "reminders": [
-      "Demon voted",
-      "Demon not voted"
+      "Demon Voted",
+      "Demon Not Voted"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/flowergirl.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "fool": {
     "ability": "The first time you die, you don't.",
@@ -327,11 +346,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/fool.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "fortuneteller": {
     "ability": "Each night, choose 2 players: you learn if either is a Demon. There is a good player that registers as a Demon to you.",
@@ -343,11 +363,12 @@
     "otherNight": 56,
     "otherNightReminder": "The Fortune Teller points to two players. Show the head signal (nod 'yes', shake 'no') for whether one of those players is the Demon.",
     "reminders": [
-      "Red herring"
+      "Red Herring"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/fortuneteller.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "gambler": {
     "ability": "Each night*, choose a player & guess their character: if you guess wrong, you die.",
@@ -363,7 +384,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/gambler.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "general": {
     "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
@@ -377,7 +399,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/general.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "gossip": {
     "ability": "Each day, you may make a public statement. Tonight, if it was true, a player dies.",
@@ -393,7 +416,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/gossip.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "grandmother": {
     "ability": "You start knowing a good player & their character. If the Demon kills them, you die too.",
@@ -409,7 +433,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/grandmother.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "highpriestess": {
     "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
@@ -423,7 +448,9 @@
     "otherNightReminder": "Point to a player.",
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/highpriestess.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "reminders": [],
+    "remindersGlobal": []
   },
   "huntsman": {
     "ability": "Once per game, at night, choose a living player: the Damsel, if chosen, becomes a not-in-play Townsfolk. [+the Damsel]",
@@ -435,11 +462,12 @@
     "otherNight": 47,
     "otherNightReminder": "The Huntsman shakes their head 'no' or points to a player. If they point to the Damsel, wake that player, show the 'You are' card and a not-in-play character token.",
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/huntsman.png",
     "setup": true,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "innkeeper": {
     "ability": "Each night*, choose 2 players: they can't die tonight, but 1 is drunk until dusk.",
@@ -452,11 +480,13 @@
     "otherNightReminder": "The previously protected and drunk players lose those markers. The Innkeeper points to two players. Those players are protected. One is drunk.",
     "reminders": [
       "Protected",
+      "Protected",
       "Drunk"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/innkeeper.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "investigator": {
     "ability": "You start knowing that 1 of 2 players is a particular Minion.",
@@ -473,7 +503,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/investigator.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "juggler": {
     "ability": "On your 1st day, publicly guess up to 5 players' characters. That night, you learn how many you got correct.",
@@ -485,11 +516,16 @@
     "otherNight": 63,
     "otherNightReminder": "If today was the Juggler\u2019s first day: Show the hand signal for the number (0, 1, 2, etc.) of 'Correct' markers. Remove markers.",
     "reminders": [
+      "Correct",
+      "Correct",
+      "Correct",
+      "Correct",
       "Correct"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/juggler.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "king": {
     "ability": "Each night, if the dead outnumber the living, you learn 1 alive character. The Demon knows who you are.",
@@ -503,7 +539,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/king.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "knight": {
     "ability": "You start knowing 2 players that are not the Demon.",
@@ -516,11 +553,13 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
+      "Knows",
       "Knows"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/knight.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "librarian": {
     "ability": "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)",
@@ -537,7 +576,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/librarian.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "lycanthrope": {
     "ability": "Each night*, choose a living player: if good, they die, but they are the only player that can die tonight.",
@@ -554,6 +594,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/lycanthrope.png",
     "setup": false,
     "team": "townsfolk",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "gambler",
@@ -573,7 +614,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/magician.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "mathematician": {
     "ability": "Each night, you learn how many players\u2019 abilities worked abnormally (since dawn) due to another character's ability.",
@@ -585,11 +627,16 @@
     "otherNight": 74,
     "otherNightReminder": "Show the hand signal for the number (0, 1, 2, etc.) of players whose ability malfunctioned due to other abilities.",
     "reminders": [
+      "Abnormal",
+      "Abnormal",
+      "Abnormal",
+      "Abnormal",
       "Abnormal"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/mathematician.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "mayor": {
     "ability": "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead.",
@@ -603,7 +650,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/mayor.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "minstrel": {
     "ability": "When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow.",
@@ -615,11 +663,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "Everyone drunk"
+      "Everyone Drunk"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/minstrel.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "monk": {
     "ability": "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
@@ -635,7 +684,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/monk.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "nightwatchman": {
     "ability": "Once per game, at night, choose a player: they learn who you are.",
@@ -647,11 +697,12 @@
     "otherNight": 67,
     "otherNightReminder": "The Nightwatchman may point to a player. Wake that player, show the 'This character selected you' card and the Nightwatchman token, then point to the Nightwatchman player.",
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/nightwatchman.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "noble": {
     "ability": "You start knowing 3 players, 1 and only 1 of which is evil.",
@@ -663,11 +714,14 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
+      "Seen",
+      "Seen",
       "Seen"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/noble.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "oracle": {
     "ability": "Each night*, you learn how many dead players are evil.",
@@ -681,7 +735,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/oracle.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "pacifist": {
     "ability": "Executed good players might not die.",
@@ -695,7 +750,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/pacifist.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "philosopher": {
     "ability": "Once per game, at night, choose a good character: gain that ability. If this character is in play, they are drunk.",
@@ -707,12 +763,14 @@
     "otherNight": 2,
     "otherNightReminder": "If the Philosopher has not used their ability: the Philosopher either shows a 'no' head signal, or points to a good character on their sheet. If they chose a character: Swap the out-of-play character token with the Philosopher token and add the 'Is the Philosopher' reminder. If the character is in play, place the drunk marker by that player.",
     "reminders": [
-      "Drunk",
-      "Is the Philosopher"
+      "Drunk"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/philosopher.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": [
+      "Is the Philosopher"
+    ]
   },
   "pixie": {
     "ability": "You start knowing 1 in-play Townsfolk. If you were mad that you were this character, you gain their ability when they die.",
@@ -725,11 +783,12 @@
     "otherNightReminder": null,
     "reminders": [
       "Mad",
-      "Has ability"
+      "Has Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/pixie.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "poppygrower": {
     "ability": "Minions & Demons do not know each other. If you die, they learn who each other are that night.",
@@ -741,11 +800,12 @@
     "otherNight": 3,
     "otherNightReminder": "If the Poppy Grower has died, show the Minions/Demon who each other are.",
     "reminders": [
-      "Evil wakes"
+      "Evil Wakes"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/poppygrower.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "preacher": {
     "ability": "Each night, choose a player: a Minion, if chosen, learns this. All chosen Minions have no ability.",
@@ -757,11 +817,15 @@
     "otherNight": 6,
     "otherNightReminder": "The Preacher chooses a player. If a Minion is chosen, wake the Minion and show the 'This character selected you' card and then the Preacher token.",
     "reminders": [
-      "At a sermon"
+      "At a Sermon",
+      "At a Sermon",
+      "At a Sermon",
+      "At a Sermon"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/preacher.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "professor": {
     "ability": "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.",
@@ -774,11 +838,12 @@
     "otherNightReminder": "If the Professor has not used their ability: The Professor either shakes their head no, or points to a player. If that player is a Townsfolk, they are now alive.",
     "reminders": [
       "Alive",
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/professor.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "ravenkeeper": {
     "ability": "If you die at night, you are woken to choose a player: you learn their character.",
@@ -792,7 +857,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/ravenkeeper.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "sage": {
     "ability": "If the Demon kills you, you learn that it is 1 of 2 players.",
@@ -806,7 +872,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/sage.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "sailor": {
     "ability": "Each night, choose an alive player: either you or they are drunk until dusk. You can't die.",
@@ -822,7 +889,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/sailor.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "savant": {
     "ability": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false.",
@@ -836,7 +904,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/savant.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "seamstress": {
     "ability": "Once per game, at night, choose 2 players (not yourself): you learn if they are the same alignment.",
@@ -848,11 +917,12 @@
     "otherNight": 62,
     "otherNightReminder": "If the Seamstress has not yet used their ability: the Seamstress either shows a 'no' head signal, or points to two other players. If the Seamstress chose players , nod 'yes' or shake 'no' for whether they are of same alignment.",
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/seamstress.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "shugenja": {
     "ability": "You start knowing if your closest evil player is clockwise or anti-clockwise. If equidistant, this info is arbitrary.",
@@ -866,7 +936,9 @@
     "otherNightReminder": null,
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/shugenja.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "reminders": [],
+    "remindersGlobal": []
   },
   "slayer": {
     "ability": "Once per game, during the day, publicly choose a player: if they are the Demon, they die.",
@@ -878,11 +950,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/slayer.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "snakecharmer": {
     "ability": "Each night, choose an alive player: a chosen Demon swaps characters & alignments with you & is then poisoned.",
@@ -898,7 +971,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/snakecharmer.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "soldier": {
     "ability": "You are safe from the Demon.",
@@ -912,7 +986,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/soldier.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "steward": {
     "ability": "You start knowing 1 good player.",
@@ -925,11 +1000,13 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
+      "Knows",
       "Knows"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/steward.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "tealady": {
     "ability": "If both your alive neighbours are good, they can't die.",
@@ -941,11 +1018,13 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "Can not die"
+      "Cannot Die",
+      "Cannot Die"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/tealady.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "towncrier": {
     "ability": "Each night*, you learn if a Minion nominated today.",
@@ -957,12 +1036,13 @@
     "otherNight": 60,
     "otherNightReminder": "Nod 'yes' or shake head 'no' for whether a Minion nominated today. Place the 'Minion not nominated' marker (remove 'Minion nominated', if any).",
     "reminders": [
-      "Minions not nominated",
-      "Minion nominated"
+      "Minions Not Nominated",
+      "Minion Nominated"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/towncrier.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "undertaker": {
     "ability": "Each night*, you learn which character died by execution today.",
@@ -978,7 +1058,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/undertaker.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "virgin": {
     "ability": "The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately.",
@@ -990,11 +1071,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/virgin.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "washerwoman": {
     "ability": "You start knowing that 1 of 2 players is a particular Townsfolk.",
@@ -1011,7 +1093,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/washerwoman.png",
     "setup": false,
-    "team": "townsfolk"
+    "team": "townsfolk",
+    "remindersGlobal": []
   },
   "acrobat": {
     "ability": "Each night*, if either good living neighbour is drunk or poisoned, you die.",
@@ -1027,7 +1110,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/acrobat.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "barber": {
     "ability": "If you died today or tonight, the Demon may choose 2 players (not another Demon) to swap characters.",
@@ -1039,11 +1123,12 @@
     "otherNight": 42,
     "otherNightReminder": "If the Barber died today: Wake the Demon. Show the 'This character selected you' card, then Barber token. The Demon either shows a 'no' head signal, or points to 2 players. If they chose players: Swap the character tokens. Wake each player. Show 'You are', then their new character token.",
     "reminders": [
-      "Haircuts tonight"
+      "Haircuts Tonight"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/barber.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "butler": {
     "ability": "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too.",
@@ -1060,6 +1145,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/butler.png",
     "setup": false,
     "team": "outsider",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "cannibal",
@@ -1077,11 +1163,12 @@
     "otherNight": 48,
     "otherNightReminder": "If selected by the Huntsman, wake the Damsel, show 'You are' card and a not-in-play Townsfolk token.",
     "reminders": [
-      "Guess used"
+      "Guess Used"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/damsel.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "drunk": {
     "ability": "You do not know you are the Drunk. You think you are a Townsfolk character, but you are not.",
@@ -1110,11 +1197,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "Can not nominate"
+      "Cannot Nominate"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/golem.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "goon": {
     "ability": "Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment.",
@@ -1130,7 +1218,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/goon.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "heretic": {
     "ability": "Whoever wins, loses & whoever loses, wins, even if you are dead.",
@@ -1144,7 +1233,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/heretic.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "klutz": {
     "ability": "When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses.",
@@ -1158,7 +1248,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/klutz.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "lunatic": {
     "ability": "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night.",
@@ -1177,6 +1268,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/lunatic.png",
     "setup": false,
     "team": "outsider",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "mathematician",
@@ -1198,7 +1290,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/moonchild.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "mutant": {
     "ability": "If you are \u201cmad\u201d about being an Outsider, you might be executed.",
@@ -1212,7 +1305,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/mutant.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "plaguedoctor": {
     "ability": "If you die, the Storyteller gains a not-in-play Minion ability.",
@@ -1229,7 +1323,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/plaguedoctor.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "politician": {
     "ability": "If you were the player most responsible for your team losing, you change alignment & win, even if dead.",
@@ -1243,7 +1338,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/politician.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "puzzlemaster": {
     "ability": "1 player is drunk, even if you die. If you guess (once) who it is, learn the Demon player, but guess wrong & get false info.",
@@ -1256,11 +1352,12 @@
     "otherNightReminder": null,
     "reminders": [
       "Drunk",
-      "Guess used"
+      "Guess Used"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/puzzlemaster.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "recluse": {
     "ability": "You might register as evil & as a Minion or Demon, even if dead.",
@@ -1274,7 +1371,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/recluse.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "saint": {
     "ability": "If you die by execution, your team loses.",
@@ -1288,7 +1386,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/saint.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "snitch": {
     "ability": "Minions start knowing 3 not-in-play characters.",
@@ -1302,7 +1401,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/snitch.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "sweetheart": {
     "ability": "When you die, 1 player is drunk from now on.",
@@ -1318,7 +1418,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/sweetheart.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "tinker": {
     "ability": "You might die at any time.",
@@ -1334,7 +1435,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/tinker.png",
     "setup": false,
-    "team": "outsider"
+    "team": "outsider",
+    "remindersGlobal": []
   },
   "assassin": {
     "ability": "Once per game, at night*, choose a player: they die, even if for some reason they could not.",
@@ -1347,11 +1449,12 @@
     "otherNightReminder": "If the Assassin has not yet used their ability: The Assassin either shows the 'no' head signal, or points to a player. That player dies.",
     "reminders": [
       "Dead",
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/assassin.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "baron": {
     "ability": "There are extra Outsiders in play. [+2 Outsiders]",
@@ -1366,6 +1469,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/baron.png",
     "setup": true,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "heretic",
@@ -1390,6 +1494,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/boomdandy.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "plaguedoctor",
@@ -1412,6 +1517,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/cerenovus.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "goblin",
@@ -1429,11 +1535,12 @@
     "otherNight": 13,
     "otherNightReminder": "The Devil\u2019s Advocate points to a living player, different from the previous night. That player survives execution tomorrow.",
     "reminders": [
-      "Survives execution"
+      "Survives Execution"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/devilsadvocate.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "eviltwin": {
     "ability": "You & an opposing player know each other. If the good player is executed, evil wins. Good can't win if you both live.",
@@ -1450,6 +1557,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/eviltwin.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "plaguedoctor",
@@ -1472,6 +1580,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/fearmonger.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "plaguedoctor",
@@ -1494,6 +1603,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/goblin.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "plaguedoctor",
@@ -1511,12 +1621,13 @@
     "otherNight": 39,
     "otherNightReminder": "If an Outsider died today: The Godfather points to a player. That player dies.",
     "reminders": [
-      "Died today",
+      "Died Today",
       "Dead"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/godfather.png",
     "setup": true,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "heretic",
@@ -1540,7 +1651,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/harpy.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "marionette": {
     "ability": "You think you are a good character but you are not. The Demon knows who you are. [You neighbour the Demon]",
@@ -1601,7 +1713,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/mastermind.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "mezepheles": {
     "ability": "You start knowing a secret word. The 1st good player to say this word becomes evil that night.",
@@ -1613,12 +1726,13 @@
     "otherNight": 19,
     "otherNightReminder": "Wake the 1st good player that said the Mezepheles' secret word and show them the 'You are' card and the thumbs down evil signal.",
     "reminders": [
-      "Turns evil",
-      "No ability"
+      "Turns Evil",
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/mezepheles.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "organgrinder": {
     "ability": "All players keep their eyes closed when voting & the vote tally is secret. Votes for you only count if you vote.",
@@ -1630,11 +1744,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "About to die"
+      "About to Die"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/organgrinder.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "butler",
@@ -1667,6 +1782,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/pithag.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "heretic",
@@ -1696,7 +1812,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/poisoner.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "psychopath": {
     "ability": "Each day, before nominations, you may publicly choose a player: they die. If executed, you only die if you lose roshambo.",
@@ -1710,7 +1827,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/psychopath.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "scarletwoman": {
     "ability": "If there are 5 or more players alive & the Demon dies, you become the Demon. (Travellers don\u2019t count)",
@@ -1721,12 +1839,13 @@
     "name": "Scarlet Woman",
     "otherNight": 20,
     "otherNightReminder": "If the Scarlet Woman became the Demon today: Show the 'You are' card, then the demon token.",
-    "reminders": [
-      "Demon"
-    ],
+    "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/scarletwoman.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [
+      "Is the Scarlet Woman"
+    ],
     "jinxes": [
       {
         "id": "plaguedoctor",
@@ -1747,6 +1866,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/spy.png",
     "setup": false,
     "team": "minion",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "alchemist",
@@ -1785,6 +1905,8 @@
     "otherNightReminder": null,
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/vizier.png",
     "team": "minion",
+    "reminders": [],
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "investigator",
@@ -1867,7 +1989,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/witch.png",
     "setup": false,
-    "team": "minion"
+    "team": "minion",
+    "remindersGlobal": []
   },
   "alhadikhia": {
     "ability": "Each night*, choose 3 players (all players learn who): each silently chooses to live or die, but if all live, all die.",
@@ -1882,12 +2005,17 @@
       "1",
       "2",
       "3",
-      "Chose death",
-      "Chose life"
+      "Chose Death",
+      "Chose Death",
+      "Chose Death",
+      "Chose Life",
+      "Chose Life",
+      "Chose Life"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/alhadikhia.png",
     "setup": false,
     "team": "demon",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "scarletwoman",
@@ -1915,6 +2043,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/fanggu.png",
     "setup": true,
     "team": "demon",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "scarletwoman",
@@ -1936,7 +2065,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/imp.png",
     "setup": false,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "legion": {
     "ability": "Each night*, a player might die. Executions fail if only evil voted. You register as a Minion too. [Most players are Legion]",
@@ -1949,11 +2079,14 @@
     "otherNightReminder": "Choose a player, that player dies.",
     "reminders": [
       "Dead",
-      "About to die"
+      "Dead",
+      "Dead",
+      "About To Die"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/legion.png",
     "setup": true,
     "team": "demon",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "engineer",
@@ -1980,11 +2113,12 @@
       "Day 3",
       "Day 4",
       "Day 5",
-      "Good player executed"
+      "Good Executed"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/leviathan.png",
     "setup": false,
     "team": "demon",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "soldier",
@@ -2072,6 +2206,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/lleech.png",
     "setup": false,
     "team": "demon",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "mastermind",
@@ -2098,11 +2233,13 @@
     "otherNightReminder": "The No Dashii points to a player. That player dies.",
     "reminders": [
       "Dead",
+      "Poisoned",
       "Poisoned"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/nodashii.png",
     "setup": false,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "ojo": {
     "ability": "Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.",
@@ -2118,7 +2255,8 @@
       "Dead"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/ojo.png",
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "po": {
     "ability": "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight.",
@@ -2131,11 +2269,14 @@
     "otherNightReminder": "If the Po chose no-one the previous night: The Po points to three players. Otherwise: The Po either shows the 'no' head signal , or points to a player. Chosen players die",
     "reminders": [
       "Dead",
-      "3 attacks"
+      "Dead",
+      "Dead",
+      "3 Attacks"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/po.png",
     "setup": false,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "pukka": {
     "ability": "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy.",
@@ -2152,7 +2293,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/pukka.png",
     "setup": false,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "riot": {
     "ability": "Nominees die, but may nominate again immediately (on day 3, they must). After day 3, evil wins. [All Minions are Riot]",
@@ -2167,6 +2309,7 @@
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/riot.png",
     "setup": true,
     "team": "demon",
+    "remindersGlobal": [],
     "jinxes": [
       {
         "id": "engineer",
@@ -2289,11 +2432,13 @@
     "otherNightReminder": "One player that the Shabaloth chose the previous night might be resurrected. The Shabaloth points to two players. Those players die.",
     "reminders": [
       "Dead",
+      "Dead",
       "Alive"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/shabaloth.png",
     "setup": false,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "vigormortis": {
     "ability": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbour. [\u22121 Outsider]",
@@ -2306,12 +2451,17 @@
     "otherNightReminder": "The Vigormortis points to a player. That player dies. If a Minion, they keep their ability and one of their Townsfolk neighbours is poisoned.",
     "reminders": [
       "Dead",
-      "Has ability",
+      "Has Ability",
+      "Has Ability",
+      "Has Ability",
+      "Poisoned",
+      "Poisoned",
       "Poisoned"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/vigormortis.png",
     "setup": true,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "vortox": {
     "ability": "Each night*, choose a player: they die. Townsfolk abilities yield false info. Each day, if no-one is executed, evil wins.",
@@ -2327,7 +2477,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/vortox.png",
     "setup": false,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "zombuul": {
     "ability": "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead.",
@@ -2339,12 +2490,13 @@
     "otherNight": 26,
     "otherNightReminder": "If no-one died during the day: The Zombuul points to a player. That player dies.",
     "reminders": [
-      "Died today",
+      "Died Today",
       "Dead"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/zombuul.png",
     "setup": false,
-    "team": "demon"
+    "team": "demon",
+    "remindersGlobal": []
   },
   "angel": {
     "ability": "Something bad might happen to whoever is most responsible for the death of a new player.",
@@ -2356,12 +2508,13 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "Protect",
+      "Protected",
       "Something Bad"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/angel.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "bootlegger": {
     "ability": "This script has homebrew characters or rules.",
@@ -2375,7 +2528,9 @@
     "otherNightReminder": null,
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/bootlegger.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "reminders": [],
+    "remindersGlobal": []
   },
   "buddhist": {
     "ability": "For the first 2 minutes of each day, veteran players may not talk.",
@@ -2389,7 +2544,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/buddhist.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "djinn": {
     "ability": "Use the Djinn's special rule. All players know what it is.",
@@ -2403,7 +2559,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/djinn.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "doomsayer": {
     "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies.",
@@ -2417,7 +2574,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/doomsayer.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "duchess": {
     "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info.",
@@ -2430,11 +2588,13 @@
     "otherNightReminder": "Wake each player marked \u201cVisitor\u201d or \u201cFalse Info\u201d one at a time. Show them the Duchess token, then fingers (1, 2, 3) equaling the number of evil players marked \u201cVisitor\u201d or, if you are waking the player marked \u201cFalse Info,\u201d show them any number of fingers except the number of evil players marked \u201cVisitor.\u201d",
     "reminders": [
       "Visitor",
+      "Visitor",
       "False Info"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/duchess.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "fibbin": {
     "ability": "Once per game, 1 good player might get false information.",
@@ -2450,7 +2610,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/fibbin.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "fiddler": {
     "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win.",
@@ -2464,7 +2625,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/fiddler.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "hellslibrarian": {
     "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence.",
@@ -2480,7 +2642,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/hellslibrarian.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "revolutionary": {
     "ability": "2 neighboring players are known to be the same alignment. Once per game, one of them registers falsely.",
@@ -2496,7 +2659,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/revolutionary.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "sentinel": {
     "ability": "There might be 1 extra or 1 fewer Outsider in play.",
@@ -2510,7 +2674,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/sentinel.png",
     "setup": true,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "spiritofivory": {
     "ability": "There can't be more than 1 extra evil player.",
@@ -2522,11 +2687,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "No extra evil"
+      "No Extra Evil"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/spiritofivory.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "stormcatcher": {
     "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is.",
@@ -2542,7 +2708,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/stormcatcher.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "toymaker": {
     "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info.",
@@ -2554,11 +2721,12 @@
     "otherNight": null,
     "otherNightReminder": "If it is a night when a Demon attack could end the game, and the Demon is marked \u201cFinal night: No Attack,\u201d then the Demon does not act tonight. (Do not wake them.)",
     "reminders": [
-      "Final Night: No Attack"
+      "Final Night"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/toymaker.png",
     "setup": false,
-    "team": "fabled"
+    "team": "fabled",
+    "remindersGlobal": []
   },
   "apprentice": {
     "ability": "On your 1st night, you gain a Townsfolk ability (if good), or a Minion ability (if evil).",
@@ -2569,12 +2737,13 @@
     "name": "Apprentice",
     "otherNight": null,
     "otherNightReminder": null,
-    "reminders": [
-      "Is the Apprentice"
-    ],
+    "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/apprentice.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": [
+      "Is the Apprentice"
+    ]
   },
   "barista": {
     "ability": "Each night, until dusk, 1) a player becomes sober, healthy and gets true info, or 2) their ability works twice. They learn which.",
@@ -2591,7 +2760,8 @@
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/barista.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "beggar": {
     "ability": "You must use a vote token to vote. Dead players may choose to give you theirs. If so, you learn their alignment. You are sober & healthy.",
@@ -2605,7 +2775,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/beggar.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "bishop": {
     "ability": "Only the Storyteller can nominate. At least 1 opposite player must be nominated each day.",
@@ -2617,12 +2788,13 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "Nominate good",
-      "Nominate evil"
+      "Nominate Good",
+      "Nominate Evil"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/bishop.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "bonecollector": {
     "ability": "Once per game, at night, choose a dead player: they regain their ability until dusk.",
@@ -2634,12 +2806,13 @@
     "otherNight": null,
     "otherNightReminder": "The Bone Collector either shakes their head no or points at any dead player. If they pointed at any dead player, put the Bone Collector's 'Has Ability' reminder by the chosen player's character token. (They may need to be woken tonight to use it.)",
     "reminders": [
-      "No ability",
-      "Has ability"
+      "No Ability",
+      "Has Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/bonecollector.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "bureaucrat": {
     "ability": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.",
@@ -2651,11 +2824,12 @@
     "otherNight": null,
     "otherNightReminder": "The Bureaucrat points to a player. Put the Bureaucrat's '3 votes' reminder by the chosen player's character token.",
     "reminders": [
-      "3 votes"
+      "3 Votes"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/bureaucrat.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "butcher": {
     "ability": "Each day, after the 1st execution, you may nominate again.",
@@ -2669,7 +2843,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/butcher.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "deviant": {
     "ability": "If you were funny today, you cannot die by exile.",
@@ -2683,7 +2858,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/deviant.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "gangster": {
     "ability": "Once per day, you may choose to kill an alive neighbour, if your other alive neighbour agrees.",
@@ -2697,7 +2873,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/gangster.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "gunslinger": {
     "ability": "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.",
@@ -2711,7 +2888,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/gunslinger.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "harlot": {
     "ability": "Each night*, choose a living player: if they agree, you learn their character, but you both might die.",
@@ -2723,11 +2901,13 @@
     "otherNight": null,
     "otherNightReminder": "The Harlot points at any player. Then, put the Harlot to sleep. Wake the chosen player, show them the 'This character selected you' token, then the Harlot token. That player either nods their head yes or shakes their head no. If they nodded their head yes, wake the Harlot and show them the chosen player's character token. Then, you may decide that both players die.",
     "reminders": [
+      "Dead",
       "Dead"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/harlot.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "judge": {
     "ability": "Once per game, if another player nominated, you may choose to force the current execution to pass or fail.",
@@ -2739,11 +2919,12 @@
     "otherNight": null,
     "otherNightReminder": null,
     "reminders": [
-      "No ability"
+      "No Ability"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/judge.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "matron": {
     "ability": "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private.",
@@ -2757,7 +2938,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/matron.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "scapegoat": {
     "ability": "If a player of your alignment is executed, you might be executed instead.",
@@ -2771,7 +2953,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/scapegoat.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "thief": {
     "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow.",
@@ -2783,11 +2966,12 @@
     "otherNight": null,
     "otherNightReminder": "The Thief points to a player. Put the Thief's 'Negative vote' reminder by the chosen player's character token.",
     "reminders": [
-      "Negative vote"
+      "Negative Vote"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/thief.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   },
   "voudon": {
     "ability": "Only you and the dead can vote. They don't need a vote token to do so. A 50% majority is not required.",
@@ -2801,6 +2985,7 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/voudon.png",
     "setup": false,
-    "team": "traveler"
+    "team": "traveler",
+    "remindersGlobal": []
   }
 }
