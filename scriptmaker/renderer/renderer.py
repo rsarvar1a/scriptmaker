@@ -139,7 +139,9 @@ class Renderer ():
             "meta": script.meta,
             "options": script.options
         }
-        output_path = Path(output_folder, f"{utilities.sanitize.name(script.meta.name)}-nights.pdf")
+        
+        nights_style = 'nights-simple' if script.options.simple_nightorder else 'nights-full'
+        output_path = Path(output_folder, f"{utilities.sanitize.name(script.meta.name)}-{nights_style}.pdf")
         
         return self.__render_jinja(
             workspace = workspace,

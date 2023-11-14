@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scriptmaker"
-version = "1.1.5"
+version = "1.1.7"
 description = "A Python library for producing custom scripts in Blood On The Clocktower."
 authors = ["Rohan Sarvaria <rsarvaria@uwaterloo.ca>"]
 license = "MIT"
@@ -13,6 +13,7 @@ pillow = "^10.1.0"
 jinja2 = "^3.1.2"
 weasyprint = "^60.1"
 pdf2image = "^1.16.3"
+drawsvg = {extras = ["all"], version = "^2.3.0"}
 
 [tool.poetry.group.dev.dependencies]
 pyright = "^1.1.335"

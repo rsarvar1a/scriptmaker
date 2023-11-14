@@ -29,6 +29,16 @@ class Icon ():
         return base64.b64encode(buffer.getvalue())
     
     
+    def crop (self):
+        """ 
+        Returns a new icon cropped to content.
+        """
+        buffer = io.BytesIO()
+        cropped = self.icon.crop(self.icon.getbbox())
+        cropped.save(buffer, format = "png")
+        return Icon(self.id, buffer.getvalue())
+    
+    
     def path (self, dirname):
         """ 
         Hints the save path with the given dirname.

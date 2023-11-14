@@ -7,7 +7,7 @@ import sys
 import tempfile
 import urllib.request
    
-from scriptmaker import Datastore, Script, PDFTools, Renderer
+from scriptmaker import Datastore, PDFTools, Renderer, Script, Tokenizer
 
 
 def main ():
@@ -25,6 +25,7 @@ def main ():
     output.add_argument('--export', action = 'store_true')
     output.add_argument('--pngify', action = 'store_true')
     output.add_argument('--save-to', default = None)
+    output.add_argument('--tokens', action = 'store_true')
     
     options = parser.add_argument_group('script options')
     options.add_argument('--simple-nightorder', action = 'store_true')
@@ -61,8 +62,13 @@ def main ():
     if args.export:
         datastore.export()
     output_files = Renderer().render(script)
-    result = { "pdfs": { doc: str(path.resolve()) for doc, path in output_files.items() } }
     
+    # Render tokens if wanted.
+    if args.tokens:
+        output_files['tokens'] = Tokenizer().render(script, render_everything = True)
+
+    # Collect results.
+    result = { "pdfs": { doc: str(path.resolve()) for doc, path in output_files.items() } }
     
     # Postprocess the PDFs if desired.
     for _, path in output_files.items():

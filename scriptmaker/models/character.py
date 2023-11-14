@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 
 import scriptmaker.constants as constants
 import scriptmaker.utilities as utilities
@@ -20,6 +21,7 @@ class Character ():
         self, *, 
         id, name, team, ability, image, # Mandatory properties
         firstNight = None, firstNightReminder = "", otherNight = None, otherNightReminder = "", # Populates the nightorder
+        reminders = [], remindersGlobal = [], setup = False, # Useful properties for token building
         jinxes = [] # A list of jinxes that originate from this character
     ):
         """
@@ -30,7 +32,9 @@ class Character ():
         
         try:
             self.__set_mandatory_properties(id, name, team, ability, image)
+            self.__check_setup(setup)
             self.__set_nightinfo(firstNight, firstNightReminder, otherNight, otherNightReminder)
+            self.__set_reminders(reminders, remindersGlobal)
             self.__set_jinxes(jinxes)
         except utilities.ScriptmakerValueError as prev:
             raise CharacterError("failed to create character") from prev
@@ -62,6 +66,19 @@ class Character ():
             return cls.from_dict(character_info)
         except json.JSONDecodeError as prev:
             raise CharacterError("failed to create character") from prev
+    
+    
+    def __check_setup (self, setup):
+        """ 
+        Sets whether or not this character affects setup, and checks that the ability agrees.
+        """
+        self.setup = setup
+        
+        ability_hint = re.search("\[.*\]", self.ability)
+        if not self.setup and ability_hint:
+            self.__warnings.append("no setup ability, but ability hints to one")
+        elif self.setup and not ability_hint:
+            self.__warnings.append("setup ability, but ability contains no setup condition")
         
     
     def __set_mandatory_properties(self, id, name, team, ability, image):
@@ -132,6 +149,17 @@ class Character ():
             "first": __create_nightinfo_for("first", firstNight, firstNightReminder),
             "other": __create_nightinfo_for("other", otherNight, otherNightReminder)
         }
+        
+    
+    def __set_reminders (self, reminders, remindersGlobal):
+        """ 
+        Sets reminders, ignoring anything that is not a string.
+        """
+        for reminder in reminders + remindersGlobal:
+            if not isinstance(reminder, str):
+                self.__warnings.append(f"reminder {reminder} is not a string; ignoring")
+        self.reminders = reminders
+        self.remindersGlobal = remindersGlobal
     
     
     def __set_jinxes (self, jinxes):

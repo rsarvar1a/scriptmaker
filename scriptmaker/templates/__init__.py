@@ -1,6 +1,8 @@
 
 import pkgutil
 
+from . import tokens 
+
 
 COMMON = [
     "CormorantGaramond-Bold.ttf",

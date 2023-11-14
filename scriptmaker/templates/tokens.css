@@ -1,0 +1,74 @@
+
+.cols-auto
+{
+    display: flexbox;
+    flex-direction: column;
+    column-count: auto;
+    gap: 10px;
+    column-gap: 10px;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.token-box
+{
+    border-radius: 100%;
+    border: 2.5mm;
+    border-color: linear-gradient(#00000000, #ffffffff);
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.reminder
+{
+    border-radius: 100%;
+    background-color: #37133c;
+    background-clip: border-box;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.icon-box
+{
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    height: 50%; width: 50%;
+    z-index: 30;
+}
+
+.icon
+{
+    height: 100%; width: 100%;
+    object-fit: scale-down;
+}
+
+.token
+{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    object-fit: scale-down;
+    z-index: 10;
+}
+
+.decoration
+{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    object-fit: scale-down;
+    z-index: 20;
+}
+
+.name 
+{
+    position: absolute;
+    top: 0%; left: 0%;
+    height: 100%; width: 100%;
+    object-fit: scale-down;
+    z-index: 40;
+}
