@@ -27,12 +27,17 @@ class Tokenizer ():
         Renders a script's (or it's datastore's) entire token set into a physically-printable layout.
         """
         # What are we rendering, and to where?
-        folder = Path(output_folder) if output_folder else Path(script.data.workspace, "pdf")
+        folder = Path(output_folder, 'pdf') if output_folder else Path(script.data.workspace, "pdf")
+        utilities.filesystem.mkdirp(folder)
+                
+        tmpdir = Path(folder.parent, 'build')
+        utilities.filesystem.mkdirp(tmpdir)
+        
         output_path = Path(folder, f"{utilities.sanitize.name(script.meta.name)}-tokens.pdf")
-        character_set = script.data.characters.values() if render_everything else script.characters
-        tmpdir = Path(script.data.workspace, 'build')
         
         # Build a parameter set for each character we want to print.
+        character_set = script.data.characters.values() if render_everything else script.characters
+        
         character_tokens = []
         reminder_tokens = []
         

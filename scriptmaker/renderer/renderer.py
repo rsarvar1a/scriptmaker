@@ -30,7 +30,10 @@ class Renderer ():
         """
         script.finalize()
         
-        folder = output_folder if output_folder else Path(script.data.workspace, "pdf")
+        folder = Path(output_folder, 'pdf') if output_folder else Path(script.data.workspace, "pdf")
+        utilities.filesystem.mkdirp(folder.parent)
+        utilities.filesystem.mkdirp(folder)
+        
         script_path = self.__render_script(script, output_folder = folder)
         nightorder_path = self.__render_nightorder(script, output_folder = folder)
         
@@ -92,7 +95,7 @@ class Renderer ():
                 page_groups.append({ "teams": [next_team], "height": current_height })
 
         # Decide where we'll build icons.
-        workspace = script.data.workspace
+        workspace = output_folder
 
         # Pass configuration forwards to jinja/weasyprint stack.  
         params = {
@@ -127,7 +130,7 @@ class Renderer ():
         """
         Renders the nightorder PDF, returning the file path.
         """
-        workspace = script.data.workspace
+        workspace = output_folder
         
         # Pass configuration forwards to jinja/weasyprint stack.  
         params = {
@@ -158,7 +161,7 @@ class Renderer ():
         """
         Renders a jinja template (in the templates directory) and converts to PDF.
         """
-        tmpdir = Path(workspace, 'build')
+        tmpdir = Path(workspace.parent, 'build')
         utilities.filesystem.mkdirp(tmpdir)
         
         # Load the jinja templates, CSS and fonts into our tmpdir, so we can pretend it's an environment.
