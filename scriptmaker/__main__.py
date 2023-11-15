@@ -2,84 +2,236 @@
 import argparse 
 import io
 import json
-import pathlib
 import sys
-import tempfile
+import traceback
 import urllib.request
    
-from scriptmaker import Datastore, PDFTools, Renderer, Script, Tokenizer
+from pathlib import Path 
+   
+from scriptmaker import Datastore, PDFTools, Renderer, Script, ScriptmakerError, Tokenizer, utilities
 
 
 def main ():
-    # Figure out what our user wants to do. We accept either a URL to a script (that we fetch) or a JSON file.
+
+    # Delegate out to the respective CLI.
+
     parser = argparse.ArgumentParser()
-    
-    inputs = parser.add_argument_group('script inputs')
-    source = inputs.add_mutually_exclusive_group(required = True) 
-    source.add_argument('--url')
+    subparsers = parser.add_subparsers()
+    parser.set_defaults(func = fourohfour)
+
+    # scriptmaker make-pdf 
+    # (--script SCRIPT | --url URL | --recurse DIRECTORY) 
+    # [--output-folder OUTPUT]
+    # [--nights]
+    # [--simple-nightorder]
+    # [--i18n-fallback]
+    # [--postprocess]
+
+    makepdfs = subparsers.add_parser('make-pdf')
+    makepdfs.add_argument('--output-folder')
+    inputs = makepdfs.add_argument_group('inputs')
+    source = inputs.add_mutually_exclusive_group(required = True)
+    source.add_argument('--recurse')
     source.add_argument('--script')
-    inputs.add_argument('--nights', default = None)
-    
-    output = parser.add_argument_group('output options')
-    output.add_argument('--compress', action = 'store_true')
-    output.add_argument('--export', action = 'store_true')
-    output.add_argument('--pngify', action = 'store_true')
-    output.add_argument('--save-to', default = None)
-    output.add_argument('--tokens', action = 'store_true')
-    
-    options = parser.add_argument_group('script options')
-    options.add_argument('--simple-nightorder', action = 'store_true')
+    source.add_argument('--url')
+    inputs.add_argument('--nights')
+    styles = makepdfs.add_argument_group('styles')
+    styles.add_argument('--full', action = 'store_true')
+    styles.add_argument('--simple', action = 'store_true')
+    options = makepdfs.add_argument_group('options')
     options.add_argument('--i18n-fallback', action = 'store_true')
+    options.add_argument('--postprocess', action = 'store_true')
+    makepdfs.set_defaults(func = cmd_make_pdf)
+    
+    # scriptmaker tokenize
+    # (directory DIRECTORY)
+    # [--output-folder OUTPUT]
+    # [--official-only | --exclude-official]
+    # [--character-size SIZE]
+    # [--reminder-size SIZE]
+    # [--extra-copies FILE]
+    # [--postprocess]
+
+    tokenize = subparsers.add_parser('tokenize')
+    tokenize.add_argument('directory')
+    tokenize.add_argument('--output-folder')
+    official = tokenize.add_mutually_exclusive_group(required = False)
+    official.add_argument('--official-only', action = 'store_true')
+    official.add_argument('--exclude-official', action = 'store_true')
+    options = tokenize.add_argument_group('options')
+    options.add_argument('--character-size')
+    options.add_argument('--reminder-size')
+    options.add_argument('--extra-copies')
+    options.add_argument('--postprocess', action = 'store_true')
+    tokenize.set_defaults(func = cmd_tokenize)
+
+    # Fire
     
     args = parser.parse_args()
+    args.func(args)
+
+
+def fourohfour (args):
+    print('usage: scriptmaker (make-pdf | tokenize)')
+    exit(1)
+
+
+def cmd_make_pdf (args):
     
-    # Create a datastore.
-    datastore = Datastore(args.save_to)
+    if not args.output_folder:
+        args.output_folder = Path(args.directory)
+    utilities.filesystem.mkdirp(args.output_folder)
+    datastore = Datastore(args.output_folder)
     datastore.add_official_characters()
     
-    # Load our script.
-    if args.script:
-        with open(args.script) as json_file:
-            script_json = json.load(json_file)
-    else:
-        buffer = io.BytesIO()
-        urllib.request.urlretrieve(args.url, buffer)
-        script_json = json.load(buffer)
-    
-    # Load our nights if given.
-    if args.nights:
-        with open(args.nights) as json_file:
-            nights_json = json.load(json_file)
-    else:
-        nights_json = None
-    
-    # Apply options.
-    script = datastore.load_script(script_json, nights_json = nights_json)
-    script.options.simple_nightorder = args.simple_nightorder
-    script.options.i18n_fallback = args.i18n_fallback
-    
-    # Render out our PDFs (currently if the datastore was temporary then I'm not sure how these could possibly be valid).
-    if args.export:
-        datastore.export()
-    output_files = Renderer().render(script)
-    
-    # Render tokens if wanted.
-    if args.tokens:
-        output_files['tokens'] = Tokenizer().render(script, render_everything = True)
+    if args.recurse:        
+        for json_path in args.recurse.rglob("*.json"):
+            try:
+                with open(json_path) as json_file:
+                    script_json = json.load(json_file)
 
-    # Collect results.
-    result = { "pdfs": { doc: str(path.resolve()) for doc, path in output_files.items() } }
+                if not isinstance (script_json, list) or len(script_json) == 0:
+                    continue
+
+                output_folder = json_path.parent
+                script : Script = datastore.load_script(script_json)
+                
+                if args.i18n_fallback:
+                    script.options.i18n_fallback = True
+
+                results = set()
+
+                if args.full:
+                    script.options.simple_nightorder = False
+                    paths = Renderer().render(script, output_folder = output_folder)
+                    results.update(paths.values())
+                    
+                if args.simple:
+                    script.options.simple_nightorder = True
+                    paths = Renderer().render(script, output_folder = output_folder)
+                    results.update(paths.values())
+
+                if args.postprocess:
+                    for path in results:
+                        PDFTools.compress(path)
+                        PDFTools.pngify(path)
+                        
+            except (ScriptmakerError, TypeError, Exception):
+                print(traceback.format_exc())
+                continue
+        
+            for path in results:
+                print(str(path))
     
-    # Postprocess the PDFs if desired.
-    for _, path in output_files.items():
-        p = path.resolve()
-        if args.compress: 
-            PDFTools.compress(p)
-        if args.pngify: 
-            result['pngs'] = list(map(lambda p: str(p), PDFTools.pngify(p)))
+    else:
+        try:
+            if args.script:
+                with open(args.script) as json_file:
+                    script_json = json.load(json_file)
+            elif args.url:
+                buffer = io.BytesIO()
+                urllib.request.urlretrieve(args.url, buffer)
+                script_json = json.load(buffer)
+            
+            if args.nights:
+                with open(args.nights) as nights_file:
+                    nights_json = json.load(nights_file)
+            else:
+                nights_json = None
+            
+            output_folder = args.output_folder if args.output_folder else datastore.workspace
+            script : Script = datastore.load_script(script_json, nights_json = nights_json)
+            
+            if args.i18n_fallback:
+                script.options.i18n_fallback = True
+
+            results = set()
+
+            if args.full:
+                script.options.simple_nightorder = False
+                paths = Renderer().render(script, output_folder = output_folder)
+                results.update(paths.values())
+                
+            if args.simple:
+                script.options.simple_nightorder = True
+                paths = Renderer().render(script, output_folder = output_folder)
+                results.update(paths.values())
+
+            if args.postprocess:
+                for path in results:
+                    PDFTools.compress(path)
+                    PDFTools.pngify(path)
+            
+        except (ScriptmakerError, TypeError, Exception):
+            print(traceback.format_exc())
     
-    # Success!
-    print(json.dumps(result, indent=2))
+        for path in results:
+            print(str(path))
+    
+    return 0
+
+
+def cmd_tokenize (args):
+    
+    script_count = 0
+    directory = Path(args.directory).resolve()
+    
+    if not args.output_folder:
+        args.output_folder = Path(directory)
+    utilities.filesystem.mkdirp(args.output_folder)
+    datastore = Datastore(args.output_folder)
+    
+    if not args.exclude_official:
+        datastore.add_official_characters()
+    
+    if args.extra_copies:
+        with open(args.extra_copies) as f:
+            copies_dict = json.load(f)
+            character_copies = { utilities.sanitize.id(id): v for id, v in copies_dict.items() }
+    else:
+        character_copies = {}
+    
+    if not args.official_only:
+        for json_path in directory.rglob('*.json'):
+            with open(json_path) as json_file:
+                script_json = json.load(json_file)
+            if not isinstance(script_json, list) or len(script_json) == 0: 
+                continue 
+            
+            try:
+                entries = [ entry for entry in script_json if isinstance(entry, dict) ]
+                ids = [ entry['id'] for entry in entries if 'id' in entry ]
+                if '_meta' not in ids:
+                    continue 
+                script : Script = datastore.load_script(script_json)
+                script_count += 1
+            except (ScriptmakerError, TypeError):
+                print(traceback.format_exc())
+                continue
+    
+    else:
+        script_json = [ {"id": "_meta", "name": "all"}, "atheist" ]
+        script : Script = datastore.load_script(script_json)
+        script_count = 1
+    
+    if script_count > 0:
+        params = {
+            'name': script.meta.name,
+            'characters': script.characters,
+            'character_copies': character_copies,
+            "render_everything": True 
+        }
+        if args.character_size: params['character_token_size'] = args.character_size
+        if args.reminder_size: params['reminder_token_size'] = args.reminder_size
+        
+        datastore.characters = dict(sorted(datastore.characters.items(), key=lambda item: item[0]))
+        output_file = Tokenizer().render(datastore, ** params)
+        
+        if args.postprocess:
+            PDFTools.compress(output_file)
+            PDFTools.pngify(output_file)
+
+    print(str(output_file))
     return 0
 
 

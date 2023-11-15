@@ -6,6 +6,7 @@ import weasyprint
 from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
 
+import scriptmaker.data as data
 import scriptmaker.models as models
 import scriptmaker.templates as templates 
 import scriptmaker.utilities as utilities
@@ -17,7 +18,10 @@ class Tokenizer ():
     """
     
     def render (
-        self, script : models.Script, *,
+        self, datastore : data.Datastore, *,
+        name, 
+        characters = [],
+        character_copies = {},
         output_folder = None,
         render_everything = False,
         character_token_size = 45, 
@@ -27,16 +31,16 @@ class Tokenizer ():
         Renders a script's (or it's datastore's) entire token set into a physically-printable layout.
         """
         # What are we rendering, and to where?
-        folder = Path(output_folder, 'pdf') if output_folder else Path(script.data.workspace, "pdf")
+        folder = Path(output_folder, 'pdf') if output_folder else Path(datastore.workspace, "pdf")
         utilities.filesystem.mkdirp(folder)
                 
         tmpdir = Path(folder.parent, 'build')
         utilities.filesystem.mkdirp(tmpdir)
         
-        output_path = Path(folder, f"{utilities.sanitize.name(script.meta.name)}-tokens.pdf")
+        output_path = Path(folder, f"{utilities.sanitize.name(name)}-tokens.pdf")
         
         # Build a parameter set for each character we want to print.
-        character_set = script.data.characters.values() if render_everything else script.characters
+        character_set = datastore.characters.values() if render_everything else [datastore.characters[id] for id in characters]
         
         character_tokens = []
         reminder_tokens = []
@@ -85,14 +89,17 @@ class Tokenizer ():
             character_entry = CharacterToken(
                 id = character.id,
                 name = character.name, ability = character.ability,
-                icon = f"file://{script.data.icons[character.id].path(Path(tmpdir, 'icons').resolve())}",
+                icon = f"file://{datastore.icons[character.id].path(Path(tmpdir, 'icons').resolve())}",
                 setup = f"file://{Path(tmpdir,'leaf-setup.png').resolve()}" if character.setup else None,
                 first = f"file://{Path(tmpdir,'leaf-first.png').resolve()}" if character.nightinfo['first']['acts'] else None,
                 other = f"file://{Path(tmpdir,'leaf-other.png').resolve()}" if character.nightinfo['other']['acts'] else None,
                 reminders = f"file://{Path(tmpdir, f'leaf-reminder-{min(reminder_count, 7)}.png').resolve()}" if reminder_count > 0 else None,
                 out = text_svg_folder
             )
-            character_tokens.append(character_entry)
+            if character.id in character_copies:
+                character_tokens.extend([character_entry] * character_copies[character.id])
+            else:
+                character_tokens.append(character_entry)
             for i, reminder_text in enumerate(character.reminders + character.remindersGlobal):
                 reminder_entry = ReminderToken(
                     id = f"{character.id}-{i}",
@@ -126,7 +133,7 @@ class Tokenizer ():
         
         utilities.filesystem.mkdirp(Path(tmpdir, 'icons'))
         for character in character_set:
-            cropped = script.data.icons[character.id].crop()
+            cropped = datastore.icons[character.id].crop()
             cropped.save(Path(tmpdir, 'icons'))
         
         # Render everything and save.
