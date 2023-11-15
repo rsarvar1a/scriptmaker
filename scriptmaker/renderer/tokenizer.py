@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import drawsvg
+import re
 import weasyprint
 
 from jinja2 import Environment, FileSystemLoader
@@ -50,6 +51,7 @@ class Tokenizer ():
             def __init__ (self, *, id, name, ability, icon, setup, first, other, reminders, out):
                 self.id = id; self.name = name.upper(); self.ability = ability; self.icon = icon
                 self.setup = setup; self.first = first; self.other = other; self.reminders = reminders
+                self.ability = re.sub(r'(?P<setup>\[.*\])', '<b>\g<setup></b>', self.ability)
                 d = drawsvg.Drawing(500, 500)
                 p = drawsvg.Path(fill='transparent')
                 p.M(75, 250)

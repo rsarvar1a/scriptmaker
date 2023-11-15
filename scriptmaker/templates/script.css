@@ -1,6 +1,10 @@
 
 /* CHARACTERS */
 
+b 
+{
+    font-family: abilitytextbold;
+}
 .character 
 {
     break-inside: avoid-column;

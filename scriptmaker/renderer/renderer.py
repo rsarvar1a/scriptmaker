@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import pkgutil
+import re
 import tempfile
 import weasyprint
 
@@ -97,10 +98,16 @@ class Renderer ():
         # Decide where we'll build icons.
         workspace = output_folder
 
+        # Bold the ability text.
+        abilities = {}
+        for character in script.characters:
+            abilities[character.id] = re.sub(r'(?P<setup>\[.*\])', '<b>\g<setup></b>', character.ability)
+
         # Pass configuration forwards to jinja/weasyprint stack.  
         params = {
             "pages": [ group['teams'] for group in page_groups ],
             "characters": { character.id: character for character in script.characters },
+            "abilities": abilities,
             "spacers": { team: len(script.by_team[team]) == 1 for team in script.by_team },
             "teams": script.by_team,
             "icons": { id: f"file://{icon.path(Path(workspace.parent, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
@@ -147,7 +154,7 @@ class Renderer ():
         output_path = Path(output_folder, f"{utilities.sanitize.name(script.meta.name)}-{nights_style}.pdf")
         
         return self.__render_jinja(
-            workspace = workspace.parent,
+            workspace = workspace,
             template = "nights.jinja",
             style = "nights.css",
             icons = script.data.icons.values(),

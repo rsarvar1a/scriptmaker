@@ -149,7 +149,7 @@ class Script ():
                 return self.nights[night]
             
         for nightmeta in constants.NIGHT_META:
-            if nightmeta not in self.characters:
+            if nightmeta not in [ character.id for character in self.characters ]:
                 self.characters.append(self.data.get_character(nightmeta))
 
         self.nightorder = {
