@@ -14,7 +14,7 @@
                     <img src="{{character.name}}" class="name">
                     <img src="{{token_background}}" class="token">
                     <div class="icon-box"><img src="{{character.icon}}" class="icon"></div>
-                    <div class="ability">{{ character.ability }}</div>
+                    <div class="ability{{character.fontsize}}">{{ character.ability }}</div>
                     {%- if character.setup %}<img src="{{character.setup}}" class="decoration">{%- endif %}
                     {%- if character.first %}<img src="{{character.first}}" class="decoration">{%- endif %}
                     {%- if character.other %}<img src="{{character.other}}" class="decoration">{%- endif %}

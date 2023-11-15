@@ -85,6 +85,28 @@
     font-family: abilitytext;
     font-size: 6pt;
     line-height: 6pt;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+
+    color: black;
+    text-align: center;
+    white-space: normal;
+    text-shadow: 0px 0px 10px black;
+
+    position: absolute;
+    top: 32%; left: 50%; transform: translate(-50%, -50%);
+    width: 74%;
+
+    z-index: 40;
+}
+
+.ability-large
+{
+    font-family: abilitytext;
+    font-size: 5pt;
+    line-height: 5pt;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
 
     color: black;
     text-align: center;

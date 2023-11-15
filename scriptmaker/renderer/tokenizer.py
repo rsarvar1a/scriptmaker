@@ -52,6 +52,7 @@ class Tokenizer ():
                 self.id = id; self.name = name.upper(); self.ability = ability; self.icon = icon
                 self.setup = setup; self.first = first; self.other = other; self.reminders = reminders
                 self.ability = re.sub(r'(?P<setup>\[.*\])', '<b>\g<setup></b>', self.ability)
+                self.fontsize = "-large" if len(self.ability) >= 125 else ""
                 d = drawsvg.Drawing(500, 500)
                 p = drawsvg.Path(fill='transparent')
                 p.M(75, 250)
