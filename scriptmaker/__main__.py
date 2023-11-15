@@ -78,13 +78,13 @@ def fourohfour (args):
 
 def cmd_make_pdf (args):
     
-    if not args.output_folder:
-        args.output_folder = Path(args.directory)
-    utilities.filesystem.mkdirp(args.output_folder)
-    datastore = Datastore(args.output_folder)
-    datastore.add_official_characters()
-    
-    if args.recurse:        
+    if args.recurse:     
+        if not args.output_folder:
+            args.output_folder = Path(args.recurse)
+        utilities.filesystem.mkdirp(args.output_folder)
+        datastore = Datastore(args.output_folder)
+        datastore.add_official_characters()
+           
         for json_path in args.recurse.rglob("*.json"):
             try:
                 with open(json_path) as json_file:
@@ -123,15 +123,17 @@ def cmd_make_pdf (args):
             for path in results:
                 print(str(path))
     
-    else:
+    else:    
         try:
             if args.script:
                 with open(args.script) as json_file:
                     script_json = json.load(json_file)
+                    path = Path(args.script).parent
             elif args.url:
                 buffer = io.BytesIO()
                 urllib.request.urlretrieve(args.url, buffer)
                 script_json = json.load(buffer)
+                path = '.'
             
             if args.nights:
                 with open(args.nights) as nights_file:
@@ -139,7 +141,13 @@ def cmd_make_pdf (args):
             else:
                 nights_json = None
             
-            output_folder = args.output_folder if args.output_folder else datastore.workspace
+            if not args.output_folder:
+                args.output_folder = Path(path)
+            utilities.filesystem.mkdirp(args.output_folder)
+            datastore = Datastore(args.output_folder)
+            datastore.add_official_characters()
+            
+            output_folder = datastore.workspace
             script : Script = datastore.load_script(script_json, nights_json = nights_json)
             
             if args.i18n_fallback:

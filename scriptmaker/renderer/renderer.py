@@ -103,8 +103,8 @@ class Renderer ():
             "characters": { character.id: character for character in script.characters },
             "spacers": { team: len(script.by_team[team]) == 1 for team in script.by_team },
             "teams": script.by_team,
-            "icons": { id: f"file://{icon.path(Path(workspace, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
-            "logo": f"file://{script.meta.icon.path(Path(workspace, 'build').resolve())}" if script.meta.icon else "",
+            "icons": { id: f"file://{icon.path(Path(workspace.parent, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
+            "logo": f"file://{script.meta.icon.path(Path(workspace.parent, 'build').resolve())}" if script.meta.icon else "",
             "jinxes": script.jinxes,
             "has_jinxes": sum([ len(jinxes) for id, jinxes in script.jinxes.items() ]) > 0,
             "meta": script.meta,
@@ -136,8 +136,8 @@ class Renderer ():
         params = {
             
             "characters": { character.id: character for character in script.characters },
-            "icons": { id: f"file://{icon.path(Path(workspace, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
-            "logo": f"file://{script.meta.icon.path(Path(workspace, 'build').resolve())}" if script.meta.icon else "",
+            "icons": { id: f"file://{icon.path(Path(workspace.parent, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
+            "logo": f"file://{script.meta.icon.path(Path(workspace.parent, 'build').resolve())}" if script.meta.icon else "",
             "nightorder": script.nightorder,
             "meta": script.meta,
             "options": script.options
@@ -147,7 +147,7 @@ class Renderer ():
         output_path = Path(output_folder, f"{utilities.sanitize.name(script.meta.name)}-{nights_style}.pdf")
         
         return self.__render_jinja(
-            workspace = workspace,
+            workspace = workspace.parent,
             template = "nights.jinja",
             style = "nights.css",
             icons = script.data.icons.values(),
