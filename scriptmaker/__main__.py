@@ -101,15 +101,18 @@ def cmd_make_pdf (args):
 
                 results = set()
 
+                path = Renderer().render_script(script, output_folder = output_folder)
+                results.add(path)
+
                 if args.full:
                     script.options.simple_nightorder = False
-                    paths = Renderer().render(script, output_folder = output_folder)
-                    results.update(paths.values())
+                    path = Renderer().render_nightorder(script, output_folder = output_folder)
+                    results.add(path)
                     
                 if args.simple:
                     script.options.simple_nightorder = True
-                    paths = Renderer().render(script, output_folder = output_folder)
-                    results.update(paths.values())
+                    paths = Renderer().render_nightorder(script, output_folder = output_folder)
+                    results.add(paths)
 
                 if args.postprocess:
                     for path in results:
@@ -155,15 +158,18 @@ def cmd_make_pdf (args):
 
             results = set()
 
+            path = Renderer().render_script(script, output_folder = output_folder)
+            results.add(path)
+
             if args.full:
                 script.options.simple_nightorder = False
-                paths = Renderer().render(script, output_folder = output_folder)
-                results.update(paths.values())
+                path = Renderer().render_nightorder(script, output_folder = output_folder)
+                results.add(path)
                 
             if args.simple:
                 script.options.simple_nightorder = True
-                paths = Renderer().render(script, output_folder = output_folder)
-                results.update(paths.values())
+                path = Renderer().render_nightorder(script, output_folder = output_folder)
+                results.add(path)
 
             if args.postprocess:
                 for path in results:

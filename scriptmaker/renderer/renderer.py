@@ -21,36 +21,19 @@ class Renderer ():
     """ 
     A script-to-PDF renderer.
     """
-    
-    def render (
-        self, script : models.Script, *, 
-        output_folder = None
-    ):
-        """ 
-        Renders the given script into PDFs. 
-        """
-        script.finalize()
-        
-        folder = Path(output_folder, 'pdf') if output_folder else Path(script.data.workspace, "pdf")
-        utilities.filesystem.mkdirp(folder.parent)
-        utilities.filesystem.mkdirp(folder)
-        
-        script_path = self.__render_script(script, output_folder = folder)
-        nightorder_path = self.__render_nightorder(script, output_folder = folder)
-        
-        return {
-            "script": script_path,
-            "nightorder": nightorder_path
-        }
-    
-    
-    def __render_script (
+      
+    def render_script (
         self, script : models.Script, *,
         output_folder = None
     ):
         """
         Renders the script PDF, returning the path to the file.
         """
+        script.finalize()
+        
+        output_folder = Path(output_folder, 'pdf') if output_folder else Path(script.data.workspace, "pdf")
+        utilities.filesystem.mkdirp(output_folder.parent)
+        utilities.filesystem.mkdirp(output_folder)
         
         # We are going to calculate some layouts, so we're gonna need a few numbers.
         ppi = 144.
@@ -108,7 +91,7 @@ class Renderer ():
             "pages": [ group['teams'] for group in page_groups ],
             "characters": { character.id: character for character in script.characters },
             "abilities": abilities,
-            "spacers": { team: len(script.by_team[team]) == 1 for team in script.by_team },
+            "spacers": { team: len(script.by_team[team]) <= 2 for team in script.by_team },
             "teams": script.by_team,
             "icons": { id: f"file://{icon.path(Path(workspace.parent, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
             "logo": f"file://{script.meta.icon.path(Path(workspace.parent, 'build').resolve())}" if script.meta.icon else "",
@@ -130,13 +113,19 @@ class Renderer ():
         )
         
         
-    def __render_nightorder (
+    def render_nightorder (
         self, script : models.Script, *, 
         output_folder = None
     ):
         """
         Renders the nightorder PDF, returning the file path.
         """
+        script.finalize()
+        
+        output_folder = Path(output_folder, 'pdf') if output_folder else Path(script.data.workspace, "pdf")
+        utilities.filesystem.mkdirp(output_folder.parent)
+        utilities.filesystem.mkdirp(output_folder)
+        
         workspace = output_folder
         
         # Pass configuration forwards to jinja/weasyprint stack.  

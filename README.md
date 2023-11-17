@@ -161,13 +161,16 @@ my_script.options.i18n_fallback = True
 
 4. Render it!
 ```python
-outputs = Renderer().render(my_script)
-        # my_script.render()
+outputs = set()
+
+# Renders to the datastore path, if no output_folder is given
+outputs.add(Renderer().render_script(my_script), output_folder = None)
+outputs.add(Renderer().render_nightorder(my_script))
 ```
 
 5. Postprocess your PDFs.
 ```python
-for _, path in outputs:
+for path in outputs:
   PDFTools.compress(path)
   PDFTools.pngify(path)
 ```

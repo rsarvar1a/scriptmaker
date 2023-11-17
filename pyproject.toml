@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scriptmaker"
-version = "1.2.6"
+version = "1.2.7"
 description = "A Python library for producing custom scripts in Blood On The Clocktower."
 authors = ["Rohan Sarvaria <rsarvaria@uwaterloo.ca>"]
 license = "MIT"
