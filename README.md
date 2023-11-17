@@ -69,39 +69,55 @@ Scriptmaker requires the following non-Python dependencies:
 ```
 ghostscript
 poppler-utils
+pango
 ```
 
 Install the package with your package manager of choice.
 
 ```sh
 pip install scriptmaker
-```
-```sh
 poetry add scriptmaker
-```
-```sh
 ...
 ```
 
 ## Using the CLI
 
+```yaml
+scriptmaker (make-pdf | tokenize)
 ```
-scriptmaker <inputs> [outputs] [options]
 
-    inputs: (--url | --script)
-        --url https://url/to/script.json
-        --script path/to/script.json
-        --nights path/to/nights.json
-    
-    outputs:
-        --compress
-        --export
-        --pngify
-        --save-to path/to/folder/
+```yaml
+scriptmaker make-pdf <inputs> [output] [options]
 
-    options:
-        --i18n-fallback
-        --simple-nightorder
+  inputs:
+    (--script path/to/script.json | --url https://script.json | --recurse path/to/folder/) # Sources a script.
+    [--nights path/to/nights.json] # Supplies a custom night order.
+  
+  output:
+    [--output-folder path/to/folder/] # Creates build/ and pdf/ folders under this directory.
+  
+  options:
+    [--full] # Creates a full-text two-sided nightorder
+    [--simple] # Creates a simple, rotatable nightorder for physical printing
+    [--i18n-fallback] # Tries to resolve issues with non-Latin character rendering
+    [--postprocess] # Compresses PDFs and generates PNGs for pages
+```
+
+```yaml
+scriptmaker tokenize <inputs> [output] [options]
+
+  inputs:
+    directory # Recurses over it, adds all scripts to a datastore, and prints the result.
+  
+  output:
+    [--output-folder path/to/folder/] # Creates build/ and pdf/ folders under this directory.
+  
+  options:
+    [--character-size size-in-mm] # Determines the size in millimetres of character tokens; default 45.
+    [--reminder-size size-in-mm] # Determines the size in millimetres of reminder tokens; default 19.
+    [--extra-copies path/to/copies.json] # A key-value dict of character IDs and token counts, if you wish to generate extra copies.
+    [--official-only | --exclude-official] # Either only print base3 + experimental tokens, or don't add them at all (good for homebrews).
+    [--postprocess] # Compresses PDFs and generates PNGs for pages
 ```
 
 ## Using the package
@@ -114,7 +130,7 @@ from scriptmaker import Character, Datastore, Script, PDFTools, Renderer, Script
 1. Create a data store for your new script.
 ```python
 # Create a datastore (leaving it blank uses a temporary directory)
-my_datastore : Datastore = Datastore("my/output/directory")
+my_datastore : Datastore = Datastore("my/output/directory/")
 
 # Load the official characters into it, if you want
 my_datastore.add_official_characters()
@@ -155,14 +171,3 @@ for _, path in outputs:
   PDFTools.compress(path)
   PDFTools.pngify(path)
 ```
-
-# Changelog
-
-## 1.0.0 - packages are neat
-
-- Character updates:
-    - adds all experimental characters up to the Ojo
-- Features:
-    - shows a script's author and logo if those properties are in the `_meta`
-- **Breaking changes**:
-    - if you were using the (unpackaged) version of `scriptmaker`, you will need to write your own scripts
