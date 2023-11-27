@@ -51,12 +51,14 @@ class ScriptOptions ():
     
     def __init__ (
         self, *,
+        bucket = False,
         simple_nightorder = False, # if True, creates a script with rotatable nightorder
         i18n_fallback = False # if True, uses an internationally-friendly font for titles and character names
     ):
         """
         Creates a set of options for generating a script.
         """
+        self.bucket = bucket
         self.simple_nightorder = simple_nightorder
         self.i18n_fallback = i18n_fallback
         

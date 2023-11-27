@@ -72,7 +72,8 @@ class Renderer ():
             next_team = to_add.get()
             cumulative = page_groups[-1]['height']
             current_height = heights[next_team]
-            if cumulative + current_height < content_h:
+            # If the current page is empty, don't skip it just because the current group is too big.
+            if cumulative == 0 or cumulative + current_height < content_h:
                 page_groups[-1]['teams'].append(next_team)
                 page_groups[-1]['height'] += current_height
             else:
@@ -86,12 +87,15 @@ class Renderer ():
         for character in script.characters:
             abilities[character.id] = re.sub(r'(?P<setup>\[.*\])', '<b>\g<setup></b>', character.ability)
 
+        needs_spacers = { team: len(script.by_team[team]) <= 2 for team in script.by_team }
+        needs_spacers['demon'] = len(script.by_team['demon']) == 1
+
         # Pass configuration forwards to jinja/weasyprint stack.  
         params = {
             "pages": [ group['teams'] for group in page_groups ],
             "characters": { character.id: character for character in script.characters },
             "abilities": abilities,
-            "spacers": { team: len(script.by_team[team]) <= 2 for team in script.by_team },
+            "spacers": needs_spacers,
             "teams": script.by_team,
             "icons": { id: f"file://{icon.path(Path(workspace.parent, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
             "logo": f"file://{script.meta.icon.path(Path(workspace.parent, 'build').resolve())}" if script.meta.icon else "",

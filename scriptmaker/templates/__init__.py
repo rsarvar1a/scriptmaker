@@ -5,6 +5,8 @@ from . import tokens
 
 
 COMMON = [
+    "paper.jpg",
+    "parchment.jpg",
     "CormorantGaramond-Bold.ttf",
     "CormorantGaramond-Medium.ttf",
     "Dumbledor 1.ttf",

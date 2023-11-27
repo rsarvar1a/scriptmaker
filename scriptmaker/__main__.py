@@ -36,6 +36,7 @@ def main ():
     source.add_argument('--url')
     inputs.add_argument('--nights')
     styles = makepdfs.add_argument_group('styles')
+    styles.add_argument('--bucket', action = 'store_true')
     styles.add_argument('--full', action = 'store_true')
     styles.add_argument('--simple', action = 'store_true')
     options = makepdfs.add_argument_group('options')
@@ -85,7 +86,7 @@ def cmd_make_pdf (args):
         datastore = Datastore(args.output_folder)
         datastore.add_official_characters()
            
-        for json_path in args.recurse.rglob("*.json"):
+        for json_path in sorted(Path(args.recurse).resolve().rglob("*.json")):
             try:
                 with open(json_path) as json_file:
                     script_json = json.load(json_file)
@@ -100,6 +101,9 @@ def cmd_make_pdf (args):
                     script.options.i18n_fallback = True
 
                 results = set()
+
+                if args.bucket:
+                    script.options.bucket = True
 
                 path = Renderer().render_script(script, output_folder = output_folder)
                 results.add(path)
@@ -155,6 +159,9 @@ def cmd_make_pdf (args):
             
             if args.i18n_fallback:
                 script.options.i18n_fallback = True
+
+            if args.bucket:
+                script.options.bucket = True
 
             results = set()
 

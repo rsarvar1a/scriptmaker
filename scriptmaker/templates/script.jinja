@@ -10,9 +10,7 @@
 
         {# Characters #}
 
-        {%- for page in pages %}
-
-            {# Script title header on every page #}
+        {%- if options.bucket %}
             <div class="header">
                 {%- if meta.logo %}
                     <img src="{{ logo }}" class="script-logo"/>
@@ -24,6 +22,24 @@
                     {%- endif %}
                 </div>
             </div>
+        {%- endif %}
+
+        {%- for page in pages %}
+
+            {# Script title header on every page #}
+            {%- if not options.bucket %}
+                <div class="header">
+                    {%- if meta.logo %}
+                        <img src="{{ logo }}" class="script-logo"/>
+                    {%- endif %}
+                    <div class="header-text{{ '-logo' if meta.logo else '' }}">
+                        <div class="script-title">{{ meta.name }}</div>
+                        {%- if meta.author %}
+                            <div class="author">by {{ meta.author }}</div>
+                        {%- endif %}
+                    </div>
+                </div>
+            {%- endif %}
             
             {# Character blocks #}
             <div class="reference">
@@ -58,7 +74,7 @@
             <div class="not-first-night">* not the first night</div>
 
             {# Break on every page #}
-            {%- if not loop.last %}
+            {%- if not options.bucket and not loop.last %}
                 <p style="page-break-before: always" ></p>
             {%- endif %}
 
