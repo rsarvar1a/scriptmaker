@@ -122,13 +122,13 @@ def cmd_make_pdf (args):
                     for path in results:
                         PDFTools.compress(path)
                         PDFTools.pngify(path)
-                        
+                
+                for path in results:
+                    print(str(path))        
+                
             except (ScriptmakerError, TypeError, Exception):
                 print(traceback.format_exc())
                 continue
-        
-            for path in results:
-                print(str(path))
     
     else:    
         try:
@@ -183,11 +183,11 @@ def cmd_make_pdf (args):
                     PDFTools.compress(path)
                     PDFTools.pngify(path)
             
+            for path in results:
+                print(str(path))
+            
         except (ScriptmakerError, TypeError, Exception):
             print(traceback.format_exc())
-    
-        for path in results:
-            print(str(path))
     
     return 0
 
