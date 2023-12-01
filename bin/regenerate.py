@@ -14,6 +14,7 @@ from pathlib import Path
 
 upstream = "data/upstream.json"
 out_path = Path("scriptmaker/data/compiled/official.json").resolve()
+met_path = Path("scriptmaker/data/compiled/nightmeta.json").resolve()
 img_path = Path("scriptmaker/data/icons").resolve()
 
 #
@@ -31,8 +32,14 @@ urllib.request.urlretrieve(upstream_url, upstream)
 with open(upstream, "r") as upstream_file:
     jotc : dict = json.load(upstream_file)
     output = jotc['character_by_id']   
-    for key in ['DUSK', 'MINION', 'DEMON', 'DAWN', 'mephit']:
-        output.pop(key, None)
+    output.pop('mephit', None)
+    
+# Recreate the nightmeta.
+with open(met_path, 'w') as nightmeta_file:
+    nightmeta = []
+    for key in ['DUSK', 'MINION', 'DEMON', 'DAWN']:
+        nightmeta.append(output.pop(key, None))
+    json.dump(nightmeta, nightmeta_file, indent=2)
 
 # Load patches for each official character as well.
 with open("data/patches.json", "r") as patches_file:
