@@ -87,8 +87,12 @@ class Renderer ():
         for character in script.characters:
             abilities[character.id] = re.sub(r'(?P<setup>\[.*\])', '<b>\g<setup></b>', character.ability)
 
-        needs_spacers = { team: len(script.by_team[team]) <= 2 for team in script.by_team }
-        needs_spacers['demon'] = len(script.by_team['demon']) == 1
+        # Calculate spacers for small team names.
+        needs_spacers = { team: len(script.by_team[team]) == 1 for team in script.by_team }
+        
+        # Calculate spacers for large team names.
+        for team in ['outsider', 'traveler']:
+            needs_spacers[team] = len(script.by_team[team]) <= 2
 
         # Pass configuration forwards to jinja/weasyprint stack.  
         params = {

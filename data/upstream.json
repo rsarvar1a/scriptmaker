@@ -3,11 +3,11 @@
         "DAWN": {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 58,
+            "firstNight": null,
             "firstNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
             "id": "DAWN",
-            "name": "DAWN",
-            "otherNight": 76,
+            "name": "Dawn",
+            "otherNight": null,
             "otherNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
             "reminders": [],
             "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DAWN.png",
@@ -17,10 +17,10 @@
         "DEMON": {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 9,
+            "firstNight": null,
             "firstNightReminder": "If 7 or more players: wake up the Demon. Show the 'These are your minions' card. Point to each Minion. Show the 'These characters are not in play' card. Show 3 character tokens of Good characters that are not in play",
             "id": "DEMON",
-            "name": "DEMON",
+            "name": "Demon Info",
             "otherNight": null,
             "otherNightReminder": null,
             "reminders": [],
@@ -31,11 +31,11 @@
         "DUSK": {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 1,
+            "firstNight": null,
             "firstNightReminder": null,
             "id": "DUSK",
-            "name": "DUSK",
-            "otherNight": 1,
+            "name": "Dusk",
+            "otherNight": null,
             "otherNightReminder": "Check that all eyes are closed. Some travellers act.",
             "reminders": [],
             "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DUSK.png",
@@ -45,10 +45,10 @@
         "MINION": {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 6,
+            "firstNight": null,
             "firstNightReminder": "If 7 or more players: wake up all of the Minions. They make eye contact with each other. Show the 'This is the Demon' card. Point to the Demon.",
             "id": "MINION",
-            "name": "MINION",
+            "name": "Minion Info",
             "otherNight": null,
             "otherNightReminder": null,
             "reminders": [],
@@ -6093,10 +6093,10 @@
         {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 6,
+            "firstNight": null,
             "firstNightReminder": "If 7 or more players: wake up all of the Minions. They make eye contact with each other. Show the 'This is the Demon' card. Point to the Demon.",
             "id": "MINION",
-            "name": "MINION",
+            "name": "Minion Info",
             "otherNight": null,
             "otherNightReminder": null,
             "reminders": [],
@@ -6107,10 +6107,10 @@
         {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 9,
+            "firstNight": null,
             "firstNightReminder": "If 7 or more players: wake up the Demon. Show the 'These are your minions' card. Point to each Minion. Show the 'These characters are not in play' card. Show 3 character tokens of Good characters that are not in play",
             "id": "DEMON",
-            "name": "DEMON",
+            "name": "Demon Info",
             "otherNight": null,
             "otherNightReminder": null,
             "reminders": [],
@@ -6121,11 +6121,11 @@
         {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 1,
+            "firstNight": null,
             "firstNightReminder": null,
             "id": "DUSK",
-            "name": "DUSK",
-            "otherNight": 1,
+            "name": "Dusk",
+            "otherNight": null,
             "otherNightReminder": "Check that all eyes are closed. Some travellers act.",
             "reminders": [],
             "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DUSK.png",
@@ -6135,11 +6135,11 @@
         {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 58,
+            "firstNight": null,
             "firstNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
             "id": "DAWN",
-            "name": "DAWN",
-            "otherNight": 76,
+            "name": "Dawn",
+            "otherNight": null,
             "otherNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
             "reminders": [],
             "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DAWN.png",
@@ -6322,19 +6322,19 @@
         "_meta": [
             {
                 "id": "MINION",
-                "name": "MINION"
+                "name": "Minion Info"
             },
             {
                 "id": "DEMON",
-                "name": "DEMON"
+                "name": "Demon Info"
             },
             {
                 "id": "DUSK",
-                "name": "DUSK"
+                "name": "Dusk"
             },
             {
                 "id": "DAWN",
-                "name": "DAWN"
+                "name": "Dawn"
             }
         ],
         "demon": [
