@@ -11,7 +11,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DUSK.png",
     "setup": false,
-    "team": "_meta"
+    "team": "_meta",
+    "image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DUSK.png"
   },
   {
     "ability": "",
@@ -25,7 +26,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/MINION.png",
     "setup": false,
-    "team": "_meta"
+    "team": "_meta",
+    "image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/MINION.png"
   },
   {
     "ability": "",
@@ -39,7 +41,8 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DEMON.png",
     "setup": false,
-    "team": "_meta"
+    "team": "_meta",
+    "image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DEMON.png"
   },
   {
     "ability": "",
@@ -53,6 +56,7 @@
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DAWN.png",
     "setup": false,
-    "team": "_meta"
+    "team": "_meta",
+    "image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DAWN.png"
   }
 ]

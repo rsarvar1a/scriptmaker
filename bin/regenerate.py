@@ -38,7 +38,9 @@ with open(upstream, "r") as upstream_file:
 with open(met_path, 'w') as nightmeta_file:
     nightmeta = []
     for key in ['DUSK', 'MINION', 'DEMON', 'DAWN']:
-        nightmeta.append(output.pop(key, None))
+        v = output.pop(key, None)
+        v['image'] = v['remote_image']
+        nightmeta.append(v)
     json.dump(nightmeta, nightmeta_file, indent=2)
 
 # Load patches for each official character as well.
