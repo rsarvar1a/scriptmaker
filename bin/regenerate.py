@@ -40,6 +40,7 @@ with open(met_path, 'w') as nightmeta_file:
     for key in ['DUSK', 'MINION', 'DEMON', 'DAWN']:
         v = output.pop(key, None)
         v['image'] = v['remote_image']
+        v['name'] = v['name'].capitalize() + (" Info" if v['name'] in ['MINION', 'DEMON'] else "")
         nightmeta.append(v)
     json.dump(nightmeta, nightmeta_file, indent=2)
 
