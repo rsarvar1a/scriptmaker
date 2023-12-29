@@ -99,7 +99,7 @@ with open(exceptions_path, "r") as exceptions_file:
 
 # Re-sanitize the unsanitized IDs.
 def sanitize(id):
-    return re.sub('[^A-Za-z0-9]', '', id.replace('Icon_', '')).lower()
+    return re.sub('[^A-Za-z0-9]', '', id.replace('Icon_', '').replace('_icon', '')).lower()
 
 with tempfile.NamedTemporaryFile("w+b") as tmp:
     for unsanitized_id in unsanitized_ids:

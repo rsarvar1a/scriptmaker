@@ -64,7 +64,7 @@ b
     flex-direction: column;
     column-count: 2;
     column-gap: 1%;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     vertical-align: top;
 }
 .icon
@@ -94,7 +94,7 @@ b
 }
 .team-spacer
 {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
 }
 
 /* JINXES */
