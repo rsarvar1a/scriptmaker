@@ -6,8 +6,6 @@
         <link rel="stylesheet" href="file://script.css">
     </head>
 
-    <body>
-
         {# Characters #}
 
         {%- if options.bucket %}
@@ -75,7 +73,7 @@
 
             {# Break on every page #}
             {%- if not options.bucket and not loop.last %}
-                <p style="page-break-before: always" ></p>
+                <p style="break-before: always;" ></p>
             {%- endif %}
 
         {%- endfor %}
@@ -85,6 +83,10 @@
         {%- if has_jinxes %}
             <h2 class="character-type name-fabled">{{ 'jinxes' | upper }}</h2>         
             <div class="jinx-box align justify">
+                {%- if jinxes_next_page %}
+                    <p style="page-break-before: always;" ></p>
+                {%- endif %}
+                
                 <div class="jinx-enclosing-c align justify">
                     {%- for id in jinxes %}
                         {%- for jinx in jinxes[id] %}
@@ -101,5 +103,4 @@
             </div>
         {%- endif %}
 
-    </body>
 </html>

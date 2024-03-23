@@ -20,12 +20,6 @@ def main ():
     parser.set_defaults(func = fourohfour)
 
     # scriptmaker make-pdf 
-    # (--script SCRIPT | --url URL | --recurse DIRECTORY) 
-    # [--output-folder OUTPUT]
-    # [--nights]
-    # [--simple-nightorder]
-    # [--i18n-fallback]
-    # [--postprocess]
 
     makepdfs = subparsers.add_parser('make-pdf')
     makepdfs.add_argument('--output-folder')
@@ -39,19 +33,13 @@ def main ():
     styles.add_argument('--bucket', action = 'store_true')
     styles.add_argument('--full', action = 'store_true')
     styles.add_argument('--simple', action = 'store_true')
+    styles.add_argument('--force-jinxes', action = 'store_true')
     options = makepdfs.add_argument_group('options')
     options.add_argument('--i18n-fallback', action = 'store_true')
     options.add_argument('--postprocess', action = 'store_true')
     makepdfs.set_defaults(func = cmd_make_pdf)
     
     # scriptmaker tokenize
-    # (directory DIRECTORY)
-    # [--output-folder OUTPUT]
-    # [--official-only | --exclude-official]
-    # [--character-size SIZE]
-    # [--reminder-size SIZE]
-    # [--extra-copies FILE]
-    # [--postprocess]
 
     tokenize = subparsers.add_parser('tokenize')
     tokenize.add_argument('directory')
@@ -99,6 +87,9 @@ def cmd_make_pdf (args):
                 
                 if args.i18n_fallback:
                     script.options.i18n_fallback = True
+
+                if args.force_jinxes:
+                    script.options.force_jinxes = True
 
                 results = set()
 

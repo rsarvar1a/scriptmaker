@@ -53,7 +53,8 @@ class ScriptOptions ():
         self, *,
         bucket = False,
         simple_nightorder = False, # if True, creates a script with rotatable nightorder
-        i18n_fallback = False # if True, uses an internationally-friendly font for titles and character names
+        i18n_fallback = False, # if True, uses an internationally-friendly font for titles and character name
+        force_jinxes = False
     ):
         """
         Creates a set of options for generating a script.
@@ -61,6 +62,7 @@ class ScriptOptions ():
         self.bucket = bucket
         self.simple_nightorder = simple_nightorder
         self.i18n_fallback = i18n_fallback
+        self.force_jinxes = force_jinxes
         
 
 class Script ():

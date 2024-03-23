@@ -64,7 +64,10 @@ class Renderer ():
         for team in script.by_team:
             if len(script.by_team[team]) > 0:
                 to_add.put(team)
-        to_add.put('jinxes')
+    
+        # If we want jinxes to flow, we should try to cram it too.
+        if not script.options.force_jinxes:
+            to_add.put('jinxes')
         
         page_groups = [{ "teams": [], "height": 0 }]
         
@@ -78,6 +81,12 @@ class Renderer ():
                 page_groups[-1]['height'] += current_height
             else:
                 page_groups.append({ "teams": [next_team], "height": current_height })
+
+        # If we always want jinxes on a new page
+        if script.options.force_jinxes:
+            page_groups.append({ "teams": ["jinxes"], "height": 0 })
+        
+        jinxes_next_page = len(page_groups[-1]["teams"]) == 1 or script.options.force_jinxes
 
         # Decide where we'll build icons.
         workspace = output_folder
@@ -105,6 +114,7 @@ class Renderer ():
             "logo": f"file://{script.meta.icon.path(Path(workspace.parent, 'build').resolve())}" if script.meta.icon else "",
             "jinxes": script.jinxes,
             "has_jinxes": sum([ len(jinxes) for id, jinxes in script.jinxes.items() ]) > 0,
+            "jinxes_next_page": jinxes_next_page,
             "meta": script.meta,
             "options": script.options
         }

@@ -32,7 +32,7 @@
   {
     "ability": "",
     "edition": "_meta",
-    "firstNight": 11,
+    "firstNight": 12,
     "firstNightReminder": "If 7 or more players: wake up the Demon. Show the 'These are your minions' card. Point to each Minion. Show the 'These characters are not in play' card. Show 3 character tokens of Good characters that are not in play",
     "id": "DEMON",
     "name": "Demon Info",
@@ -47,11 +47,11 @@
   {
     "ability": "",
     "edition": "_meta",
-    "firstNight": 61,
+    "firstNight": 62,
     "firstNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
     "id": "DAWN",
     "name": "Dawn",
-    "otherNight": 79,
+    "otherNight": 80,
     "otherNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DAWN.png",
