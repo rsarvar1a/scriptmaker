@@ -92,9 +92,21 @@ b
     display: flexbox;
     flex-direction: row;
 }
-.team-spacer
+.team-spacer-1
 {
-    margin-bottom: 55px;
+    margin-bottom: 5px;
+}
+.team-spacer-4
+{
+    margin-bottom: 20px;
+}
+.team-spacer-5
+{
+    margin-bottom: 25px;
+}
+.team-spacer-7
+{
+    margin-bottom: 35px;
 }
 
 /* JINXES */

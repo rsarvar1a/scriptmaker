@@ -65,6 +65,9 @@
                         </div>
                     {%- endfor %}
                     </div>
+                    {%- if spacers[team] %}
+                        <div class="team-spacer-{{spacers[team]}}"></div>
+                    {%- endif %}
                 {%- endfor %}
             </div>
 

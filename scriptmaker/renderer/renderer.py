@@ -100,15 +100,30 @@ class Renderer ():
         needs_spacers = { team: len(script.by_team[team]) == 1 for team in script.by_team }
         
         # Calculate spacers for large team names.
-        for team in ['outsider', 'traveler']:
+        for team in ['townsfolk', 'outsider', 'traveler']:
             needs_spacers[team] = len(script.by_team[team]) <= 2
+
+        def num_spacers(team):
+            match team:
+                case 'townsfolk' | 'outsider' | 'traveler':
+                    return 7
+                case 'fabled':
+                    return 4
+                case _:
+                    return 5
+
+        spacers = { team: num_spacers(team) for team in needs_spacers if needs_spacers[team] is True }
+
+        for team in ['townsfolk', 'outsider', 'traveler']:
+            if len(script.by_team[team]) == 2:
+                spacers[team] = 1
 
         # Pass configuration forwards to jinja/weasyprint stack.  
         params = {
             "pages": [ group['teams'] for group in page_groups ],
             "characters": { character.id: character for character in script.characters },
             "abilities": abilities,
-            "spacers": needs_spacers,
+            "spacers": spacers,
             "teams": script.by_team,
             "icons": { id: f"file://{icon.path(Path(workspace.parent, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
             "logo": f"file://{script.meta.icon.path(Path(workspace.parent, 'build').resolve())}" if script.meta.icon else "",
