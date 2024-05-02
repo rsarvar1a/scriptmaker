@@ -51,7 +51,7 @@
     "firstNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
     "id": "DAWN",
     "name": "Dawn",
-    "otherNight": 80,
+    "otherNight": 81,
     "otherNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
     "reminders": [],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/DAWN.png",
