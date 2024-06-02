@@ -3,7 +3,7 @@
         "DAWN": {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 62,
+            "firstNight": 63,
             "firstNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
             "id": "DAWN",
             "name": "Dawn",
@@ -476,7 +476,7 @@
         "chambermaid": {
             "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
             "edition": "bmr",
-            "firstNight": 60,
+            "firstNight": 61,
             "firstNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, \u2026) for how many of those players wake tonight for their ability.",
             "id": "chambermaid",
             "name": "Chambermaid",
@@ -921,7 +921,7 @@
         "general": {
             "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
             "edition": "ks",
-            "firstNight": 59,
+            "firstNight": 60,
             "firstNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
             "id": "general",
             "name": "General",
@@ -1126,7 +1126,7 @@
         "highpriestess": {
             "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
             "edition": "experimental",
-            "firstNight": 58,
+            "firstNight": 59,
             "firstNightReminder": "Point to a player.",
             "id": "highpriestess",
             "image": "your direct url here",
@@ -1317,7 +1317,7 @@
         "leviathan": {
             "ability": "If more than 1 good player is executed, you win. All players know you are in play. After day 5, evil wins.",
             "edition": "ks",
-            "firstNight": 63,
+            "firstNight": 64,
             "firstNightReminder": "Place the Leviathan 'Day 1' marker. Announce 'The Leviathan is in play; this is Day 1.'",
             "id": "leviathan",
             "name": "Leviathan",
@@ -1469,7 +1469,7 @@
         "mathematician": {
             "ability": "Each night, you learn how many players\u2019 abilities worked abnormally (since dawn) due to another character's ability.",
             "edition": "snv",
-            "firstNight": 61,
+            "firstNight": 62,
             "firstNightReminder": "Show the hand signal for the number (0, 1, 2, etc.) of players whose ability malfunctioned due to other abilities.",
             "id": "mathematician",
             "name": "Mathematician",
@@ -1654,6 +1654,19 @@
             "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/nodashii.png",
             "setup": false,
             "team": "demon"
+        },
+        "ogre": {
+            "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
+            "edition": "experimental",
+            "firstNight": 58,
+            "firstNightReminder": "The Ogre points to a player (not themselves) and becomes their alignment.",
+            "id": "ogre",
+            "image": "your direct url here",
+            "name": "Ogre",
+            "otherNight": null,
+            "otherNightReminder": null,
+            "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/ogre.png",
+            "team": "outsider"
         },
         "ojo": {
             "ability": "Each night*, choose a character: they die. If they are not in play, the Storyteller chooses who dies.",
@@ -2439,7 +2452,7 @@
         "vizier": {
             "ability": "All players know who you are. You can not die during the day. If good voted, you may choose to execute immediately.",
             "edition": "experimental",
-            "firstNight": 64,
+            "firstNight": 65,
             "firstNightReminder": "Announce 'The Vizier is in play' and state which player they are.",
             "id": "vizier",
             "name": "Vizier",
@@ -2904,6 +2917,11 @@
             "nightwatchman": {
                 "id": "nightwatchman",
                 "name": "nightwatchman",
+                "physicaltoken": false
+            },
+            "ogre": {
+                "id": "ogre",
+                "name": "ogre",
                 "physicaltoken": false
             },
             "ojo": {
@@ -3454,11 +3472,15 @@
             ]
         },
         {
-            "id": "Butler",
+            "id": "Cannibal",
             "jinx": [
                 {
-                    "id": "Cannibal",
+                    "id": "Butler",
                     "reason": "If the Cannibal gains the Butler ability, the Cannibal learns this."
+                },
+                {
+                    "id": "Juggler",
+                    "reason": "If the Juggler guesses on their first day and dies by execution, tonight the living Cannibal learns how many guesses the Juggler got correct."
                 }
             ]
         },
@@ -3484,11 +3506,23 @@
                 },
                 {
                     "id": "Politician",
-                    "reason": "A Pit-Hag can not create an evil Politician."
+                    "reason": "If the Pit-Hag turns an evil player into the Politician, they can't turn good due to their own ability."
                 },
                 {
                     "id": "Village Idiot",
                     "reason": "If there is a spare token, the Pit-Hag can create an extra Village Idiot. If so, the drunk Village Idiot might change."
+                },
+                {
+                    "id": "Cult Leader",
+                    "reason": "If the Pit-Hag turns an evil player into the Cult Leader, they can't turn good due to their own ability."
+                },
+                {
+                    "id": "Goon",
+                    "reason": "If the Pit-Hag turns an evil player into the Goon, they can't turn good due to their own ability."
+                },
+                {
+                    "id": "Ogre",
+                    "reason": "If the Pit-Hag turns an evil player into the Ogre, they can't turn good due to their own ability."
                 }
             ]
         },
@@ -3607,10 +3641,6 @@
                 {
                     "id": "Hatter",
                     "reason": "If the Hatter dies and Legion is in play, nothing happens. If the Hatter dies and an evil player chooses Legion, all current evil players become Legion."
-                },
-                {
-                    "id": "Summoner",
-                    "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
                 }
             ]
         },
@@ -3644,11 +3674,15 @@
                 },
                 {
                     "id": "Damsel",
-                    "reason": "Only 1 jinxed character can be in play."
+                    "reason": "If the Spy is (or has been) in play, the Damsel is poisoned."
                 },
                 {
                     "id": "Heretic",
                     "reason": "Only 1 jinxed character can be in play."
+                },
+                {
+                    "id": "Ogre",
+                    "reason": "The Spy registers as evil to the Ogre."
                 }
             ]
         },
@@ -3669,7 +3703,7 @@
                 },
                 {
                     "id": "Damsel",
-                    "reason": "Only 1 jinxed character can be in play."
+                    "reason": "If the Widow is (or has been) in play, the Damsel is poisoned."
                 },
                 {
                     "id": "Heretic",
@@ -3740,6 +3774,42 @@
                 {
                     "id": "Marionette",
                     "reason": "The Marionette neighbors the Summoner. The Summoner knows who the Marionette is."
+                },
+                {
+                    "id": "Pit-Hag",
+                    "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+                },
+                {
+                    "id": "Hatter",
+                    "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
+                },
+                {
+                    "id": "Courtier",
+                    "reason": "If the Summoner is drunk on the 3rd night, the Summoner chooses which Demon, but the Storyteller chooses which player."
+                },
+                {
+                    "id": "Engineer",
+                    "reason": "If the Engineer removes a Summoner from play before that Summoner uses their ability, the Summoner uses their ability immediately."
+                },
+                {
+                    "id": "Zombuul",
+                    "reason": "If the Summoner turns a dead player into the Zombuul, the Storyteller treats that player as a Zombuul that has died once."
+                },
+                {
+                    "id": "Pukka",
+                    "reason": "The Summoner may choose a player to become the Pukka on the 2nd night."
+                },
+                {
+                    "id": "Riot",
+                    "reason": "If the Summoner creates Riot, all Minions also become Riot."
+                },
+                {
+                    "id": "Legion",
+                    "reason": "If the Summoner creates Legion, most players (including all evil players) become evil Legion."
+                },
+                {
+                    "id": "Kazali",
+                    "reason": "The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary."
                 }
             ]
         },
@@ -3828,10 +3898,6 @@
                 {
                     "id": "Choirboy",
                     "reason": "The Kazali can not choose the King to become a Minion if a Choirboy is in play."
-                },
-                {
-                    "id": "Summoner",
-                    "reason": "The Kazali can not choose to create a Summoner."
                 }
             ]
         },
@@ -3931,10 +3997,6 @@
                     "reason": "Players that die by nomination register as being executed to the Devil's Advocate."
                 },
                 {
-                    "id": "Summoner",
-                    "reason": "If the Summoner creates Riot, the chosen player and all evil players become Riot. The chosen player must be one of the Summoner's living good neighbors."
-                },
-                {
                     "id": "Investigator",
                     "reason": "Riot registers as a Minion to the Investigator."
                 },
@@ -4015,11 +4077,15 @@
                 },
                 {
                     "id": "Magician",
-                    "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+                    "reason": "If the Vizier and Magician are both in play, the Demon does not learn the Minions."
                 },
                 {
                     "id": "Fearmonger",
                     "reason": "The Vizier wakes with the Fearmonger, learns who they choose and cannot choose to immediately execute that player."
+                },
+                {
+                    "id": "Politician",
+                    "reason": "The Politician might register as evil to the Vizier."
                 }
             ]
         },
@@ -4029,6 +4095,15 @@
                 {
                     "id": "Banshee",
                     "reason": "If the Vortox is in play and the Demon kills the Banshee, the players still learn that the Banshee has died."
+                }
+            ]
+        },
+        {
+            "id": "Ogre",
+            "jinx": [
+                {
+                    "id": "Recluse",
+                    "reason": "If the Recluse registers as evil to the Ogre, the Ogre learns that they are evil."
                 }
             ]
         }
@@ -4481,7 +4556,7 @@
         {
             "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
             "edition": "bmr",
-            "firstNight": 60,
+            "firstNight": 61,
             "firstNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, \u2026) for how many of those players wake tonight for their ability.",
             "id": "chambermaid",
             "name": "Chambermaid",
@@ -4977,7 +5052,7 @@
         {
             "ability": "Each night, you learn how many players\u2019 abilities worked abnormally (since dawn) due to another character's ability.",
             "edition": "snv",
-            "firstNight": 61,
+            "firstNight": 62,
             "firstNightReminder": "Show the hand signal for the number (0, 1, 2, etc.) of players whose ability malfunctioned due to other abilities.",
             "id": "mathematician",
             "name": "Mathematician",
@@ -5451,7 +5526,7 @@
         {
             "ability": "Each night, you learn which alignment the Storyteller believes is winning: good, evil, or neither.",
             "edition": "ks",
-            "firstNight": 59,
+            "firstNight": 60,
             "firstNightReminder": "Show the General thumbs up for good winning, thumbs down for evil winning or thumb to the side for neither.",
             "id": "general",
             "name": "General",
@@ -6040,7 +6115,7 @@
         {
             "ability": "If more than 1 good player is executed, you win. All players know you are in play. After day 5, evil wins.",
             "edition": "ks",
-            "firstNight": 63,
+            "firstNight": 64,
             "firstNightReminder": "Place the Leviathan 'Day 1' marker. Announce 'The Leviathan is in play; this is Day 1.'",
             "id": "leviathan",
             "name": "Leviathan",
@@ -6331,7 +6406,7 @@
         {
             "ability": "",
             "edition": "_meta",
-            "firstNight": 62,
+            "firstNight": 63,
             "firstNightReminder": "Wait approximately 10 seconds. Call for eyes open, then immediately announce which players (if any) died.",
             "id": "DAWN",
             "name": "Dawn",
@@ -6345,7 +6420,7 @@
         {
             "ability": "Each night, learn which player the Storyteller believes you should talk to most.",
             "edition": "experimental",
-            "firstNight": 58,
+            "firstNight": 59,
             "firstNightReminder": "Point to a player.",
             "id": "highpriestess",
             "image": "your direct url here",
@@ -6439,6 +6514,19 @@
             "team": "townsfolk"
         },
         {
+            "ability": "On your 1st night, choose a player (not yourself): you become their alignment (you don't know which) even if drunk or poisoned.",
+            "edition": "experimental",
+            "firstNight": 58,
+            "firstNightReminder": "The Ogre points to a player (not themselves) and becomes their alignment.",
+            "id": "ogre",
+            "image": "your direct url here",
+            "name": "Ogre",
+            "otherNight": null,
+            "otherNightReminder": null,
+            "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/ogre.png",
+            "team": "outsider"
+        },
+        {
             "ability": "If you die, the Storyteller gains a not-in-play Minion ability.",
             "edition": "experimental",
             "firstNight": null,
@@ -6508,7 +6596,7 @@
         {
             "ability": "All players know who you are. You can not die during the day. If good voted, you may choose to execute immediately.",
             "edition": "experimental",
-            "firstNight": 64,
+            "firstNight": 65,
             "firstNightReminder": "Announce 'The Vizier is in play' and state which player they are.",
             "id": "vizier",
             "name": "Vizier",
@@ -6922,6 +7010,10 @@
             {
                 "id": "politician",
                 "name": "Politician"
+            },
+            {
+                "id": "ogre",
+                "name": "Ogre"
             },
             {
                 "id": "plaguedoctor",

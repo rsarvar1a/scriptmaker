@@ -84,12 +84,11 @@
         {# Jinxes as a continutation of the last page #}
 
         {%- if has_jinxes %}
+            {%- if jinxes_next_page %}
+                 <p style="break-before: page;" ></p>
+            {%- endif %}
             <h2 class="character-type name-fabled">{{ 'jinxes' | upper }}</h2>         
             <div class="jinx-box align justify">
-                {%- if jinxes_next_page %}
-                    <p style="page-break-before: always;" ></p>
-                {%- endif %}
-                
                 <div class="jinx-enclosing-c align justify">
                     {%- for id in jinxes %}
                         {%- for jinx in jinxes[id] %}

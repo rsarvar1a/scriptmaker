@@ -154,6 +154,9 @@ def cmd_make_pdf (args):
             if args.bucket:
                 script.options.bucket = True
 
+            if args.force_jinxes:
+                script.options.force_jinxes = True
+
             results = set()
 
             path = Renderer().render_script(script, output_folder = output_folder)
