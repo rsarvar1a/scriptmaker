@@ -26,6 +26,8 @@
     "otherNight": 54,
     "otherNightReminder": "If the Amnesiac's ability causes them to wake tonight: Wake the Amnesiac and run their ability.",
     "reminders": [
+      "?",
+      "?",
       "?"
     ],
     "remote_image": "https://raw.githubusercontent.com/rsarvar1a/json-on-the-clocktower/main/data/images/amnesiac.png",
@@ -653,6 +655,8 @@
     "otherNight": 80,
     "otherNightReminder": "Show the hand signal for the number (0, 1, 2, etc.) of players whose ability malfunctioned due to other abilities.",
     "reminders": [
+      "Abnormal",
+      "Abnormal",
       "Abnormal",
       "Abnormal",
       "Abnormal",
@@ -2285,8 +2289,6 @@
     "otherNight": 25,
     "otherNightReminder": "Choose a player, that player dies.",
     "reminders": [
-      "Dead",
-      "Dead",
       "Dead",
       "About To Die"
     ],

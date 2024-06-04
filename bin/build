@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 
-poetry run python bin/regenerate.py
+bin/regenerate
 poetry version "$1"
 poetry build

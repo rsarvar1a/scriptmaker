@@ -107,10 +107,8 @@ class Tokenizer ():
                 reminders = f"file://{Path(tmpdir, f'leaf-reminder-{min(reminder_count, 7)}.png').resolve()}" if reminder_count > 0 else None,
                 out = text_svg_folder
             )
-            if character.id in character_copies:
-                character_tokens.extend([character_entry] * character_copies[character.id])
-            else:
-                character_tokens.append(character_entry)
+            character_tokens.extend([character_entry] * character_copies.get(character.id, 1))
+
             for i, reminder_text in enumerate(character.reminders + character.remindersGlobal):
                 reminder_entry = ReminderToken(
                     id = f"{character.id}-{i}",
@@ -118,7 +116,7 @@ class Tokenizer ():
                     text = reminder_text,
                     out = text_svg_folder
                 )
-                reminder_tokens.append(reminder_entry)
+                reminder_tokens.extend([reminder_entry] * character_copies.get(character.id, 1))
 
         # Load every asset we need into the build workspace.
 

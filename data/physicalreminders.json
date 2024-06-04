@@ -9,6 +9,8 @@
   {
     "id": "amnesiac",
     "reminders": [
+      "?",
+      "?",
       "?"
     ],
     "remindersGlobal": []
@@ -246,6 +248,8 @@
   {
     "id": "mathematician",
     "reminders": [
+      "Abnormal",
+      "Abnormal",
       "Abnormal",
       "Abnormal",
       "Abnormal",
@@ -748,8 +752,6 @@
   {
     "id": "legion",
     "reminders": [
-      "Dead",
-      "Dead",
       "Dead",
       "About To Die"
     ],
