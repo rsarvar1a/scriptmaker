@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head lang="EN">
+        <link rel="stylesheet" href="file://common.css">
+        <link rel="stylesheet" href="file://reminder-tokens-{{reminder_size}}.css">
+    </head>
+
+    <body>
+        {%- for reminder_page in reminders %}
+            {%- if not loop.first %}
+                <p style="margin-top: -0.75mm;"></p>
+            {%- endif %}
+            <div class="cols-auto">
+                {%- for reminder in reminder_page %}
+                    <div class="reminder" style="height: {{reminder_size}}; width: {{reminder_size}}">
+                        <img src="{{reminder.text}}" class="name">                   
+                        <div class='icon-box-reminder'><img src="{{reminder.icon}}" class="icon"></div>
+                    </div>
+                {%- endfor %}
+            </div>
+            {%- if not loop.last %}
+                <p style="break-before: page;"></p>
+            {%- endif %}
+        {%- endfor %}
+    </body>
+</html>

@@ -234,19 +234,20 @@ def cmd_tokenize (args):
             'name': script.meta.name,
             'characters': script.characters,
             'character_copies': character_copies,
-            "render_everything": True 
+            "render_everything": args.official_only 
         }
-        if args.character_size: params['character_token_size'] = args.character_size
-        if args.reminder_size: params['reminder_token_size'] = args.reminder_size
+        if args.character_size: params['character_token_size'] = int(args.character_size)
+        if args.reminder_size: params['reminder_token_size'] = int(args.reminder_size)
         
         datastore.characters = dict(sorted(datastore.characters.items(), key=lambda item: item[0]))
-        output_file = Tokenizer().render(datastore, ** params)
+        output_files = Tokenizer().render(datastore, ** params)
         
-        if args.postprocess:
-            PDFTools.compress(output_file)
-            PDFTools.pngify(output_file)
+        for output_file in output_files:
+            if args.postprocess:
+                PDFTools.compress(output_file)
+                PDFTools.pngify(output_file)
+            print(str(output_file))
 
-    print(str(output_file))
     return 0
 
 

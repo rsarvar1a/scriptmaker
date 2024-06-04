@@ -1,3 +1,11 @@
+@page 
+{
+    background-image: url("paper.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 5mm;
+    size: letter;
+}
 
 /* CHARACTERS */
 

@@ -86,7 +86,9 @@ class Renderer ():
         if script.options.force_jinxes:
             page_groups.append({ "teams": ["jinxes"], "height": 0 })
         
-        jinxes_next_page = len(page_groups[-1]["teams"]) > 1 or script.options.force_jinxes
+        jinxes_next_page = len(page_groups[-1]["teams"]) == 1 or script.options.force_jinxes
+        if jinxes_next_page:
+            page_groups.pop()
 
         # Decide where we'll build icons.
         workspace = output_folder

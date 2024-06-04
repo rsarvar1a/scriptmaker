@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head lang="EN">
+        <link rel="stylesheet" href="file://common.css">
+        <link rel="stylesheet" href="file://character-tokens-{{character_size}}.css">
+    </head>
+
+    <body>
+
+        {# Characters #}
+        {%- for character_page in characters %}
+            {%- if not loop.first %}
+                <p style="margin-top: -0.75mm;"></p>
+            {%- endif %}
+            <div class="cols-auto" style="column-width: {{character_size}}">
+                {%- for character in character_page %}
+                    <div class="token-box" style="height: {{character_size}}; width: {{character_size}}">
+                        <img src="{{character.name}}" class="name">
+                        <img src="{{token_background}}" class="token">
+                        <div class="icon-box"><img src="{{character.icon}}" class="icon"></div>
+                        <!-- <div class="ability{{character.fontsize}}">{{ character.ability }}</div> -->
+                        {%- if character.setup %}<img src="{{character.setup}}" class="decoration">{%- endif %}
+                        {%- if character.first %}<img src="{{character.first}}" class="decoration">{%- endif %}
+                        {%- if character.other %}<img src="{{character.other}}" class="decoration">{%- endif %}
+                        {%- if character.reminders %}<img src="{{character.reminders}}" class="decoration">{%- endif %}
+                    </div>
+                {%- endfor %}
+            </div>
+            {%- if not loop.last %}
+                <p style="break-before: page;"></p>
+            {%- endif %}
+        {%- endfor %}
+    </body>
+</html>

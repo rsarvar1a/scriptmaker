@@ -12,6 +12,10 @@ import scriptmaker.models as models
 import scriptmaker.templates as templates 
 import scriptmaker.utilities as utilities
 
+PAGE_COUNTS = {
+    38: 20,
+    19: 80
+}
 
 class Tokenizer ():
     """ 
@@ -21,16 +25,22 @@ class Tokenizer ():
     def render (
         self, datastore : data.Datastore, *,
         name, 
-        characters = [],
+        characters = list[models.Character],
         character_copies = {},
         output_folder = None,
         render_everything = False,
-        character_token_size = 45, 
-        reminder_token_size = 19
+        character_token_size, 
+        reminder_token_size
     ):
         """
         Renders a script's (or it's datastore's) entire token set into a physically-printable layout.
         """
+        if character_token_size not in [38]:
+            raise Exception(f"cannot handle characters of size {character_token_size}: wait for Avery support!")
+
+        if reminder_token_size not in [19]:
+            raise Exception(f"cannot handle reminders of size {reminder_token_size}: wait for Avery support!")
+
         # What are we rendering, and to where?
         folder = Path(output_folder, 'pdf') if output_folder else Path(datastore.workspace, "pdf")
         utilities.filesystem.mkdirp(folder)
@@ -38,10 +48,8 @@ class Tokenizer ():
         tmpdir = Path(folder.parent, 'build')
         utilities.filesystem.mkdirp(tmpdir)
         
-        output_path = Path(folder, f"{utilities.sanitize.name(name)}-tokens.pdf")
-        
         # Build a parameter set for each character we want to print.
-        character_set = datastore.characters.values() if render_everything else [datastore.characters[id] for id in characters]
+        character_set = datastore.characters.values() if render_everything else [datastore.characters[char.id] for char in characters]
         
         character_tokens = []
         reminder_tokens = []
@@ -58,7 +66,7 @@ class Tokenizer ():
                 p.M(75, 250)
                 p.A(175, 175, 0, 0, 0, 425, 250)
                 d.append(p)
-                t = drawsvg.Text(self.name, 60, path = p, fill='black', text_anchor = 'middle', center = True, font_family = 'Dumbledor 1')
+                t = drawsvg.Text(self.name, 60, path=p, stroke='white', stroke_width='1', fill='black', text_anchor = 'middle', center = True, font_family = 'Dumbledor 1')
                 d.append(t)
                 self.name = Path(out, f"{self.id}.png").resolve()
                 d.set_pixel_scale(2)
@@ -111,20 +119,10 @@ class Tokenizer ():
                     out = text_svg_folder
                 )
                 reminder_tokens.append(reminder_entry)
-                
-        # Set up all other params.
-        token_path = f"file://{Path(tmpdir, 'token.png').resolve()}"
 
-        params = {
-            "characters": character_tokens,
-            "reminders": reminder_tokens,
-            "token_background": token_path,
-            "character_size": f"{character_token_size}mm",
-            "reminder_size": f"{reminder_token_size}mm"
-        }
-        
         # Load every asset we need into the build workspace.
-        for file in templates.COMMON + ['tokens.jinja', 'tokens.css']:
+
+        for file in templates.COMMON:
             file_content = templates.get_data(file)
             with open(Path(tmpdir, file), "wb") as tmpfile:
                 tmpfile.write(file_content)
@@ -138,22 +136,52 @@ class Tokenizer ():
         for character in character_set:
             cropped = datastore.icons[character.id].crop()
             cropped.save(Path(tmpdir, 'icons'))
-        
-        # Render everything and save.
-        loader = FileSystemLoader(tmpdir)
-        env = Environment(loader = loader, extensions=['jinja2.ext.loopcontrols'])
-        html = env.get_template('tokens.jinja').render(params)
-        
-        with open(Path(tmpdir, output_path.stem).with_suffix('.html'), 'w') as html_file:
-            html_file.write(html)
+
+        n = PAGE_COUNTS[character_token_size]
+        characters_paged = [character_tokens[i:i+n] for i in range(0, len(character_tokens), n)]
+
+        n = PAGE_COUNTS[reminder_token_size]
+        reminders_paged = [reminder_tokens[i:i+n] for i in range(0, len(reminder_tokens), n)]
+
+        paths = []
+        for mode in ['character', 'reminder']:
+            token_size = character_token_size if mode == 'character' else reminder_token_size
+
+            # Set up all other params.
+            css_path = f'{mode}-tokens-{token_size}.css'
+            jinja_path = f'{mode}-tokens.jinja'
+            out_path = Path(folder, f"{utilities.sanitize.name(name)}-{mode}-tokens.pdf")
+            token_path = f"file://{Path(tmpdir, 'token.png').resolve()}"
+
+            for file in [jinja_path, css_path]:
+                file_content = templates.get_data(file)
+                with open(Path(tmpdir, file), 'wb') as tmpfile:
+                    tmpfile.write(file_content)
+
+            params = {
+                "characters": characters_paged,
+                "reminders": reminders_paged,
+                "token_background": token_path,
+                "character_size": f"{character_token_size}mm",
+                "reminder_size": f"{reminder_token_size}mm",
+            }
             
-        utilities.filesystem.mkdirp(Path(output_path).parent)
-        
-        weasyprint.HTML(string = html).write_pdf(
-            target = output_path,
-            stylesheets = [Path(tmpdir, 'tokens.css'), Path(tmpdir, 'common.css')],
-            jpeg_quality = 95,
-            full_fonts = True
-        )
-        
-        return output_path
+            # Render everything and save.
+            loader = FileSystemLoader(tmpdir)
+            env = Environment(loader = loader, extensions=['jinja2.ext.loopcontrols'])
+            html = env.get_template(jinja_path).render(params)
+
+            with open(Path(tmpdir, out_path.stem).with_suffix('.html'), 'w') as html_file:
+                html_file.write(html)
+                
+            utilities.filesystem.mkdirp(Path(out_path).parent)
+            
+            weasyprint.HTML(string = html).write_pdf(
+                target = out_path,
+                stylesheets = [Path(tmpdir, css_path), Path(tmpdir, 'common.css')],
+                jpeg_quality = 95,
+                full_fonts = True
+            )
+
+            paths.append(out_path)
+        return paths

@@ -13,7 +13,8 @@ COMMON = [
     "leaf-reminder-6.png",
     "leaf-reminder-7.png",
     "leaf-setup.png",
-    "token.png"
+    "token.png",
+    "token2.png"
 ]
 
 def get_data (file):
