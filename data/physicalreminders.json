@@ -11,6 +11,15 @@
     "reminders": [
       "?",
       "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
       "?"
     ],
     "remindersGlobal": []
@@ -155,7 +164,13 @@
   },
   {
     "id": "general",
-    "reminders": [],
+    "reminders": [
+      "Evil Winning",
+      "Evil Ahead",
+      "Neutral",
+      "Good Ahead",
+      "Good Winning"
+    ],
     "remindersGlobal": []
   },
   {
@@ -174,7 +189,11 @@
   },
   {
     "id": "highpriestess",
-    "reminders": [],
+    "reminders": [
+      "Should Talk",
+      "Should Talk",
+      "Should Talk"
+    ],
     "remindersGlobal": []
   },
   {
@@ -316,6 +335,7 @@
     "id": "pixie",
     "reminders": [
       "Mad",
+      "Satisfied",
       "Has Ability"
     ],
     "remindersGlobal": []
@@ -468,7 +488,8 @@
   {
     "id": "damsel",
     "reminders": [
-      "Guess Used"
+      "Guess Used",
+      "Poisoned"
     ],
     "remindersGlobal": []
   },
@@ -496,7 +517,9 @@
   {
     "id": "heretic",
     "reminders": [],
-    "remindersGlobal": []
+    "remindersGlobal": [
+      "Is the Heretic"
+    ]
   },
   {
     "id": "klutz",
@@ -510,7 +533,9 @@
       "Attack 2",
       "Attack 3"
     ],
-    "remindersGlobal": []
+    "remindersGlobal": [
+      "Is the Lunatic"
+    ]
   },
   {
     "id": "moonchild",
@@ -521,13 +546,16 @@
   },
   {
     "id": "mutant",
-    "reminders": [],
+    "reminders": [
+      "Can Execute"
+    ],
     "remindersGlobal": []
   },
   {
     "id": "plaguedoctor",
     "reminders": [
-      "Storyteller Ability"
+      "Storyteller Ability",
+      "Has Ability"
     ],
     "remindersGlobal": []
   },
@@ -594,7 +622,8 @@
   {
     "id": "cerenovus",
     "reminders": [
-      "Mad"
+      "Mad",
+      "Can Execute"
     ],
     "remindersGlobal": []
   },
@@ -638,7 +667,8 @@
     "id": "harpy",
     "reminders": [
       "Mad",
-      "2nd"
+      "2nd",
+      "Can Execute"
     ],
     "remindersGlobal": []
   },
@@ -651,7 +681,9 @@
   },
   {
     "id": "mastermind",
-    "reminders": [],
+    "reminders": [
+      "Active"
+    ],
     "remindersGlobal": []
   },
   {
@@ -671,7 +703,11 @@
   },
   {
     "id": "pithag",
-    "reminders": [],
+    "reminders": [
+      "Is Evil",
+      "Is Evil",
+      "Is Evil"
+    ],
     "remindersGlobal": []
   },
   {
@@ -753,6 +789,8 @@
     "id": "legion",
     "reminders": [
       "Dead",
+      "Dead",
+      "Dead",
       "About To Die"
     ],
     "remindersGlobal": []
@@ -791,6 +829,13 @@
       "Dead",
       "Poisoned",
       "Poisoned"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "ogre",
+    "reminders": [
+      "Friend"
     ],
     "remindersGlobal": []
   },
@@ -847,8 +892,28 @@
     "remindersGlobal": []
   },
   {
+    "id": "villageidiot",
+    "reminders": [
+      "Drunk",
+      "Drunk",
+      "Drunk"
+    ],
+    "remindersGlobal": []
+  },
+  {
     "id": "vortox",
     "reminders": [
+      "Dead"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "yaggababble",
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Dead",
+      "Dead",
       "Dead"
     ],
     "remindersGlobal": []
@@ -865,6 +930,10 @@
     "id": "angel",
     "reminders": [
       "Protected",
+      "Protected",
+      "Protected",
+      "Something Bad",
+      "Something Bad",
       "Something Bad"
     ],
     "remindersGlobal": []
@@ -876,7 +945,11 @@
   },
   {
     "id": "buddhist",
-    "reminders": [],
+    "reminders": [
+      "Is Quiet",
+      "Is Quiet",
+      "Is Quiet"
+    ],
     "remindersGlobal": []
   },
   {

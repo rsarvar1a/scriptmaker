@@ -116,7 +116,7 @@ class Tokenizer ():
                     text = reminder_text,
                     out = text_svg_folder
                 )
-                reminder_tokens.extend([reminder_entry] * character_copies.get(character.id, 1))
+                reminder_tokens.extend([reminder_entry])
 
         # Load every asset we need into the build workspace.
 

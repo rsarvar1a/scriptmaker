@@ -61,7 +61,6 @@ with open("data/physicalreminders.json") as patches_file:
 
 # Deal with inconsistent referencing in the old bra1n data.
 names_to_ids = { output[id]['name']: id for id in output }
-print(names_to_ids)
 def to_id (id):
     if id in output.keys(): return id
     else: return names_to_ids[id]
