@@ -1,0 +1,23 @@
+ability: 'Each night, choose a player: you learn their alignment. [+0 to +2 Village
+  Idiots. 1 of the extras is drunk]'
+edition: carousel
+firstNight: 67
+firstNightReminder: Choose a Village Idiot to be drunk. Wake the Village Idiots one
+  at a time, they choose a player, show either good or evil thumbs according to the
+  alignment of that player.
+flavor: Roses are blue, and violets are red, Please reverse what I just said.
+id: villageidiot
+image:
+- https://botc.app/assets/villageidiot_g-CdZf6FkN.webp
+- https://botc.app/assets/villageidiot_e-D6AONnUX.webp
+name: Village Idiot
+otherNight: 85
+otherNightReminder: Wake the Village Idiots one at a time, they choose a player, show
+  either good or evil thumbs according to the alignment of that player.
+reminders:
+- Drunk
+setup: true
+special:
+- name: bag-duplicate
+  type: selection
+team: townsfolk

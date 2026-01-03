@@ -1,0 +1,24 @@
+ability: 'Each night*, choose a player: they die. Minions you kill keep their ability
+  & poison 1 Townsfolk neighbor. [-1 Outsider]'
+edition: snv
+flavor: All doors are one door. All keys are one key. All cups are one cup, but whosoever
+  drinketh of the water that I give shall never thirst, but the water shall be in
+  him a well springing up into everlasting life.
+id: vigormortis
+image:
+- https://botc.app/assets/vigormortis_e-0VJIslwJ.webp
+- https://botc.app/assets/vigormortis_g-DP1UY2Jk.webp
+name: Vigormortis
+otherNight: 48
+otherNightReminder: 'The Vigormortis chooses a player. :reminder: If that player is
+  a Minion, poison a neighboring Townsfolk. :reminder: :reminder:'
+reminders:
+- Dead
+- Has Ability
+- Has Ability
+- Has Ability
+- Poisoned
+- Poisoned
+- Poisoned
+setup: true
+team: demon

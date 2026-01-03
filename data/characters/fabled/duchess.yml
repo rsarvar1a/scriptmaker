@@ -1,0 +1,21 @@
+ability: Each day, 3 players may choose to visit you. At night*, each visitor learns
+  how many visitors are evil, but 1 gets false info.
+edition: fabled
+flavor: We shall entertain between the hours of 6 and 7 precisely. Tea at 6:15. Scones
+  at 6:45. Do not be late. Formal wear applies, as always.
+id: duchess
+image:
+- https://botc.app/assets/duchess-CHpS7XMx.webp
+name: Duchess
+otherNight: 2
+otherNightReminder: "Wake each player marked *VISITOR* or *FALSE INFO* one at a time.\
+  \ Show them the Duchess token, then fingers (1, 2, 3) equaling the number of evil\
+  \ players marked \u201CVisitor\u201D or, if you are waking the player marked \u201C\
+  False Info,\u201D show them any number of fingers except the number of evil players\
+  \ marked \u201CVisitor.\u201D"
+reminders:
+- Visitor
+- Visitor
+- False Info
+setup: false
+team: fabled

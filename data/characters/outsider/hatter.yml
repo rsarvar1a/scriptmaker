@@ -1,0 +1,17 @@
+ability: If you died today or tonight, the Minion & Demon players may choose new Minion
+  & Demon characters to be.
+edition: carousel
+flavor: One Hat. Too Hat. Three Hat. Tea Hat. Fore Hat. Thrive Hat. Six Hat. Sticks
+  Hat.
+id: hatter
+image:
+- https://botc.app/assets/hatter_g-16CFZpfo.webp
+- https://botc.app/assets/hatter_e-BMVaOuLf.webp
+name: Hatter
+otherNight: 58
+otherNightReminder: If the Hatter died today or tonight, wake Minions and Demons,
+  allow them to choose new characters.
+reminders:
+- Tea Party Tonight
+setup: false
+team: outsider

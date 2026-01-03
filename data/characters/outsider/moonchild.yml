@@ -1,0 +1,17 @@
+ability: When you learn that you died, publicly choose 1 alive player. Tonight, if
+  it was a good player, they die.
+edition: bmr
+flavor: Scorpio looks sideways at the lovers, and you have a choice to make. With
+  silver cross my palm, and your fate shall be revealed. With steel cross my throat,
+  and by the stars you shall regret it.
+id: moonchild
+image:
+- https://botc.app/assets/moonchild_g-DKURQEzF.webp
+- https://botc.app/assets/moonchild_e-D-P3dKVK.webp
+name: Moonchild
+otherNight: 71
+otherNightReminder: 'If the Moonchild is due to kill a good player, they die. :reminder:'
+reminders:
+- Dead
+setup: false
+team: outsider

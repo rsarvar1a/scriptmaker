@@ -1,0 +1,13 @@
+ability: You start knowing how many steps from the Demon to its nearest Minion.
+edition: snv
+firstNight: 59
+firstNightReminder: Give a finger signal.
+flavor: Do not disturb me. The tick must continue, for the circle is a symbol of life
+  and contains all things - all answers - in its divine machinery. I must work.
+id: clockmaker
+image:
+- https://botc.app/assets/clockmaker_g-z-gzmkzc.webp
+- https://botc.app/assets/clockmaker_e-De0CuxuO.webp
+name: Clockmaker
+setup: false
+team: townsfolk

@@ -1,0 +1,17 @@
+ability: On your 1st day, if you nominated & executed a player, the Demon doesn't
+  kill tonight.
+edition: carousel
+flavor: Our words are hounds, bound by silken threads, dear lords. Let kindness weave
+  them true, lest the reigns unravel and rend our court.
+id: princess
+image:
+- https://botc.app/assets/princess_g-BGsIJ79g.webp
+- https://botc.app/assets/princess_e-DDQtxFNX.webp
+name: Princess
+otherNight: 37
+otherNightReminder: If the Princess nominated the player who was executed today, the
+  Demon wakes as normal, but no one dies to the Demon's ability.
+reminders:
+- Doesn't Kill
+setup: false
+team: townsfolk

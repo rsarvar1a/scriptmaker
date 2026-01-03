@@ -1,0 +1,15 @@
+ability: Once per game, during the day, visit the Storyteller for some advice to help
+  your team win.
+edition: carousel
+flavor: This was my favourite part of the river... see how the sunlight makes a rainbow
+  from the monastery to the market? This was the best place for big fish. And the
+  older I get, the bigger they were.
+id: fisherman
+image:
+- https://botc.app/assets/fisherman_g-D4SVpSql.webp
+- https://botc.app/assets/fisherman_e-Da2Y5IG7.webp
+name: Fisherman
+reminders:
+- No Ability
+setup: false
+team: townsfolk

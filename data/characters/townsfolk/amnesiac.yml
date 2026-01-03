@@ -1,0 +1,19 @@
+ability: 'You do not know what your ability is. Each day, privately guess what it
+  is: you learn how accurate you are.'
+edition: carousel
+firstNight: 50
+firstNightReminder: Run the Amnesiac's ability, if applicable.
+flavor: Wait. What. Who? Oh, ok. Wait. What?
+id: amnesiac
+image:
+- https://botc.app/assets/amnesiac_g-1rV8CyUl.webp
+- https://botc.app/assets/amnesiac_e-CEaf8TX1.webp
+name: Amnesiac
+otherNight: 68
+otherNightReminder: Run the Amnesiac's ability, if applicable.
+reminders:
+- '?'
+- '?'
+- '?'
+setup: false
+team: townsfolk

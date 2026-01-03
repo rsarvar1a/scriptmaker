@@ -1,0 +1,13 @@
+ability: Once per game, during the day, privately ask the Storyteller any yes/no question.
+edition: snv
+flavor: "Mon Dieu! C'est lumineux! My work, she is... how you say... Magnifique! Dieu\
+  \ est r\xE9v\xE9l\xE9! Oui."
+id: artist
+image:
+- https://botc.app/assets/artist_g-CyRrA7cN.webp
+- https://botc.app/assets/artist_e-CpwoIhpV.webp
+name: Artist
+reminders:
+- No Ability
+setup: false
+team: townsfolk

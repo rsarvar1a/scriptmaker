@@ -1,0 +1,10 @@
+ability: You are a Townsfolk.
+edition: special
+flavor: I am a good Townfolk.
+id: townsfolk
+image:
+- https://botc.app/assets/townsfolk_g-CKaS3yKc.webp
+- https://botc.app/assets/townsfolk_e-CHxn-dgu.webp
+name: Townsfolk
+setup: false
+team: _meta

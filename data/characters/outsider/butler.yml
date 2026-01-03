@@ -1,0 +1,21 @@
+ability: 'Each night, choose a player (not yourself): tomorrow, you may only vote
+  if they are voting too.'
+edition: tb
+firstNight: 57
+firstNightReminder: 'The Butler chooses a player. :reminder:'
+flavor: Yes, sir... No, sir... Certainly, sir.
+id: butler
+image:
+- https://botc.app/assets/butler_g-Cr36DpeC.webp
+- https://botc.app/assets/butler_e-C2ho4G2f.webp
+jinxes:
+- id: organgrinder
+  reason: If the Organ Grinder is causing eyes closed voting, the Butler may raise
+    their hand to vote but their vote is only counted if their master voted too.
+name: Butler
+otherNight: 90
+otherNightReminder: 'The Butler chooses a player. :reminder:'
+reminders:
+- Master
+setup: false
+team: outsider

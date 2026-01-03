@@ -1,0 +1,12 @@
+ability: Display Demon information.
+edition: special
+firstNight: 23
+firstNightReminder: 'If there are 7 or more players, wake the Demon: Show the *THESE
+  ARE YOUR MINIONS* token. Point to all Minions. Show the *THESE CHARACTERS ARE NOT
+  IN PLAY* token. Show 3 not-in-play good character tokens.'
+id: demoninfo
+image:
+- https://botc.app/assets/demon-info-B8oHUaMT.webp
+name: Demon Info
+setup: false
+team: _meta

@@ -1,0 +1,28 @@
+ability: You start knowing 1 evil player. If the player you know dies, you learn another
+  evil player tonight. [1 Townsfolk is evil]
+edition: carousel
+firstNight: 68
+firstNightReminder: Point to the *KNOWN* player.
+flavor: Alone, I walk these streets, paved with the sick stench of corruption. Its
+  thickness worms its way into my nostrils, unbidden, burning with revulsion. And
+  anticipation. The illness of this wretched place grows each night. And I... I am
+  the cure.
+id: bountyhunter
+image:
+- https://botc.app/assets/bountyhunter_g-BCEfwrWL.webp
+- https://botc.app/assets/bountyhunter_e-BhBaVK4W.webp
+jinxes:
+- id: kazali
+  reason: If the Kazali turns the Bounty Hunter into a Minion, an evil Townsfolk is
+    not created.
+- id: philosopher
+  reason: If the Philosopher gains the Bounty Hunter ability, a Townsfolk might turn
+    evil.
+name: Bounty Hunter
+otherNight: 87
+otherNightReminder: If the *KNOWN* player died today or tonight, point to a new *KNOWN*
+  player.
+reminders:
+- Know
+setup: true
+team: townsfolk

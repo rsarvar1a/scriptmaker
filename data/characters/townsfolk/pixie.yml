@@ -1,0 +1,19 @@
+ability: You start knowing 1 in-play Townsfolk. If you were mad that you were this
+  character, you gain their ability when they die.
+edition: carousel
+firstNight: 47
+firstNightReminder: Show the Townsfolk character token marked *MAD*.
+flavor: "Round and round the garden, go. Little girls run to and fro. Little boys\
+  \ climb up the tree. Which of these should Pixie be? Ladies smile and go to town.\
+  \ Lords with axe chop forest down. What\u2019s yours is mine. What\u2019s mine,\
+  \ divine. Silly little Pixie, me."
+id: pixie
+image:
+- https://botc.app/assets/pixie_g-B1xIo6Bx.webp
+- https://botc.app/assets/pixie_e-Dknojw1x.webp
+name: Pixie
+reminders:
+- Mad
+- Has Ability
+setup: false
+team: townsfolk

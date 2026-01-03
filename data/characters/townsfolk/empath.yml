@@ -1,0 +1,14 @@
+ability: Each night, you learn how many of your 2 alive neighbors are evil.
+edition: tb
+firstNight: 55
+firstNightReminder: Give a finger signal.
+flavor: My skin prickles. Something is not right here. I can feel it.
+id: empath
+image:
+- https://botc.app/assets/empath_g-vVEkU0cf.webp
+- https://botc.app/assets/empath_e-CWeYvCJ9.webp
+name: Empath
+otherNight: 75
+otherNightReminder: Give a finger signal.
+setup: false
+team: townsfolk

@@ -1,0 +1,9 @@
+ability: There might be 1 extra or 1 fewer Outsider in play.
+edition: fabled
+flavor: Name, please. Papers, please. Weapons, please.
+id: sentinel
+image:
+- https://botc.app/assets/sentinel-BaOVo1PE.webp
+name: Sentinel
+setup: true
+team: fabled

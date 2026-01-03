@@ -1,0 +1,15 @@
+ability: If you are executed, all but 3 players die. After a 10 to 1 countdown, the
+  player with the most players pointing at them, dies.
+edition: carousel
+flavor: Tick... Tick... Tick... TOCK.
+id: boomdandy
+image:
+- https://botc.app/assets/boomdandy_e-S13eahkU.webp
+- https://botc.app/assets/boomdandy_g-DOTwgB8d.webp
+name: Boomdandy
+setup: false
+special:
+- name: pointing
+  time: day
+  type: ability
+team: minion

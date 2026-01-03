@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+bin/build $1
+poetry publish

@@ -180,7 +180,7 @@ class Datastore ():
         """
         try:
             nightmeta = json.loads(compiled.get_data("nightmeta.json"))
-            for character in nightmeta:
+            for _, character in nightmeta.items():
                 nightmeta_char = models.Character.from_dict(character)
                 self.characters[nightmeta_char.id] = nightmeta_char
                 self.__load_package_icon(nightmeta_char.id)

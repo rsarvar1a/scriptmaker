@@ -1,0 +1,11 @@
+ability: Each day, after the 1st execution, you may nominate again.
+edition: snv
+flavor: It tastes like chicken. More please.
+id: butcher
+image:
+- https://botc.app/assets/butcher-COYeTS3-.webp
+- https://botc.app/assets/butcher_g-BqDe54Mz.webp
+- https://botc.app/assets/butcher_e-BvZvHE-0.webp
+name: Butcher
+setup: false
+team: traveller

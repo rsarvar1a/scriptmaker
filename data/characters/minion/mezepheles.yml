@@ -1,0 +1,21 @@
+ability: You start knowing a secret word. The 1st good player to say this word becomes
+  evil that night.
+edition: carousel
+firstNight: 45
+firstNightReminder: Show the written word.
+flavor: That which issues from the heart alone, will bend the hearts of others to
+  your own.
+id: mezepheles
+image:
+- https://botc.app/assets/mezepheles_e-B7tfHUqC.webp
+- https://botc.app/assets/mezepheles_g-DlDB5-jk.webp
+name: Mezepheles
+otherNight: 31
+otherNightReminder: 'If a player is marked with the *TURNS EVIL* reminder, wake them.
+  Show the *YOU ARE* info token and a thumbs down. The Mezepheles loses their ability.
+  :reminder:'
+reminders:
+- Turns Evil
+- No Ability
+setup: false
+team: minion

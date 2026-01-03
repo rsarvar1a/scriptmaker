@@ -1,0 +1,18 @@
+ability: Something bad might happen to whoever is most responsible for the death of
+  a new player.
+edition: fabled
+firstNight: 2
+firstNightReminder: Announce which players are protected by the Angel. Add the *PROTECTED*
+  token to the relevant players.
+flavor: Let those who are without sin dare to raise their hand to my chosen, for I
+  shall strike such fools down with the fury and righteousness of a thousand storms.
+id: angel
+image:
+- https://botc.app/assets/angel-Ayuhu7Hq.webp
+name: Angel
+reminders:
+- Protected
+- Protected
+- Something Bad
+setup: false
+team: fabled

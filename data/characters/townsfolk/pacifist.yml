@@ -1,0 +1,10 @@
+ability: Executed good players might not die.
+edition: bmr
+flavor: Distrust all in whom the impulse to punish is powerful.
+id: pacifist
+image:
+- https://botc.app/assets/pacifist_g-DAkM1DME.webp
+- https://botc.app/assets/pacifist_e-BDyZFmeQ.webp
+name: Pacifist
+setup: false
+team: townsfolk

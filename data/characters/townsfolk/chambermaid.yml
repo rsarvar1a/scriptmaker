@@ -1,0 +1,18 @@
+ability: 'Each night, choose 2 alive players (not yourself): you learn how many woke
+  tonight due to their ability.'
+edition: bmr
+firstNight: 75
+firstNightReminder: The Chambermaid chooses 2 living players. Give a finger signal.
+flavor: I aint seen nothin' untoward, Milady. Begging your pardon, but if I did see
+  somethin', it certainly weren't the master o' the house sneaking into the professor's
+  laboratory 'round eleven o'clock and mixing up fancy potions, just like you said,
+  Miss.
+id: chambermaid
+image:
+- https://botc.app/assets/chambermaid_g-DAtPnmSz.webp
+- https://botc.app/assets/chambermaid_e-CdqkTS11.webp
+name: Chambermaid
+otherNight: 94
+otherNightReminder: The Chambermaid chooses 2 living players. Give a finger signal.
+setup: false
+team: townsfolk

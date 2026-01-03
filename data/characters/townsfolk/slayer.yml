@@ -1,0 +1,13 @@
+ability: 'Once per game, during the day, publicly choose a player: if they are the
+  Demon, they die.'
+edition: tb
+flavor: Die.
+id: slayer
+image:
+- https://botc.app/assets/slayer_g-BO_75tK_.webp
+- https://botc.app/assets/slayer_e-4pQk5kJR.webp
+name: Slayer
+reminders:
+- No Ability
+setup: false
+team: townsfolk

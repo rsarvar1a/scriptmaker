@@ -1,0 +1,14 @@
+ability: If the Demon kills the King, you learn which player is the Demon. [+the King]
+edition: carousel
+flavor: "I saw it, I did. I was in the pews, tidying the hymn books, when a dreadful\
+  \ tune started from the pipe organ. The organist had a long cloak, and long fingers\
+  \ on the keys. And a hat that looked\u2026 just like\u2026 yours."
+id: choirboy
+image:
+- https://botc.app/assets/choirboy_g-Dk5L9Lx_.webp
+- https://botc.app/assets/choirboy_e-CpElv2uq.webp
+name: Choirboy
+otherNight: 65
+otherNightReminder: If the Demon killed the King, point to the Demon player.
+setup: true
+team: townsfolk

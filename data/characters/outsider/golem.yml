@@ -1,0 +1,13 @@
+ability: You may only nominate once per game. When you do, if the nominee is not the
+  Demon, they die.
+edition: carousel
+flavor: Golem help? Golem smash! Golem help.
+id: golem
+image:
+- https://botc.app/assets/golem_g-HC-xAVh8.webp
+- https://botc.app/assets/golem_e-BMGfUhmK.webp
+name: Golem
+reminders:
+- May Not Nominate
+setup: false
+team: outsider

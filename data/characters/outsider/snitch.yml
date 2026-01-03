@@ -1,0 +1,13 @@
+ability: Each Minion gets 3 bluffs.
+edition: carousel
+firstNight: 20
+firstNightReminder: Wake each Minion. Show the *THESE CHARACTERS ARE NOT IN PLAY*
+  token and three not-in-play character tokens. Put each Minion to sleep.
+flavor: It was John.
+id: snitch
+image:
+- https://botc.app/assets/snitch_g-D_RNpbcY.webp
+- https://botc.app/assets/snitch_e-yBlnGiGd.webp
+name: Snitch
+setup: false
+team: outsider

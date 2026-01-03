@@ -1,0 +1,25 @@
+ability: You have the ability of the recently killed executee. If they are evil, you
+  are poisoned until a good player dies by execution.
+edition: carousel
+flavor: "I don\u2019t like clowns. They taste funny."
+id: cannibal
+image:
+- https://botc.app/assets/cannibal_g-eP3mwaD2.webp
+- https://botc.app/assets/cannibal_e-PuVaqnSr.webp
+jinxes:
+- id: butler
+  reason: If the Cannibal gains the Butler ability, the Cannibal learns this.
+- id: juggler
+  reason: If the Juggler guesses on their first day and dies by execution, tonight
+    the living Cannibal learns how many guesses the Juggler got correct.
+- id: princess
+  reason: "If the Cannibal nominated, executed, & killed the Princess today, the Demon\
+    \ doesn\u2019t kill tonight."
+- id: zealot
+  reason: If the Cannibal gains the Zealot ability, the Cannibal learns this.
+name: Cannibal
+reminders:
+- Poisoned
+- Lunch
+setup: false
+team: townsfolk

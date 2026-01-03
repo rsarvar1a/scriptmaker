@@ -1,0 +1,13 @@
+ability: On the final day, all dead players regain their vote token.
+edition: fabled
+flavor: When righteous dreams come, they have the weight of truth.
+id: ferryman
+image:
+- https://botc.app/assets/ferryman-B8DIdDH1.webp
+name: Ferryman
+setup: false
+special:
+- name: ghost-votes
+  time: day
+  type: ability
+team: fabled

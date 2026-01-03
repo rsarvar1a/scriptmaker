@@ -1,0 +1,26 @@
+ability: Each night, until dusk, 1) a player becomes sober, healthy & gets true info,
+  or 2) their ability works twice. They learn which.
+edition: snv
+firstNight: 10
+firstNightReminder: Choose a player, wake them and tell them which Barista power is
+  affecting them. Treat them accordingly (sober/healthy/true info or activate their
+  ability twice).
+flavor: "A cup of coffee with no cream, Monsieur? I\u2019m terribly sorry, but we\u2019\
+  re fresh out of cream \u2014 how about with no milk?"
+id: barista
+image:
+- https://botc.app/assets/barista-9RUmOrIt.webp
+- https://botc.app/assets/barista_g-IYOwLzUb.webp
+- https://botc.app/assets/barista_e-dh62LsHj.webp
+name: Barista
+otherNight: 52
+otherNightReminder: Choose a player, wake them and tell them which Barista power is
+  affecting them. Treat them accordingly (sober/healthy/true info or activate their
+  ability twice).
+reminders:
+- Sober & Healthy
+- Acts Twice
+- '?'
+- '?'
+setup: false
+team: traveller

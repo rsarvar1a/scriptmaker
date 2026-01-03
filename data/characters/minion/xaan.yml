@@ -1,0 +1,21 @@
+ability: On night X, all Townsfolk are poisoned until dusk. [X Outsiders]
+edition: carousel
+firstNight: 31
+firstNightReminder: 'Mark the Xaan with the *NIGHT 1* reminder. If X is 1, mark the
+  Xaan with the *X* reminder token. :reminder: :reminder:'
+flavor: Down they fall. One by one. By two, by three, by five.
+id: xaan
+image:
+- https://botc.app/assets/xaan_e-CkIqEKvE.webp
+- https://botc.app/assets/xaan_g-BtfiSj2N.webp
+name: Xaan
+otherNight: 15
+otherNightReminder: 'Change the Xaan reminder token to the relevant night. If it is
+  night X, mark the Xaan with the *X* reminder token. :reminder: :reminder:'
+reminders:
+- Night 1
+- Night 2
+- Night 3
+- X
+setup: true
+team: minion

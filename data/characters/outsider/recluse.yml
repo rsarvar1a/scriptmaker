@@ -1,0 +1,18 @@
+ability: You might register as evil & as a Minion or Demon, even if dead.
+edition: tb
+flavor: Garn git ya darn grub ya mitts ofma lorn yasee. Grr. Natsy pikkins yonder
+  southwise ye begittin afta ya! Git! Me harvy no so widda licks and demmons no be
+  fightin' hadsup ne'er ma kin. Git, assay!
+id: recluse
+image:
+- https://botc.app/assets/recluse_g-DxMFqO0r.webp
+- https://botc.app/assets/recluse_e-BUtHsTp3.webp
+jinxes:
+- id: ogre
+  reason: If the Recluse registers as evil to the Ogre, the Ogre learns that they
+    are evil.
+- id: sage
+  reason: The Recluse might register as the Demon to the Sage.
+name: Recluse
+setup: false
+team: outsider

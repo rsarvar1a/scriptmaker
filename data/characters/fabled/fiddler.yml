@@ -1,0 +1,16 @@
+ability: 'Once per game, the Demon secretly chooses an opposing player: all players
+  choose which of these 2 players win.'
+edition: fabled
+flavor: I'll wager mi lyef ye cannae best me in a fiddle contest, ye boss-eyed snook!
+  We'll go out on the lash, get the pub jammers an' have a right craic. I'll be layin'
+  ma boots into ya come mornin' ye rumbly muppet.
+id: fiddler
+image:
+- https://botc.app/assets/fiddler-DlAFGPhN.webp
+name: Fiddler
+setup: false
+special:
+- name: pointing
+  time: day
+  type: ability
+team: fabled

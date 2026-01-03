@@ -1,0 +1,17 @@
+ability: You start knowing 3 players, 1 and only 1 of which is evil.
+edition: carousel
+firstNight: 64
+firstNightReminder: Point to all three players marked *KNOW*.
+flavor: Sarcasm is indeed the lowest form of wit. But speaking in response to your
+  criticism, Sir, it is, nevertheless, a form of wit.
+id: noble
+image:
+- https://botc.app/assets/noble_g-B0vksP8B.webp
+- https://botc.app/assets/noble_e-BFJBeujm.webp
+name: Noble
+reminders:
+- Know
+- Know
+- Know
+setup: false
+team: townsfolk

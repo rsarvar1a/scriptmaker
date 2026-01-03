@@ -1,0 +1,15 @@
+ability: 'Each night*, choose a character: they die. If they are not in play, the
+  Storyteller chooses who dies.'
+edition: carousel
+flavor: "Like a bonfire on a moonless night\u2026 I see you, mortal."
+id: ojo
+image:
+- https://botc.app/assets/ojo_e-BwP-O6LJ.webp
+- https://botc.app/assets/ojo_g-jY2iz8BT.webp
+name: Ojo
+otherNight: 49
+otherNightReminder: 'The Ojo chooses a character. :reminder: '
+reminders:
+- Dead
+setup: false
+team: demon

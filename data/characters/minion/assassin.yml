@@ -1,0 +1,16 @@
+ability: 'Once per game, at night*, choose a player: they die, even if for some reason
+  they could not.'
+edition: bmr
+flavor: '...'
+id: assassin
+image:
+- https://botc.app/assets/assassin_e-BDitHnVO.webp
+- https://botc.app/assets/assassin_g-D_zJwNaF.webp
+name: Assassin
+otherNight: 55
+otherNightReminder: 'The Assassin might choose a player. :reminder: :reminder:'
+reminders:
+- Dead
+- No Ability
+setup: false
+team: minion

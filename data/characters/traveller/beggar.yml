@@ -1,0 +1,13 @@
+ability: You must use a vote token to vote. If a dead player gives you theirs, you
+  learn their alignment. You are sober & healthy.
+edition: tb
+flavor: Alms for the poor, good Sir? Spare a coin, Madam? Thank you. God bless! You're
+  a right kind soul and no mistake! I'll have some swanky nosh tonight, I will!
+id: beggar
+image:
+- https://botc.app/assets/beggar-BpoW7fsL.webp
+- https://botc.app/assets/beggar_g-Cn5PE4nQ.webp
+- https://botc.app/assets/beggar_e-C3_HD_se.webp
+name: Beggar
+setup: false
+team: traveller

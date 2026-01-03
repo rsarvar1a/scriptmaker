@@ -1,0 +1,16 @@
+ability: You start knowing that 1 of 2 players is a particular Townsfolk.
+edition: tb
+firstNight: 51
+firstNightReminder: Show the Townsfolk character token. Point to both the *TOWNSFOLK*
+  and *WRONG* players.
+flavor: Bloodstains on a dinner jacket? No, this is cooking sherry. How careless.
+id: washerwoman
+image:
+- https://botc.app/assets/washerwoman_g-CVnYjPdR.webp
+- https://botc.app/assets/washerwoman_e-TC3PgT2N.webp
+name: Washerwoman
+reminders:
+- Townsfolk
+- Wrong
+setup: false
+team: townsfolk

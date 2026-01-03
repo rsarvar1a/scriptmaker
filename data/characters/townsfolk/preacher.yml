@@ -1,0 +1,23 @@
+ability: 'Each night, choose a player: a Minion, if chosen, learns this. All chosen
+  Minions have no ability.'
+edition: carousel
+firstNight: 28
+firstNightReminder: 'The Preacher chooses a player. :reminder: If they chose a Minion:
+  Put the Preacher to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU*
+  token and the Preacher token.'
+flavor: It is better to be rich and healthy than poor and sick.
+id: preacher
+image:
+- https://botc.app/assets/preacher_g-CpPb8fQI.webp
+- https://botc.app/assets/preacher_e-CjXiLHle.webp
+name: Preacher
+otherNight: 14
+otherNightReminder: 'The Preacher chooses a player. :reminder: If they chose a Minion:
+  Put the Preacher to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU*
+  token and the Preacher token.'
+reminders:
+- No Ability
+- No Ability
+- No Ability
+setup: false
+team: townsfolk

@@ -1,0 +1,12 @@
+ability: There are extra Outsiders in play. [+2 Outsiders]
+edition: tb
+flavor: This town has gone to the dogs, what? Cheap foreign labor... that's the ticket.
+  Stuff them in the mine, I say. A bit of hard work never hurt anyone, and a clip'o'the
+  ears to any brigand who says otherwise. It's all about the bottom line, what?
+id: baron
+image:
+- https://botc.app/assets/baron_e-CH4q2C6-.webp
+- https://botc.app/assets/baron_g-DSaQcH7D.webp
+name: Baron
+setup: true
+team: minion

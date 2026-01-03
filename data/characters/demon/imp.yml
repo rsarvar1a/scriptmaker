@@ -1,0 +1,19 @@
+ability: 'Each night*, choose a player: they die. If you kill yourself this way, a
+  Minion becomes the Imp.'
+edition: tb
+flavor: We must keep our wits sharp and our sword sharper. Evil walks among us, and
+  will stop at nothing to destroy us good, simple folk, bringing our fine town to
+  ruin. Trust no-one. But, if you must trust someone, trust me.
+id: imp
+image:
+- https://botc.app/assets/imp_e-DNpveOPY.webp
+- https://botc.app/assets/imp_g-D-G7pJEY.webp
+name: Imp
+otherNight: 39
+otherNightReminder: 'The Imp chooses a player. :reminder: If the Imp chose themselves:
+  Replace 1 alive Minion token with a spare Imp token. Put the old Imp to sleep. Wake
+  the new Imp. Show the *YOU ARE* token, then show the Imp token.'
+reminders:
+- Dead
+setup: false
+team: demon

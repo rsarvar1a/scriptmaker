@@ -1,0 +1,17 @@
+ability: The Storyteller can break the game rules, and if executed, good wins, even
+  if you are dead. [No evil characters]
+edition: carousel
+flavor: Let us disperse with unnecessary conjecture and silly paranoia. There is a
+  perfectly rational explanation for everything. Yes, a teacup may indeed be orbiting
+  the planet, too small to see, but I shall drink my tea from the very real china
+  in my very real hands.
+id: atheist
+image:
+- https://botc.app/assets/atheist_g-CQOMSxIU.webp
+- https://botc.app/assets/atheist_e-CHiIPNXQ.webp
+name: Atheist
+setup: true
+special:
+- name: bag-duplicate
+  type: selection
+team: townsfolk

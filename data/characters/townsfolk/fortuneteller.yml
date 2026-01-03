@@ -1,0 +1,20 @@
+ability: 'Each night, choose 2 players: you learn if either is a Demon. There is a
+  good player that registers as a Demon to you.'
+edition: tb
+firstNight: 56
+firstNightReminder: The Fortune Teller chooses 2 players. Nod if either is the Demon
+  (or the *RED HERRING*).
+flavor: I sense great evil in your soul! But... that could just be your perfume. I
+  am allergic to Elderberry.
+id: fortuneteller
+image:
+- https://botc.app/assets/fortuneteller_g-lQQzYvkg.webp
+- https://botc.app/assets/fortuneteller_e-BWljoXp7.webp
+name: Fortune Teller
+otherNight: 76
+otherNightReminder: The Fortune Teller chooses 2 players. Nod if either is the Demon
+  (or the *RED HERRING*).
+reminders:
+- Red Herring
+setup: false
+team: townsfolk

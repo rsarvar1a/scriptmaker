@@ -1,0 +1,23 @@
+ability: 'Once per game, at night*, choose a dead player: they regain their ability
+  until dusk.'
+edition: snv
+flavor: I collect many things. Hair. Teeth. Clothes. Fragments of poems. The dreams
+  of lost lovers. My secret arts are not for you to know but my fee is a mere pittance.
+  Bring me the blood of a noblewoman who died of heartbreak under a full moon, and
+  you shall have your answers.
+id: bonecollector
+image:
+- https://botc.app/assets/bonecollector-CEqnpjbS.webp
+- https://botc.app/assets/bonecollector_g-DBlHdEjU.webp
+- https://botc.app/assets/bonecollector_e-CIpytarz.webp
+name: Bone Collector
+otherNight: 9
+otherNightReminder: The Bone Collector either shakes their head no or points at any
+  dead player. If they pointed at any dead player, put the Bone Collector's 'Has Ability'
+  reminder by the chosen player's character token. (They may need to be woken tonight
+  to use it.)
+reminders:
+- No Ability
+- Has Ability
+setup: false
+team: traveller

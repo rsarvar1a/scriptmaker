@@ -1,0 +1,92 @@
+#!/usr/bin/env python
+
+import json
+import os
+import re
+import tempfile
+import urllib.request
+import yaml
+
+from operator import itemgetter
+
+REAL_TEAMS = ['townsfolk', 'outsider', 'minion', 'demon', 'fabled', 'loric', 'traveller']
+DOMAIN = "https://wiki.bloodontheclocktower.com"
+REPO = "https://raw.githubusercontent.com/rsarvar1a/scriptmaker/refs/heads/main"
+
+UPSTREAM_LINK = 'https://raw.githubusercontent.com/GrayPockets/Released-as-Homebrew/refs/heads/main/Homebrew/Released_Homebrew.json'
+UPSTREAM_PATH = 'data/upstream.json'
+
+META_LINK = 'https://raw.githubusercontent.com/GrayPockets/Released-as-Homebrew/refs/heads/main/Homebrew/Special_Homebrew.json'
+META_PATH = 'data/upstream-meta.json'
+
+exceptions = yaml.load(open('data/exceptions.yml', 'r'), yaml.Loader)
+
+try:
+    os.mkdir(f'data/characters')
+except:
+    pass
+
+for team in REAL_TEAMS + ['_meta']:
+    try:
+        os.mkdir(f'data/characters/{team}')
+    except:
+        pass
+
+try:
+    os.mkdir(f"scriptmaker/data/icons")
+except:
+    pass
+
+try:
+    urllib.request.urlretrieve(UPSTREAM_LINK, UPSTREAM_PATH)
+    urllib.request.urlretrieve(META_LINK, META_PATH)
+except:
+    pass
+
+officials = json.load(open(UPSTREAM_PATH, 'r'))
+metas = json.load(open(META_PATH, 'r'))
+
+with tempfile.NamedTemporaryFile("w+b") as tmp:
+    for entry in [ *officials, *metas ]:
+        if 'team' not in entry or entry['edition'] == 'special':
+            entry['team'] = '_meta'
+
+        rah_id, team = itemgetter('id', 'team')(entry)
+        id = str(rah_id).replace('_rah', '').replace('_sah', '')
+        entry['id'] = id
+
+        try:
+            if 'remote_image' in entry:
+                del entry['remote_image']
+                    
+            with open(f'data/characters/{team}/{id}.yml', 'w') as out:
+                yaml.dump(entry, out, yaml.Dumper)
+
+            exception = exceptions[id] if id in exceptions else f"Icon_{id}"
+            
+            icon_path = f"scriptmaker/data/icons/Icon_{id}.png"
+            if os.path.exists(icon_path): 
+                continue
+            
+            try:
+                # Try the one given by the upstream first.
+                urllib.request.urlretrieve(entry['image'][0], icon_path)
+            except:
+                wiki_icon_link = f"{DOMAIN}/File:{exception}.png"
+                print(id, wiki_icon_link, end = " ")
+
+                urllib.request.urlretrieve(wiki_icon_link, tmp.name)
+                html = tmp.read().decode()
+                        
+                # Get directly to the corresponding image, and save it.
+                image_urls = re.search(r'images\/.\/..\/(?:Icon_)?[A-Za-z_]+.png', html)
+                urllib.request.urlretrieve(f"{DOMAIN}/{image_urls[0]}", icon_path)
+                
+                # Log and seek back.
+                print(len(html), image_urls)
+
+            entry['image'] = f"{REPO}/scriptmaker/data/icons/Icon_{id}.png"
+            tmp.seek(0)
+
+        except Exception as e:
+            print(f'{id} failed: {e}')

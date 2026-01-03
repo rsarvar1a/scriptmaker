@@ -1,0 +1,27 @@
+ability: Each night, you see the Grimoire. You might register as good & as a Townsfolk
+  or Outsider, even if dead.
+edition: tb
+firstNight: 71
+firstNightReminder: Show the Grimoire for as long as the Spy needs.
+flavor: Any brewmaster worth their liquor, knows no concoction pours trouble quicker,
+  than one where spies seem double.
+id: spy
+image:
+- https://botc.app/assets/spy_e-DU0tdGGe.webp
+- https://botc.app/assets/spy_g-7hnV_AFT.webp
+jinxes:
+- id: damsel
+  reason: If the Spy is (or has been) in play, the Damsel is poisoned.
+- id: ogre
+  reason: The Spy registers as evil to the Ogre.
+- id: poppygrower
+  reason: If the Poppy Grower has their ability, the Spy does not see the Grimoire.
+name: Spy
+otherNight: 91
+otherNightReminder: Show the Grimoire for as long as the Spy needs.
+setup: false
+special:
+- name: grimoire
+  time: night
+  type: signal
+team: minion

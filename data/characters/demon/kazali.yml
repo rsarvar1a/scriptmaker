@@ -1,0 +1,18 @@
+ability: 'Each night*, choose a player: they die. [You choose which players are which
+  Minions. -? to +? Outsiders]'
+edition: carousel
+firstNight: 8
+firstNightReminder: Wake the Kazali, allow them to choose Minions.
+flavor: Gon(z)a7les6. Take cau8tun. The mech4an4ion is iNvert10d. E99ors insy6tum.
+  Reco{7}fig.
+id: kazali
+image:
+- https://botc.app/assets/kazali_e-Bhxi3sLd.webp
+- https://botc.app/assets/kazali_g-BZsxV8YM.webp
+name: Kazali
+otherNight: 54
+otherNightReminder: 'The Kazali chooses a player. :reminder: '
+reminders:
+- Dead
+setup: true
+team: demon

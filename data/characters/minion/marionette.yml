@@ -1,0 +1,37 @@
+ability: You think you are a good character, but you are not. The Demon knows who
+  you are. [You neighbor the Demon]
+edition: carousel
+firstNight: 26
+firstNightReminder: Wake the Demon. Point to the player marked *IS THE MARIONETTE*
+  and show the *THIS PLAYER IS* token and the Marionette character token.
+flavor: Words, words. They're all we have to go on.
+id: marionette
+image:
+- https://botc.app/assets/marionette_e-BVmqAITW.webp
+- https://botc.app/assets/marionette_g-XJqVphtg.webp
+jinxes:
+- id: balloonist
+  reason: If the Marionette thinks that they are the Balloonist, an Outsider might
+    have been added during setup.
+- id: huntsman
+  reason: If the Marionette thinks that they are the Huntsman, the Damsel was added
+    during setup.
+- id: kazali
+  reason: If there would be a Marionette in play, they enter play after the Demon
+    & must start as their neighbor.
+- id: lilmonsta
+  reason: If there would be a Marionette in play, they enter play after the Demon
+    & must start as their neighbor.
+- id: summoner
+  reason: If there would be a Marionette in play, they enter play after the Demon
+    & must start as their neighbor.
+name: Marionette
+remindersGlobal:
+- Is The Marionette
+setup: true
+special:
+- name: bag-disabled
+  type: selection
+- name: replace-character
+  type: reveal
+team: minion

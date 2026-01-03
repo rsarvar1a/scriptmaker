@@ -1,0 +1,17 @@
+ability: 'Each night*, choose a player (not yourself): they are safe from the Demon
+  tonight.'
+edition: tb
+flavor: '''Tis an ill and deathly wind that blows tonight. Come, my brother, take
+  shelter in the abbey while the storm rages. By my word, or by my life, you will
+  be safe.'
+id: monk
+image:
+- https://botc.app/assets/monk_g-D4wNFA-b.webp
+- https://botc.app/assets/monk_e-OTOQUKVm.webp
+name: Monk
+otherNight: 23
+otherNightReminder: 'The Monk chooses a player. :reminder:'
+reminders:
+- Safe
+setup: false
+team: townsfolk

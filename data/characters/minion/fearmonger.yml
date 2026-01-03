@@ -1,0 +1,20 @@
+ability: 'Each night, choose a player: if you nominate & execute them, their team
+  loses. All players know if you choose a new player.'
+edition: carousel
+firstNight: 43
+firstNightReminder: 'The Fearmonger chooses a player. :reminder: Declare that "the
+  Fearmonger has chosen a player."'
+flavor: Beware of gazing long into the Abyss, lest the Abyss also gaze into you.
+id: fearmonger
+image:
+- https://botc.app/assets/fearmonger_e-RqyAUnj6.webp
+- https://botc.app/assets/fearmonger_g-WdnstOgT.webp
+name: Fearmonger
+otherNight: 29
+otherNightReminder: 'The Fearmonger chooses a player. :reminder: If the player wasn''t
+  already marked with the *FEAR* reminder, declare that "the Fearmonger has chosen
+  a player."'
+reminders:
+- Fear
+setup: false
+team: minion

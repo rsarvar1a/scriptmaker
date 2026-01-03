@@ -1,0 +1,21 @@
+ability: 'Each night*, choose a player (different to last night): the Demon, if chosen,
+  learns who you are then doesn''t wake tonight.'
+edition: bmr
+flavor: We cast you out, every unclean spirit, every satanic power, every onslaught
+  of the infernal adversary, every legion, every diabolical group and sect, in the
+  name and by the power of Our Lord Jesus Christ. We command you, begone and fly far
+  from the Church of God, from the souls made by God in His image and redeemed by
+  the precious blood of the divine Lamb.
+id: exorcist
+image:
+- https://botc.app/assets/exorcist_g-CiIkE1hM.webp
+- https://botc.app/assets/exorcist_e-DoXc6R_z.webp
+name: Exorcist
+otherNight: 35
+otherNightReminder: 'The Exorcist chooses a player. :reminder: Put the Exorcist to
+  sleep. If the Exorcist chose the Demon: Wake the Demon. Show the *THIS CHARACTER
+  SELECTED YOU* & Exorcist tokens. Point to the Exorcist.'
+reminders:
+- Chosen
+setup: false
+team: townsfolk

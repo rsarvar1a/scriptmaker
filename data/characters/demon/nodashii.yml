@@ -1,0 +1,18 @@
+ability: 'Each night*, choose a player: they die. Your 2 Townsfolk neighbors are poisoned.'
+edition: snv
+flavor: By the sins of Arnoch, I feel thy laden stench. By the curs-ed sun and her
+  foul legion of tiny grinning gods, I corrupt thee. By the blessed night and the
+  hidden depths of the horrid and unholy sea, I end thy squalid life upon this plane.
+id: nodashii
+image:
+- https://botc.app/assets/nodashii_e-Dt8UO6rj.webp
+- https://botc.app/assets/nodashii_g-jI2LJQhL.webp
+name: No Dashii
+otherNight: 45
+otherNightReminder: 'The No Dashii chooses a player. :reminder:'
+reminders:
+- Dead
+- Poisoned
+- Poisoned
+setup: false
+team: demon

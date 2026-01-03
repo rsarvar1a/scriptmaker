@@ -1,0 +1,21 @@
+ability: The Demon may choose not to attack & must do this at least once per game.
+  Evil players get normal starting info.
+edition: fabled
+firstNight: 4
+firstNightReminder: Resolve the Minion Info and Demon Info steps even though there
+  are fewer than 7 players.
+flavor: It buzzes! It walks down stairs! It keeps you warm at night! It tastes like
+  sugar! The kiddies love it! Introducing... the brand new... Warm'o-buzzy-wuzzy-walk'a'bot-thingy-contraption!
+  Fun for all ages!
+id: toymaker
+image:
+- https://botc.app/assets/toymaker-DnUyVGxn.webp
+name: Toymaker
+otherNight: 3
+otherNightReminder: 'If it is a night when a Demon attack could end the game, and
+  the Demon is marked *FINAL NIGHT: NO ATTACK*, then the Demon does not act tonight.
+  (Do not wake them.)'
+reminders:
+- 'Final Night: No Attack'
+setup: false
+team: fabled

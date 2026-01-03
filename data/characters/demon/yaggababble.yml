@@ -1,0 +1,28 @@
+ability: You start knowing a secret phrase. For each time you said it publicly today,
+  a player might die.
+edition: carousel
+firstNight: 17
+firstNightReminder: Choose a secret phrase. Wake the Yaggababble and let them know
+  their secret phrase.
+flavor: "Murders inside the Rue Morgue? \u0424\u0430\u043B\u044C\u0448\u0438\u0432\
+  \u044B\u0435 \u043D\u043E\u0432\u043E\u0441\u0442\u0438! Hounds on the Baskerville\
+  \ moor? \u0424\u0430\u043B\u044C\u0448\u0438\u0432\u044B\u0435 \u043D\u043E\u0432\
+  \u043E\u0441\u0442\u0438! Death while sailing the Nile? \u0424\u0430\u043B\u044C\
+  \u0448\u0438\u0432\u044B\u0435 \u043D\u043E\u0432\u043E\u0441\u0442\u0438!"
+id: yaggababble
+image:
+- https://botc.app/assets/yaggababble_e-rNTFzBKi.webp
+- https://botc.app/assets/yaggababble_g-CPSh-7bE.webp
+jinxes:
+- id: exorcist
+  reason: If the Exorcist chooses the Yaggababble, the Yaggababble does not kill tonight.
+name: Yaggababble
+otherNight: 53
+otherNightReminder: 'For each time the Yaggababble said the phrase today, you may
+  choose a player. They die. :reminder:'
+reminders:
+- Dead
+- Dead
+- Dead
+setup: false
+team: demon

@@ -1,0 +1,16 @@
+ability: Each day, you may make a public statement. Tonight, if it was true, a player
+  dies.
+edition: bmr
+flavor: Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah. Blah.
+id: gossip
+image:
+- https://botc.app/assets/gossip_g-0mo_0qnq.webp
+- https://botc.app/assets/gossip_e-DKOgldGS.webp
+name: Gossip
+otherNight: 57
+otherNightReminder: 'If the Gossip is due to kill a player, they die. :reminder:'
+reminders:
+- Dead
+setup: false
+team: townsfolk

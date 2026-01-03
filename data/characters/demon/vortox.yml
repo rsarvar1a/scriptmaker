@@ -1,0 +1,20 @@
+ability: 'Each night*, choose a player: they die. Townsfolk abilities yield false
+  info. Each day, if no-one is executed, evil wins.'
+edition: snv
+flavor: Black is White. Right is Wrong. Left is Right. Up is Long. Down is Sight.
+  Short is Blind. Follow me. Answers find.
+id: vortox
+image:
+- https://botc.app/assets/vortox_e-CI-Cd8aG.webp
+- https://botc.app/assets/vortox_g-w20-Mdd8.webp
+jinxes:
+- id: banshee
+  reason: If the Vortox kills the Banshee, all players learn that the Banshee has
+    died.
+name: Vortox
+otherNight: 46
+otherNightReminder: 'The Vortox chooses a player. :reminder:'
+reminders:
+- Dead
+setup: false
+team: demon

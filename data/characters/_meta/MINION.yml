@@ -1,0 +1,10 @@
+ability: You are an Minion.
+edition: special
+flavor: I am confirmed by Outsider count.
+id: minion
+image:
+- https://botc.app/assets/minion_e-lDFo-tEX.webp
+- https://botc.app/assets/minion_g-Cgm5WnSR.webp
+name: Minion
+setup: false
+team: _meta

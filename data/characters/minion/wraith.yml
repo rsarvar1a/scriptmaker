@@ -1,0 +1,21 @@
+ability: You may choose to open your eyes at night. You wake when other evil players
+  do.
+edition: carousel
+firstNight: 6
+firstNightReminder: Wake the Wraith whenever other evil players wake.
+flavor: "Ra'\u0101b ina p\u0101n \u1E63illi \u0161a d\u0101ri. Rigim qallu ina \u0161\
+  \u016Bri, \u0161\u012Btu \u0161a \u0161un\u0101t\u012Bka iredde, u nap\u0161utka\
+  \ idlul ina p\u0101n ma\u1E63\u1E63art\u012B d\u0101riti."
+id: wraith
+image:
+- https://botc.app/assets/wraith_e-CRfpOd4V.webp
+- https://botc.app/assets/wraith_g-DDErJKaT.webp
+name: Wraith
+otherNight: 4
+otherNightReminder: Wake the Wraith whenever other evil players wake.
+setup: false
+special:
+- name: open-eyes
+  time: night
+  type: player
+team: minion

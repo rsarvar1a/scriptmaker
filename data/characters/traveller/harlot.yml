@@ -1,0 +1,22 @@
+ability: 'Each night*, choose a living player: if they agree, you learn their character,
+  but you both might die.'
+edition: snv
+flavor: "Enchant\xE9, Sailor. You look like you need someone to really listen to your\
+  \ troubles. I'm a good listener. Very, very good."
+id: harlot
+image:
+- https://botc.app/assets/harlot-aJaTZULk.webp
+- https://botc.app/assets/harlot_g-DfGUnLek.webp
+- https://botc.app/assets/harlot_e-CDyE0Kdh.webp
+name: Harlot
+otherNight: 8
+otherNightReminder: The Harlot points at any living player. Then, put the Harlot to
+  sleep. Wake the chosen player, show them the *THIS CHARACTER SELECTED YOU* token,
+  then the Harlot token. That player either nods their head yes or shakes their head
+  no. If they nodded their head yes, wake the Harlot and show them the chosen player's
+  character token. Then, you may decide that both players die.
+reminders:
+- Dead
+- Dead
+setup: false
+team: traveller

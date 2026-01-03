@@ -1,0 +1,24 @@
+ability: 'Each night, choose a player (not yourself): their vote counts as 3 votes
+  tomorrow.'
+edition: tb
+firstNight: 11
+firstNightReminder: 'The Bureaucrat chooses a player. :reminder:'
+flavor: Sign here please. And here. And here. Aaaaaaaaand here. This should all be
+  sorted and tallied by the end of the day, assuming everyone's signatures are legible.
+  We haven't had a mix-up in the paperwork for ages. Yesterday noon, if memory serves...
+id: bureaucrat
+image:
+- https://botc.app/assets/bureaucrat-C7wkPXRS.webp
+- https://botc.app/assets/bureaucrat_g-CyJZqBNe.webp
+- https://botc.app/assets/bureaucrat_e-Bmh-G0_a.webp
+name: Bureaucrat
+otherNight: 6
+otherNightReminder: 'The Bureaucrat chooses a player. :reminder:'
+reminders:
+- 3 Votes
+setup: false
+special:
+- name: multiplier
+  type: vote
+  value: 3
+team: traveller

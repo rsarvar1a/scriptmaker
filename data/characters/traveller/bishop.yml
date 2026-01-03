@@ -1,0 +1,16 @@
+ability: Only the Storyteller can nominate. At least 1 opposing player must be nominated
+  each day.
+edition: bmr
+flavor: "In nomine Patris, et Filii, et Spiritus Sancti\u2026 Nos mos Dei. Deus vult\
+  \ de nobis."
+id: bishop
+image:
+- https://botc.app/assets/bishop-LYgE69Ju.webp
+- https://botc.app/assets/bishop_g-DdZW0SpA.webp
+- https://botc.app/assets/bishop_e-CvwvjoUI.webp
+name: Bishop
+reminders:
+- Nominate Good
+- Nominate Evil
+setup: false
+team: traveller

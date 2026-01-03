@@ -1,0 +1,13 @@
+ability: Something bad might happen to whoever talks when the Storyteller has asked
+  for silence.
+edition: fabled
+flavor: Shhhhhh. Please be quiet. It is best not to disturb the Librarian. I've heard
+  it has a temper.
+id: hellslibrarian
+image:
+- https://botc.app/assets/hellslibrarian-DfbmTvS9.webp
+name: Hell's Librarian
+reminders:
+- Something Bad
+setup: false
+team: fabled

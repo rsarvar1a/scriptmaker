@@ -1,0 +1,55 @@
+ability: 'You get 3 bluffs. On the 3rd night, choose a player: they become an evil
+  Demon of your choice. [No Demon]'
+edition: carousel
+firstNight: 22
+firstNightReminder: Show the *THESE CHARACTERS ARE NOT IN PLAY* token. Show 3 not-in-play
+  good character tokens.
+flavor: Hail the guardians of the north; by my intellect, thou art cut. Hail the guardians
+  of the east; by my will, thou art dominated. Hail the guardians of the south; by
+  that which lies beyond, the mystery is revealed. Hail the guardians of the west;
+  a shield in the darkness
+id: summoner
+image:
+- https://botc.app/assets/summoner_e-Ce5RiRwu.webp
+- https://botc.app/assets/summoner_g-B3PLNqgM.webp
+jinxes:
+- id: clockmaker
+  reason: The Summoner registers as the Demon to the Clockmaker.
+- id: courtier
+  reason: If the living Summoner has no ability, the Storyteller has the Summoner
+    ability.
+- id: engineer
+  reason: If the living Summoner is removed from play, the Storyteller has the Summoner
+    ability.
+- id: hatter
+  reason: If the Summoner creates a second living Demon, deaths tonight are arbitrary.
+- id: kazali
+  reason: If the Summoner creates a second living Demon, deaths tonight are arbitrary.
+- id: lordoftyphon
+  reason: If a Lord of Typhon is summoned, they must neighbor a Minion & their other
+    neighbor becomes an evil Minion.
+- id: pithag
+  reason: If the Summoner creates a second living Demon, deaths tonight are arbitrary.
+- id: poppygrower
+  reason: If the Poppy Grower is alive on the 3rd night, the Summoner chooses which
+    Demon but not which player.
+- id: preacher
+  reason: If the living Summoner has no ability, the Storyteller has the Summoner
+    ability.
+- id: pukka
+  reason: The Summoner may summon a Pukka on the 2nd night instead of the 3rd.
+- id: zombuul
+  reason: If the Summoner summons a dead player into the Zombuul, the Zombuul has
+    already "died once".
+name: Summoner
+otherNight: 33
+otherNightReminder: Change the Summoner reminder token to the relevant night. If it
+  is night 3, the Summoner chooses a player and a Demon. Put the Summoner to sleep.
+  Wake the chosen player. Show the *YOU ARE* token, a thumbs down and the chosen Demon
+  token.
+reminders:
+- Night 1
+- Night 2
+- Night 3
+setup: true
+team: minion

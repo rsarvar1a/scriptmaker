@@ -1,0 +1,12 @@
+ability: Display Minion information.
+edition: special
+firstNight: 19
+firstNightReminder: 'If there are 7 or more players, wake all Minions: Show the *THIS
+  IS THE DEMON* token. Point to the Demon. Show the *THESE ARE YOUR MINIONS* token.
+  Point to the other Minions.'
+id: minioninfo
+image:
+- https://botc.app/assets/minion-info-5qfuy8Qq.webp
+name: Minion Info
+setup: false
+team: _meta

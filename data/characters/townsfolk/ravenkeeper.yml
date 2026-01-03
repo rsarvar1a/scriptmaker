@@ -1,0 +1,14 @@
+ability: 'If you die at night, you are woken to choose a player: you learn their character.'
+edition: tb
+flavor: My birds will avenge me! Fly! Fly, my sweet and dutiful pets! To the manor
+  and to the river! To the alleys and to the salons! Fly!
+id: ravenkeeper
+image:
+- https://botc.app/assets/ravenkeeper_g-Bg-yrUxj.webp
+- https://botc.app/assets/ravenkeeper_e-Yrx6NFvE.webp
+name: Ravenkeeper
+otherNight: 74
+otherNightReminder: If the Ravenkeeper died tonight, the Ravenkeeper chooses a player.
+  Show that player's character token.
+setup: false
+team: townsfolk

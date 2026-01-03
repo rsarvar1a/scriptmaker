@@ -1,0 +1,20 @@
+ability: 'Each night*, choose a player: they die. [Evil characters are in a line.
+  You are in the middle. +1 Minion. -? to +? Outsiders]'
+edition: carousel
+firstNight: 7
+firstNightReminder: Replace neighbors of the Lord of Typhon with Minions, wake them,
+  tell them their new alignment and character, then do minion info.
+flavor: In the shadowed and forgotten corners of the cosmos, where the stars whisper
+  secrets to the void, lies a truth so profound that the merest glimpse of it unravels
+  the sanity of mortal minds.
+id: lordoftyphon
+image:
+- https://botc.app/assets/lordoftyphon_e-DbP_44G8.webp
+- https://botc.app/assets/lordoftyphon_g-CHKJk_1t.webp
+name: Lord of Typhon
+otherNight: 47
+otherNightReminder: 'The Lord of Typhon chooses a player. :reminder:'
+reminders:
+- Dead
+setup: true
+team: demon

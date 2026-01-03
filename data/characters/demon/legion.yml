@@ -1,0 +1,39 @@
+ability: Each night*, a player might die. Executions fail if only evil voted. You
+  register as a Minion too. [Most players are Legion]
+edition: carousel
+flavor: "We are the chill wind on a winter\u2019s day. We are the shadow in the moonless\
+  \ night. We are the poison in your tea and the whisper in your ear. We are everywhere."
+id: legion
+image:
+- https://botc.app/assets/legion_e-DyzBzM4-.webp
+- https://botc.app/assets/legion_g-B4S3Jf4H.webp
+jinxes:
+- id: engineer
+  reason: If Legion is created, all evil players become Legion. If Legion is in play,
+    the Engineer starts knowing this but has no ability.
+- id: hatter
+  reason: If Legion is created, all evil players become Legion. If Legion is in play,
+    the Hatter has no ability.
+- id: minstrel
+  reason: If Legion died by execution today, Legion keeps their ability, but the Minstrel
+    might learn they are Legion.
+- id: politician
+  reason: The Politician might register as evil to Legion.
+- id: preacher
+  reason: If the Preacher chooses Legion, Legion keeps their ability, but the Preacher
+    might learn they are Legion.
+- id: summoner
+  reason: If Legion is summoned, all evil players become Legion.
+- id: zealot
+  reason: The Zealot might register as evil to Legion.
+name: Legion
+otherNight: 38
+otherNightReminder: 'A player might die. :reminder:'
+reminders:
+- Dead
+- About To Die
+setup: true
+special:
+- name: bag-duplicate
+  type: selection
+team: demon

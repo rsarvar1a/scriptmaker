@@ -1,0 +1,18 @@
+ability: Once per game, choose to make a wish. If granted, it might have a price &
+  leave a clue as to its nature.
+edition: carousel
+firstNight: 35
+firstNightReminder: Run the Wizard's ability, if applicable.
+flavor: Every man and every woman is a star. Love is the law, love under will.
+id: wizard
+image:
+- https://botc.app/assets/wizard_e-CkOtUevi.webp
+- https://botc.app/assets/wizard_g-MV5lMPJf.webp
+name: Wizard
+otherNight: 19
+otherNightReminder: Run the Wizard's ability, if applicable.
+reminders:
+- '?'
+- '?'
+setup: false
+team: minion

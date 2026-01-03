@@ -1,0 +1,21 @@
+ability: If the Demon kills you, all players learn this. From now on, you may nominate
+  twice per day and vote twice per nomination.
+edition: carousel
+flavor: "Gorm do sh\xFAile, dearg do ghruaig, n\xED bheidh s\xE9 i bhfad, is a mbeidh\
+  \ t\xFA san uaigh."
+id: banshee
+image:
+- https://botc.app/assets/banshee_g-DJc6lJye.webp
+- https://botc.app/assets/banshee_e-8hOn5kSm.webp
+name: Banshee
+otherNight: 63
+otherNightReminder: 'If the Banshee was killed by the Demon tonight, announce to all
+  players that the Banshee has died. :reminder:'
+reminders:
+- Has Ability
+setup: false
+special:
+- name: multiplier
+  type: vote
+  value: 2
+team: townsfolk

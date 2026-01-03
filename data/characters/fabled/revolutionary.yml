@@ -1,0 +1,14 @@
+ability: 2 neighboring players are known to be the same alignment. Once per game,
+  1 of them registers falsely.
+edition: fabled
+flavor: United we feigned. Divided, we stalled.
+id: revolutionary
+image:
+- https://botc.app/assets/revolutionary-D1FL8eUK.webp
+name: Revolutionary
+reminders:
+- Register Falsely?
+- Aligned
+- Aligned
+setup: false
+team: fabled

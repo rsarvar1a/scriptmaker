@@ -1,0 +1,14 @@
+ability: You start knowing how many pairs of evil players there are.
+edition: tb
+firstNight: 54
+firstNightReminder: Give a finger signal.
+flavor: This evening's reservations seem odd. Never before has Mrs. Mayweather kept
+  company with that scamp from Hudson Lane. Yet, tonight, they have a table for two.
+  Strange.
+id: chef
+image:
+- https://botc.app/assets/chef_g-C3a3cGeP.webp
+- https://botc.app/assets/chef_e-B3RO5GXN.webp
+name: Chef
+setup: false
+team: townsfolk

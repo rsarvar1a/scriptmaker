@@ -1,0 +1,10 @@
+ability: You are an Outsider.
+edition: special
+flavor: I am confirmed by Outsider count.
+id: outsider
+image:
+- https://botc.app/assets/outsider_g-BzhBt4on.webp
+- https://botc.app/assets/outsider_e-CgWWsKPC.webp
+name: Outsider
+setup: false
+team: _meta

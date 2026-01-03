@@ -1,0 +1,13 @@
+ability: At least once per game, the Storyteller will make a mistake, correct it,
+  and publicly admit to it.
+edition: fabled
+flavor: It's not a bug, it's a feature. It's not an error, it's a tweak. It's not
+  broken, it's quirky.
+id: deusexfiasco
+image:
+- https://botc.app/assets/deusexfiasco-C-oc4vaU.webp
+name: Deus ex Fiasco RAH
+reminders:
+- Whoopsie
+setup: true
+team: fabled

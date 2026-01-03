@@ -1,0 +1,25 @@
+ability: 'Each night*, choose a player: they die. You start by choosing a player:
+  they are poisoned. You die if & only if they are dead.'
+edition: carousel
+firstNight: 30
+firstNightReminder: 'The Lleech chooses a player. :reminder:'
+flavor: "Tasty, tasty, tasty, tasty, tasty, tasty, tasty, tasty brai- I mean pie!\
+  \ Yes. Tasty pie. That\u2019s what I meant to say."
+id: lleech
+image:
+- https://botc.app/assets/lleech_e-DzN_r6Yd.webp
+- https://botc.app/assets/lleech_g-CSTCwFJh.webp
+jinxes:
+- id: mastermind
+  reason: If the Mastermind is alive and the Lleech host dies by execution, the Lleech
+    lives but loses their ability.
+- id: slayer
+  reason: If the Slayer slays the Lleech host, the host dies.
+name: Lleech
+otherNight: 51
+otherNightReminder: 'The Lleech chooses a player. :reminder:'
+reminders:
+- Dead
+- Poisoned
+setup: false
+team: demon

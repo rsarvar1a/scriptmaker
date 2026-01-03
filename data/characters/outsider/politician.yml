@@ -1,0 +1,12 @@
+ability: If you were the player most responsible for your team losing, you change
+  alignment & win, even if dead.
+edition: carousel
+flavor: I'm glad you asked that question. Truly, I am. But I think the REAL question
+  here is...
+id: politician
+image:
+- https://botc.app/assets/politician_g-CXCSDrvE.webp
+- https://botc.app/assets/politician_e-CRiP_Thj.webp
+name: Politician
+setup: false
+team: outsider

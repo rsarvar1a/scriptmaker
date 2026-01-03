@@ -1,0 +1,61 @@
+ability: If more than 1 good player is executed, evil wins. All players know you are
+  in play. After day 5, evil wins.
+edition: carousel
+firstNight: 78
+firstNightReminder: 'Declare that "The Leviathan is in play." Mark the Leviathan with
+  the *DAY 1* reminder. :reminder:'
+flavor: "To the last, I grapple with thee. From Hell\u2019s heart, I stab at thee.\
+  \ For hate\u2019s sake, I spit my last breath at thee."
+id: leviathan
+image:
+- https://botc.app/assets/leviathan_e-DvtMvt2q.webp
+- https://botc.app/assets/leviathan_g-DnoVSKUH.webp
+jinxes:
+- id: banshee
+  reason: 'Each night*, the Leviathan chooses an alive good player (different to previous
+    nights): a chosen Banshee dies & gains their ability.'
+- id: exorcist
+  reason: If the Leviathan nominates and executes the Exorcist-chosen player, good
+    wins.
+- id: farmer
+  reason: 'Each night*, the Leviathan chooses an alive good player (different to previous
+    nights): a chosen Farmer uses their ability but does not die.'
+- id: grandmother
+  reason: If the Leviathan is in play and the Grandchild dies by execution, evil wins.
+- id: hatter
+  reason: The Leviathan cannot enter play after day 5.
+- id: innkeeper
+  reason: If the Leviathan nominates and executes an Innkeeper-protected player, good
+    wins.
+- id: king
+  reason: If the Leviathan is in play, and at least 1 player is dead, the King learns
+    an alive character each night.
+- id: mayor
+  reason: If the Leviathan and the Mayor are alive on day 5 & no execution occurs,
+    good wins.
+- id: monk
+  reason: If the Leviathan nominates and executes the Monk-protected player, good
+    wins.
+- id: pithag
+  reason: The Leviathan cannot enter play after day 5.
+- id: ravenkeeper
+  reason: 'Each night*, the Leviathan chooses an alive player (different to previous
+    nights): a chosen Ravenkeeper uses their ability but does not die.'
+- id: sage
+  reason: 'Each night*, the Leviathan chooses an alive good player (different to previous
+    nights): a chosen Sage uses their ability but does not die.'
+- id: soldier
+  reason: If the Leviathan nominates and executes the Soldier, good wins.
+name: Leviathan
+otherNight: 97
+otherNightReminder: 'Optionally, declare that "The Leviathan is in play." Replace
+  the reminder token. :reminder:'
+reminders:
+- Day 1
+- Day 2
+- Day 3
+- Day 4
+- Day 5
+- Good Player Executed
+setup: false
+team: demon

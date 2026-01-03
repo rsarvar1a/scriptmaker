@@ -1,0 +1,13 @@
+ability: If a player of your alignment is executed, you might be executed instead.
+edition: tb
+flavor: Good evening! Thank you for inviting me to the ball. I'm not from around here,
+  but you sure seem like a friendly bunch, by golly. I'm sure we'll get along just
+  dandy. What's all that rope for?
+id: scapegoat
+image:
+- https://botc.app/assets/scapegoat-rhlm_MDq.webp
+- https://botc.app/assets/scapegoat_g-CrL8fHff.webp
+- https://botc.app/assets/scapegoat_e-BFRtmmYo.webp
+name: Scapegoat
+setup: false
+team: traveller

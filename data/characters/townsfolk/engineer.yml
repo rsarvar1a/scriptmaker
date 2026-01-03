@@ -1,0 +1,22 @@
+ability: Once per game, at night, choose which Minions or which Demon is in play.
+edition: carousel
+firstNight: 27
+firstNightReminder: 'The Engineer might choose Minions or Demons. :reminder: If they
+  do: Put the Engineer to sleep. Wake a target, show them the *YOU ARE* token and
+  their new character token, then put that target to sleep. Repeat for all players
+  that changed characters.'
+flavor: If it bends, great. If it breaks, well, it probably needed fixing anyway.
+id: engineer
+image:
+- https://botc.app/assets/engineer_g-N-nhrQAt.webp
+- https://botc.app/assets/engineer_e-LUiXESUv.webp
+name: Engineer
+otherNight: 13
+otherNightReminder: 'The Engineer might choose Minions or Demons. :reminder: If they
+  do: Put the Engineer to sleep. Wake a target, show them the *YOU ARE* token and
+  their new character token, then put that target to sleep. Repeat for all players
+  that changed characters.'
+reminders:
+- No Ability
+setup: false
+team: townsfolk

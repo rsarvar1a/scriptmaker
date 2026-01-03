@@ -1,0 +1,11 @@
+ability: If there are 5 or more players alive, you must vote for every nomination.
+edition: carousel
+flavor: I enjoy talking to you. Your mind appeals to me. It resembles my own mind
+  except that you happen to be insane.
+id: zealot
+image:
+- https://botc.app/assets/zealot_g-D94u8jin.webp
+- https://botc.app/assets/zealot_e-DoDEvVGE.webp
+name: Zealot
+setup: false
+team: outsider

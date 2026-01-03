@@ -1,0 +1,9 @@
+ability: The Storyteller has a tool to make the game smooth.
+edition: special
+flavor: A Fabled is in play.
+id: fabled
+image:
+- https://botc.app/assets/fabled-WyWuPk8w.webp
+name: Fabled
+setup: false
+team: _meta

@@ -1,0 +1,15 @@
+ability: When you die, 1 player is drunk from now on.
+edition: snv
+flavor: I will never forget her. Never.
+id: sweetheart
+image:
+- https://botc.app/assets/sweetheart_g-CmqS74DM.webp
+- https://botc.app/assets/sweetheart_e-Bm63hRzw.webp
+name: Sweetheart
+otherNight: 60
+otherNightReminder: 'If the Sweetheart died, a player became drunk immediately. If
+  you haven''t done this yet, do so now. :reminder:'
+reminders:
+- Drunk
+setup: false
+team: outsider

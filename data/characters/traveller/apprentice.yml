@@ -1,0 +1,23 @@
+ability: On your 1st night, you gain a Townsfolk ability (if good), or a Minion ability
+  (if evil).
+edition: bmr
+firstNight: 9
+firstNightReminder: Show the Apprentice the *YOU ARE* card, then a Townsfolk or Minion
+  token. In the Grimoire, replace the Apprentice token with that character token,
+  and put the Apprentice's *IS THE APPRENTICE* reminder by that character token.
+flavor: For years have I traveled, studying the ways of The Craft. Which craft, you
+  ask? Simply that of the simple folk. Nothing to worry about. Not yet.
+id: apprentice
+image:
+- https://botc.app/assets/apprentice-Dq5aGiYi.webp
+- https://botc.app/assets/apprentice_g-qVS2q4bN.webp
+- https://botc.app/assets/apprentice_e-BEpvFWvS.webp
+name: Apprentice
+reminders:
+- Is The Apprentice
+setup: false
+special:
+- name: grimoire
+  time: night
+  type: signal
+team: traveller

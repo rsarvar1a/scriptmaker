@@ -1,0 +1,18 @@
+ability: 'Once per game, at night*, choose a dead player: if they are a Townsfolk,
+  they are resurrected.'
+edition: bmr
+flavor: The process is simple. Attach the hydraulic confabulator to the modified chi
+  matrix amplifier, add 20 CCs of pseudodorafine, keep his Z levels above 20%, and
+  your husband will be fine. Now, all we need is a lightning strike.
+id: professor
+image:
+- https://botc.app/assets/professor_g-h2X7rvhv.webp
+- https://botc.app/assets/professor_e-BpuIeGol.webp
+name: Professor
+otherNight: 64
+otherNightReminder: 'The Professor might choose a dead player. :reminder: :reminder:'
+reminders:
+- Alive
+- No Ability
+setup: false
+team: townsfolk

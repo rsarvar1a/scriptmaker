@@ -1,0 +1,16 @@
+ability: "Each night*, choose an alive player. If good, they die & the Demon doesn\u2019\
+  t kill tonight. One good player registers as evil."
+edition: carousel
+flavor: Beneath the thin veneer of civilisation lies a howling madness.
+id: lycanthrope
+image:
+- https://botc.app/assets/lycanthrope_g-BGOyDOkb.webp
+- https://botc.app/assets/lycanthrope_e-n_edx2Mg.webp
+name: Lycanthrope
+otherNight: 36
+otherNightReminder: 'The Lycanthrope chooses a player. :reminder:'
+reminders:
+- Faux Paw
+- Dead
+setup: false
+team: townsfolk

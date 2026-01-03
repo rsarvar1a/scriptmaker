@@ -1,0 +1,10 @@
+ability: This script has homebrew characters or rules.
+edition: loric
+flavor: "When I was born, I was named \u2018Homebrewy McHomebrewface\u2019, like my\
+  \ father before me. A respectable name, for a dignified age."
+id: bootlegger
+image:
+- https://botc.app/assets/bootlegger-C4a2M4Iu.webp
+name: Bootlegger
+setup: false
+team: loric

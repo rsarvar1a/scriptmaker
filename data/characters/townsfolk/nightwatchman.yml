@@ -1,0 +1,22 @@
+ability: 'Once per game, at night, choose a player: they learn you are the Nightwatchman.'
+edition: carousel
+firstNight: 69
+firstNightReminder: 'The Nightwatchman might choose a player :reminder: Put the Nightwatchman
+  to sleep. Wake the target and show the *THIS PLAYER IS* and Nightwatchman tokens
+  and point to the Nightwatchman.'
+flavor: The night is cold and lonely, but I have the moon, the stars, the crisp wind
+  and the soft thud of leather boots on cobbled stone for company. Yonder, candlelight
+  flickers behind a murky window...
+id: nightwatchman
+image:
+- https://botc.app/assets/nightwatchman_g-CaasqmRn.webp
+- https://botc.app/assets/nightwatchman_e-DcwB8vOD.webp
+name: Nightwatchman
+otherNight: 88
+otherNightReminder: 'The Nightwatchman might choose a player :reminder: Put the Nightwatchman
+  to sleep. Wake the target and show the *THIS PLAYER IS* and Nightwatchman tokens
+  and point to the Nightwatchman.'
+reminders:
+- No Ability
+setup: false
+team: townsfolk

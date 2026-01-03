@@ -1,0 +1,12 @@
+ability: If only 3 players live & no execution occurs, your team wins. If you die
+  at night, another player might die instead.
+edition: tb
+flavor: We must put our differences aside, and cease this senseless killing. We are
+  all taxpayers after all. Well, most of us.
+id: mayor
+image:
+- https://botc.app/assets/mayor_g-BQeJ8Z2E.webp
+- https://botc.app/assets/mayor_e-Bc2mKeJ3.webp
+name: Mayor
+setup: false
+team: townsfolk

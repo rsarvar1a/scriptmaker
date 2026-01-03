@@ -1,0 +1,20 @@
+ability: You start knowing a good player & their character. If the Demon kills them,
+  you die too.
+edition: bmr
+firstNight: 58
+firstNightReminder: Point to the grandchild player & show their character token.
+flavor: Take a jacket if you go outside, dearie. And your thermos. And your scarf.
+  I have a weak heart, you know. Whatever would I do if you caught cold...or worse?
+id: grandmother
+image:
+- https://botc.app/assets/grandmother_g-CjEyeFLi.webp
+- https://botc.app/assets/grandmother_e-BLCIA5TL.webp
+name: Grandmother
+otherNight: 72
+otherNightReminder: 'If the grandchild was killed by the Demon, the Grandmother dies
+  too. :reminder:'
+reminders:
+- Grandchild
+- Dead
+setup: false
+team: townsfolk

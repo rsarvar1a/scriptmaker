@@ -1,0 +1,11 @@
+ability: 'When you learn that you died, publicly choose 1 alive player: if they are
+  evil, your team loses.'
+edition: snv
+flavor: Oops.
+id: klutz
+image:
+- https://botc.app/assets/klutz_g-DRcV_Rgl.webp
+- https://botc.app/assets/klutz_e-C-CdPEop.webp
+name: Klutz
+setup: false
+team: outsider

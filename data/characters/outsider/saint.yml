@@ -1,0 +1,12 @@
+ability: If you die by execution, your team loses.
+edition: tb
+flavor: Wisdom begets peace. Patience begets wisdom. Fear not, for the time shall
+  come when fear too shall pass. Let us pray, and may the unity of our vision make
+  saints of us all.
+id: saint
+image:
+- https://botc.app/assets/saint_g-BU0hab0E.webp
+- https://botc.app/assets/saint_e-CnQBC4rO.webp
+name: Saint
+setup: false
+team: outsider

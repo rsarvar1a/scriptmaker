@@ -1,0 +1,18 @@
+ability: 'Each night*, choose 2 players: they can''t die tonight, but 1 is drunk until
+  dusk.'
+edition: bmr
+flavor: Come inside, fair traveller, and rest your weary bones. Drink and be merry,
+  for the legions of the Dark One shall not harass thee tonight.
+id: innkeeper
+image:
+- https://botc.app/assets/innkeeper_g-B_YjhWTM.webp
+- https://botc.app/assets/innkeeper_e-dzanyuqI.webp
+name: Innkeeper
+otherNight: 18
+otherNightReminder: 'The Innkeeper chooses 2 players. :reminder: :reminder: :reminder:'
+reminders:
+- Safe
+- Safe
+- Drunk
+setup: false
+team: townsfolk

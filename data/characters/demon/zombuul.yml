@@ -1,0 +1,17 @@
+ability: 'Each night*, if no-one died today, choose a player: they die. The 1st time
+  you die, you live but register as dead.'
+edition: bmr
+flavor: I do not. Understand. Your ways. Fellow human. Show me. The dirt. Where the
+  holy. Lay. Sleeping. I too. Must sleep. Soon.
+id: zombuul
+image:
+- https://botc.app/assets/zombuul_e-DzySLzke.webp
+- https://botc.app/assets/zombuul_g-B4MTwk5-.webp
+name: Zombuul
+otherNight: 40
+otherNightReminder: 'If no one died today, the Zombuul chooses a player. :reminder:'
+reminders:
+- Died Today
+- Dead
+setup: false
+team: demon

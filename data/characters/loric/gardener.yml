@@ -1,0 +1,14 @@
+ability: The Storyteller assigns 1 or more players' characters.
+edition: loric
+flavor: When sophistry becomes stupidity and hypocrisy cruelty, retreat to the garden.
+  The final love of old men is flowers and stones.
+id: gardener
+image:
+- https://botc.app/assets/gardener-DXERv7Nr.webp
+name: Gardener
+setup: false
+special:
+- name: distribute-roles
+  time: pregame
+  type: ability
+team: loric

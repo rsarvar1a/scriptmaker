@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
-bin/regenerate
+bin/parse
+bin/assemble
+if [[ -z "$1" ]]; then exit 0; fi
 poetry version "$1"
 poetry build

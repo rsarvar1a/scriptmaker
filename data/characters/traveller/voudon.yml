@@ -1,0 +1,13 @@
+ability: Only you & the dead can vote. They don't need a vote token to do so. A 50%
+  majority isn't required.
+edition: bmr
+flavor: Bien venu. Sit down. Breathe deep. Enter the land of the dead. See with their
+  eyes. Speak with their voice. Yon sel lang se janm ase.
+id: voudon
+image:
+- https://botc.app/assets/voudon-CNiyV0sS.webp
+- https://botc.app/assets/voudon_g-D-tbnf_D.webp
+- https://botc.app/assets/voudon_e-D9qWXIyp.webp
+name: Voudon
+setup: false
+team: traveller

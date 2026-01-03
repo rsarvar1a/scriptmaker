@@ -1,0 +1,15 @@
+ability: If the Demon kills you, you learn that it is 1 of 2 players.
+edition: snv
+flavor: These mountainous tomes guard the secret, I am sure of it! Twixt word and
+  word, it lies in wait. More candles, boy! More ink! These notes may look arcane,
+  but the infernal puzzle is revealing itself.
+id: sage
+image:
+- https://botc.app/assets/sage_g-BQUVfu9h.webp
+- https://botc.app/assets/sage_e-BS8e_Ree.webp
+name: Sage
+otherNight: 62
+otherNightReminder: If the Demon killed the Sage, wake the Sage and point to 2 players,
+  1 of which is the Demon.
+setup: false
+team: townsfolk

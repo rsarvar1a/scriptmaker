@@ -1,0 +1,16 @@
+ability: Each night*, you learn if a Minion nominated today.
+edition: snv
+flavor: Hear ye! Hear ye! Witchcraft in the labyrinth! Genius savant reveals all!
+  Town in danger! Hear Ye!
+id: towncrier
+image:
+- https://botc.app/assets/towncrier_g-D9dERfO2.webp
+- https://botc.app/assets/towncrier_e-BzUGp1JT.webp
+name: Town Crier
+otherNight: 80
+otherNightReminder: Either nod or shake your head.
+reminders:
+- Minions Not Nominated
+- Minion Nominated
+setup: false
+team: townsfolk

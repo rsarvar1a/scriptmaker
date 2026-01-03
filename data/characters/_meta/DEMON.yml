@@ -1,0 +1,10 @@
+ability: You are the Demon.
+edition: special
+flavor: I am a good Townfolk.
+id: demon
+image:
+- https://botc.app/assets/demon_e-BE73nmRM.webp
+- https://botc.app/assets/demon_g-CSs6ZD66.webp
+name: Demon
+setup: false
+team: _meta

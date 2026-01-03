@@ -1,0 +1,15 @@
+ability: You start knowing 1 good player.
+edition: carousel
+firstNight: 62
+firstNightReminder: Point to the good player marked *KNOW*.
+flavor: "How DARE you accuse Her Ladyship of wrongdoing? I\u2019ve known her my entire\
+  \ life! All nine years!"
+id: steward
+image:
+- https://botc.app/assets/steward_g-ASO14Teu.webp
+- https://botc.app/assets/steward_e-BJUqXXmp.webp
+name: Steward
+reminders:
+- Know
+setup: false
+team: townsfolk

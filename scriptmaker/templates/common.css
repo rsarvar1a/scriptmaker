@@ -141,8 +141,8 @@ body
 }
 .name-outsider
 {
-    border-color: #009AC9;
-    color: #009AC9;
+    border-color: #008AC9;
+    color: #008AC9;
 }
 .name-minion, .name-demon
 {
@@ -154,8 +154,18 @@ body
     border-color: #BD7300;
     color: #BD7300;
 }
+.name-loric
+{
+    border-color: #8da04f;
+    color: #8da04f;
+}
 .name-traveler
 {
     border-color: #8E5AAF;
     color: #8E5AAF;
+}
+.name-jinxes
+{
+    border-color: #777777;
+    color: #777777;
 }

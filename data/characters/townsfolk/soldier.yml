@@ -1,0 +1,11 @@
+ability: You are safe from the Demon.
+edition: tb
+flavor: As David said to Goliath, as Theseus said to the Minotaur, as Arjuna said
+  to Bhagadatta... No.
+id: soldier
+image:
+- https://botc.app/assets/soldier_g-Baq_oQFs.webp
+- https://botc.app/assets/soldier_e-CvaeglsK.webp
+name: Soldier
+setup: false
+team: townsfolk

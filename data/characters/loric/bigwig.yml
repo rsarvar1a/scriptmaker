@@ -1,0 +1,11 @@
+ability: 'Each nominee chooses a player: until voting, only they may speak & they
+  are mad the nominee is good or they might die.'
+edition: loric
+flavor: "Vanity asks \u2018Is it popular?\u2019 Cowardice asks \u2018Is it safe?\u2019\
+  \ Conscience asks \u2018Is it right?\u2019 Who among us will ask: \u2018Is it true?\u2019"
+id: bigwig
+image:
+- https://botc.app/assets/bigwig-BSza_a7D.webp
+name: Big Wig
+setup: false
+team: loric

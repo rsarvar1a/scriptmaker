@@ -10,3 +10,4 @@ dist/
 
 # Venvs
 .venv/
+.pypirc

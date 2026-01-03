@@ -1,0 +1,15 @@
+ability: 'On your 1st night, choose a player (not yourself): you become their alignment
+  (you don''t know which) even if drunk or poisoned.'
+edition: carousel
+firstNight: 72
+firstNightReminder: 'The Ogre points to a player. :reminder:'
+flavor: <grunt><grin></grunt>
+id: ogre
+image:
+- https://botc.app/assets/ogre_g-B3Q_ybOi.webp
+- https://botc.app/assets/ogre_e-k2lur_NF.webp
+name: Ogre
+reminders:
+- Friend
+setup: false
+team: outsider

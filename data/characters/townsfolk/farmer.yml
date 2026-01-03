@@ -1,0 +1,14 @@
+ability: When you die at night, an alive good player becomes a Farmer.
+edition: carousel
+flavor: Even the high and mighty need food on the table. Without us, the city starves.
+id: farmer
+image:
+- https://botc.app/assets/farmer_g-aC9H7ek9.webp
+- https://botc.app/assets/farmer_e-BKzmeJOt.webp
+name: Farmer
+otherNight: 69
+otherNightReminder: If the Farmer died tonight, wake an alive good player. Show them
+  the *YOU ARE* info token and a Farmer character token. Replace their previous token
+  with the Farmer token.
+setup: false
+team: townsfolk

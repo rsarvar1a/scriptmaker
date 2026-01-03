@@ -1,0 +1,23 @@
+ability: All players keep their eyes closed when voting and the vote tally is secret.
+  Each night, choose if you are drunk until dusk.
+edition: carousel
+firstNight: 38
+firstNightReminder: 'The Organ Grinder either nods their head yes to be drunk, or
+  shakes their head no to be sober. :reminder:'
+flavor: Round and round the handles go. The more you dance the less you know.
+id: organgrinder
+image:
+- https://botc.app/assets/organgrinder_e-EGmGGCZJ.webp
+- https://botc.app/assets/organgrinder_g-WFPK_p_x.webp
+name: Organ Grinder
+otherNight: 24
+otherNightReminder: 'The Organ Grinder either nods their head yes to be drunk, or
+  shakes their head no to be sober. :reminder:'
+reminders:
+- About To Die
+- Drunk
+setup: false
+special:
+- name: hidden
+  type: vote
+team: minion

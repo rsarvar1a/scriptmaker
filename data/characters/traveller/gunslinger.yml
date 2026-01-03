@@ -1,0 +1,12 @@
+ability: 'Each day, after the 1st vote has been tallied, you may choose a player that
+  voted: they die.'
+edition: tb
+flavor: It's time someone took matters into their own hands. That someone... is me.
+id: gunslinger
+image:
+- https://botc.app/assets/gunslinger-wipgFlby.webp
+- https://botc.app/assets/gunslinger_g-CKzyQCHC.webp
+- https://botc.app/assets/gunslinger_e-DCPdRPrm.webp
+name: Gunslinger
+setup: false
+team: traveller

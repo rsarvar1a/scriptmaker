@@ -1,0 +1,11 @@
+ability: For the first 2 minutes of each day, veteran players may not talk.
+edition: fabled
+firstNight: 3
+firstNightReminder: Declare which players are affected by the Buddhist.
+flavor: You throw thorns. Falling in my silence, they become flowers.
+id: buddhist
+image:
+- https://botc.app/assets/buddhist-BTncsaTX.webp
+name: Buddhist
+setup: false
+team: fabled

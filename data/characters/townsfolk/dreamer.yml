@@ -1,0 +1,19 @@
+ability: 'Each night, choose a player (not yourself or Travellers): you learn 1 good
+  & 1 evil character, 1 of which is correct.'
+edition: snv
+firstNight: 60
+firstNightReminder: The Dreamer points to a player. Show 1 good & 1 evil character
+  token, 1 of which is their character.
+flavor: I remember the Clockmaker. The sky was red and it was raining fractal triangles.
+  There was a smell of violets and a bubbling sound. A woman with glowing eyes and
+  a scraggly beard was hissing at the sky. Then, I awoke.
+id: dreamer
+image:
+- https://botc.app/assets/dreamer_g-CjKsf0eE.webp
+- https://botc.app/assets/dreamer_e-9zGefVKW.webp
+name: Dreamer
+otherNight: 78
+otherNightReminder: The Dreamer points to a player. Show 1 good & 1 evil character
+  token, 1 of which is their character.
+setup: false
+team: townsfolk

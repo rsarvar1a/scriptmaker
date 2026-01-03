@@ -44,7 +44,7 @@
                 {%- set last = "none" %}
                 {%- for team in page if team != "jinxes" %}
                     {%- set last = team %}
-                    {%- set pluralized = team + 's' if team != 'townsfolk' and team != 'fabled' else team %}
+                    {%- set pluralized = team + 's' if team != 'townsfolk' and team != 'fabled' and team != 'loric' else team %}
                     <h2 class="character-type name-{{ team }}">{{ pluralized | upper }}</h2>
                     <div class="cols-2{{ '-spacered' if spacers[team] else '' }}">
                     {%- for character in teams[team] %}
@@ -87,7 +87,7 @@
             {%- if jinxes_next_page %}
                  <p style="break-before: page;" ></p>
             {%- endif %}
-            <h2 class="character-type name-fabled">{{ 'jinxes' | upper }}</h2>         
+            <h2 class="character-type name-jinxes">{{ 'jinxes' | upper }}</h2>         
             <div class="jinx-box align justify">
                 <div class="jinx-enclosing-c align justify">
                     {%- for id in jinxes %}

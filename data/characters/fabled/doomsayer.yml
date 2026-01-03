@@ -1,0 +1,13 @@
+ability: If 4 or more players live, each living player may publicly choose (once per
+  game) that a player of their own alignment dies.
+edition: fabled
+flavor: And on the Seventh Day, there shall be a great flood and a pestilence upon
+  the People of the Village of the Ravens! The dead shall rise and the living shall
+  repent! O Woe! O Unholy day! Only by great sacrifice shall they prevail! So sayeth
+  the Sages of Nostros and so sayeth I.
+id: doomsayer
+image:
+- https://botc.app/assets/doomsayer-tGT5Bk_R.webp
+name: Doomsayer
+setup: false
+team: fabled

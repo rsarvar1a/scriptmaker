@@ -1,0 +1,13 @@
+ability: Once per day, you may choose to kill an alive neighbor, if your other alive
+  neighbor agrees.
+edition: carousel
+flavor: I like your shoes. It would be such a shame if you had a little accident,
+  and they got ruined. Now that you mention it, I like your cufflinks too.
+id: gangster
+image:
+- https://botc.app/assets/gangster-B_sTmUJn.webp
+- https://botc.app/assets/gangster_g-CA0UOV4w.webp
+- https://botc.app/assets/gangster_e-DCxm-xho.webp
+name: Gangster
+setup: false
+team: traveller

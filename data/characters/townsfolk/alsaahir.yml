@@ -1,0 +1,11 @@
+ability: Each day, if you publicly guess which players are Minion(s) and which are
+  Demon(s), good wins.
+edition: carousel
+flavor: I am here because of you, and you are here because of me.
+id: alsaahir
+image:
+- https://botc.app/assets/alsaahir_g-CpjMnnMq.webp
+- https://botc.app/assets/alsaahir_e-DiydqcyG.webp
+name: Alsaahir
+setup: false
+team: townsfolk

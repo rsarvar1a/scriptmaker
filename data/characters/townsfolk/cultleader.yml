@@ -1,0 +1,17 @@
+ability: Each night, you become the alignment of an alive neighbor. If all good players
+  choose to join your cult, your team wins.
+edition: carousel
+firstNight: 70
+firstNightReminder: The Cult Leader might change alignment. If so, show the *YOU ARE*
+  info token and a thumbs up or down for their new alignment.
+flavor: Thinking themselves wise, they became fools.
+id: cultleader
+image:
+- https://botc.app/assets/cultleader_g-BYq1_U3R.webp
+- https://botc.app/assets/cultleader_e-CXgWMt1A.webp
+name: Cult Leader
+otherNight: 89
+otherNightReminder: The Cult Leader might change alignment. If so, show the *YOU ARE*
+  info token and a thumbs up or down for their new alignment.
+setup: false
+team: townsfolk

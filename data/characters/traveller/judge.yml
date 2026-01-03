@@ -1,0 +1,16 @@
+ability: Once per game, if another player nominated, you may choose to force the current
+  execution to pass or fail.
+edition: bmr
+flavor: I find the defendant guilty of the crimes of murder, fraud, arson, larceny,
+  impersonating an officer of the law, practicing medicine without a license, slander,
+  regicide, and littering.
+id: judge
+image:
+- https://botc.app/assets/judge-Df7wYZLu.webp
+- https://botc.app/assets/judge_g-CJbFZ44x.webp
+- https://botc.app/assets/judge_e-jGAdrE7z.webp
+name: Judge
+reminders:
+- No Ability
+setup: false
+team: traveller

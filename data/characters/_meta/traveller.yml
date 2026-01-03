@@ -1,0 +1,11 @@
+ability: You are a Traveller.
+edition: special
+flavor: I am not staying long.
+id: traveller
+image:
+- https://botc.app/assets/traveller-CmR1gFU-.webp
+- https://botc.app/assets/traveller_e-ezMTv16C.webp
+- https://botc.app/assets/traveller_g-BNxDoGo0.webp
+name: Traveller
+setup: false
+team: _meta

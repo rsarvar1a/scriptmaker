@@ -109,7 +109,7 @@ class Renderer ():
             match team:
                 case 'townsfolk' | 'outsider' | 'traveler':
                     return 7
-                case 'fabled':
+                case 'fabled' | 'loric':
                     return 4
                 case _:
                     return 5
@@ -163,9 +163,17 @@ class Renderer ():
         
         workspace = output_folder
         
+        # Sanitize reminder text.
+        for character in script.characters:
+            for night in ['first', 'other']:
+                info = character.nightinfo[night]
+                if 'reminder' not in info:
+                    continue
+                character.nightinfo[night]['reminder'] = re.sub(r'\*(?P<bold>[A-Za-z\s-]+)\*', '<b>\g<bold></b>', character.nightinfo[night]['reminder'])
+                character.nightinfo[night]['reminder'] = re.sub(r' :reminder:', '', character.nightinfo[night]['reminder'])
+        
         # Pass configuration forwards to jinja/weasyprint stack.  
-        params = {
-            
+        params = {  
             "characters": { character.id: character for character in script.characters },
             "icons": { id: f"file://{icon.path(Path(workspace.parent, 'build', 'icons').resolve())}" for id, icon in script.data.icons.items() },
             "logo": f"file://{script.meta.icon.path(Path(workspace.parent, 'build').resolve())}" if script.meta.icon else "",

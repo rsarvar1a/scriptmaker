@@ -1,0 +1,15 @@
+ability: When a Minion dies by execution, all other players (except Travellers) are
+  drunk until dusk tomorrow.
+edition: bmr
+flavor: And I shall hear, tho' soft you tread above me... And all my dreams will warm
+  and sweeter be... If you'll not fail to tell me that you love me... I simply sleep
+  in peace until you come to me.
+id: minstrel
+image:
+- https://botc.app/assets/minstrel_g-M5EHa7zy.webp
+- https://botc.app/assets/minstrel_e-Cv94nSeJ.webp
+name: Minstrel
+reminders:
+- Everyone Is Drunk
+setup: false
+team: townsfolk

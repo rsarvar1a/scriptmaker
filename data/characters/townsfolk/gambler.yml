@@ -1,0 +1,15 @@
+ability: 'Each night*, choose a player & guess their character: if you guess wrong,
+  you die.'
+edition: bmr
+flavor: Heads, I win. Tails, you lose.
+id: gambler
+image:
+- https://botc.app/assets/gambler_g-BJg931OP.webp
+- https://botc.app/assets/gambler_e-Co0D5NyD.webp
+name: Gambler
+otherNight: 20
+otherNightReminder: 'The Gambler chooses a player & a character. :reminder:'
+reminders:
+- Dead
+setup: false
+team: townsfolk

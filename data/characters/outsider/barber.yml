@@ -1,0 +1,18 @@
+ability: If you died today or tonight, the Demon may choose 2 players (not another
+  Demon) to swap characters.
+edition: snv
+flavor: Did you know that barbery and surgery were once the same profession? No? Well,
+  now you do.
+id: barber
+image:
+- https://botc.app/assets/barber_g-CP7mk8b9.webp
+- https://botc.app/assets/barber_e-BJbMUslE.webp
+name: Barber
+otherNight: 59
+otherNightReminder: If the Barber died today or tonight, show the Demon the *THIS
+  CHARACTER SELECTED YOU* & Barber tokens. If the Demon chose 2 players, wake one
+  at a time. Show the *YOU ARE* token & their new character token.
+reminders:
+- Haircuts Tonight
+setup: false
+team: outsider

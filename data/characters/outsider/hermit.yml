@@ -1,0 +1,14 @@
+ability: You have all Outsider abilities. [-0 or -1 Outsider]
+edition: carousel
+flavor: "In the lost and forgotten places of the earth, the soul\u2019s light beckons."
+id: hermit
+image:
+- https://botc.app/assets/hermit_g-BT8xmstw.webp
+- https://botc.app/assets/hermit_e-CXzG3UkT.webp
+name: Hermit
+reminders:
+- '1'
+- '2'
+- '3'
+setup: true
+team: outsider

@@ -1,0 +1,27 @@
+ability: 'On your 1st night, look at the Grimoire & choose a player: they are poisoned.
+  1 good player knows a Widow is in play.'
+edition: carousel
+firstNight: 33
+firstNightReminder: 'Show the Grimoire for as long as the Widow needs. The Widow chooses
+  a player. :reminder:'
+flavor: "More wine? Ch\xE2teau d\u2019Ergot \u201907 is a very special vintage. My\
+  \ yes, very special indeed."
+id: widow
+image:
+- https://botc.app/assets/widow_e-DGFTy37y.webp
+- https://botc.app/assets/widow_g-BMAAZQVw.webp
+jinxes:
+- id: damsel
+  reason: If the Widow is (or has been) in play, the Damsel is poisoned.
+- id: poppygrower
+  reason: If the Poppy Grower has their ability, the Widow does not see the Grimoire.
+name: Widow
+reminders:
+- Poisoned
+- Know
+setup: false
+special:
+- name: grimoire
+  time: night
+  type: signal
+team: minion

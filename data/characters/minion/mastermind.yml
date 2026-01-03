@@ -1,0 +1,16 @@
+ability: If the Demon dies by execution (ending the game), play for 1 more day. If
+  a player is then executed, their team loses.
+edition: bmr
+flavor: The tentacles of that monster are nailed to the doors of the church. Mothers
+  and children are dancing in the street. Excellent. Everything is proceeding exactly
+  as I have planned.
+id: mastermind
+image:
+- https://botc.app/assets/mastermind_e-lwTDvV6G.webp
+- https://botc.app/assets/mastermind_g-BzBbXNuB.webp
+jinxes:
+- id: vigormortis
+  reason: A Mastermind that has their ability keeps it if the Vigormortis dies.
+name: Mastermind
+setup: false
+team: minion

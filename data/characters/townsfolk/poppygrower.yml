@@ -1,0 +1,24 @@
+ability: Minions & Demons do not know each other. If you die, they learn who each
+  other are that night.
+edition: carousel
+firstNight: 16
+firstNightReminder: Do not do the Minion Info and Demon Info steps. Wake the Demon,
+  show the *THESE CHARACTERS ARE NOT IN PLAY* info token and any three good character
+  tokens that are not in play.
+flavor: In the hidden groves of the deep forest, the black poppy dwells. To see its
+  revelry is to be enchanted. To smell its thick aroma is to be lost forever, a slave
+  to the gods of light and dark.
+id: poppygrower
+image:
+- https://botc.app/assets/poppygrower_g-BeRDzj2D.webp
+- https://botc.app/assets/poppygrower_e-BPf4mjjt.webp
+name: Poppy Grower
+otherNight: 11
+otherNightReminder: If the Poppy Grower died today or tonight, wake the Minions, show
+  the *THIS IS THE DEMON* info token and point to the Demon. Put them to sleep. Wake
+  the Demon, show the *THESE ARE YOUR MINIONS* info token and point to the Minions.
+  Put the Demon to sleep.
+reminders:
+- Evil Wakes
+setup: false
+team: townsfolk

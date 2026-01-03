@@ -1,0 +1,12 @@
+ability: Starts the Night Phase.
+edition: special
+firstNight: 1
+firstNightReminder: Start the Night Phase.
+id: dusk
+image:
+- https://botc.app/assets/dusk-CLdDXnQC.webp
+name: Dusk
+otherNight: 1
+otherNightReminder: Start the Night Phase.
+setup: false
+team: _meta

@@ -1,0 +1,14 @@
+ability: If you publicly claim to be the Goblin when nominated & are executed that
+  day, your team wins.
+edition: carousel
+flavor: "You don\u2019t want to insult the goblins. You really, really don\u2019t.\
+  \ On a completely different note\u2026 can I have another piece of cake?"
+id: goblin
+image:
+- https://botc.app/assets/goblin_e-5zp-L7ts.webp
+- https://botc.app/assets/goblin_g-Dm3DHjuy.webp
+name: Goblin
+reminders:
+- Claimed
+setup: false
+team: minion

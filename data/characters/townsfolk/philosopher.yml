@@ -1,0 +1,24 @@
+ability: 'Once per game, at night, choose a good character: gain that ability. If
+  this character is in play, they are drunk.'
+edition: snv
+firstNight: 14
+firstNightReminder: 'The Philosopher might choose a character. If necessary, swap
+  their character token. :reminder:'
+flavor: If anything is real, beer is real. Drink, for tomorrow we may die.
+id: philosopher
+image:
+- https://botc.app/assets/philosopher_g-DOk3eWqe.webp
+- https://botc.app/assets/philosopher_e-sc5zSJy2.webp
+name: Philosopher
+otherNight: 10
+otherNightReminder: 'The Philosopher might choose a character. If necessary, swap
+  their character token. :reminder:'
+reminders:
+- Drunk
+remindersGlobal:
+- Is The Philosopher
+setup: false
+special:
+- name: replace-character
+  type: reveal
+team: townsfolk

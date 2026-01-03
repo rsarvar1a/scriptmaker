@@ -1,0 +1,24 @@
+ability: "Each night, choose a player & a good character: they are \u201Cmad\u201D\
+  \ they are this character tomorrow, or might be executed."
+edition: snv
+firstNight: 42
+firstNightReminder: 'The Cerenovus chooses a player & a character. :reminder: Put
+  the Cerenovus to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU*
+  token, the Cerenovus token, then the madness-character token.'
+flavor: Reality is merely an opinion. Specifically, my opinion.
+id: cerenovus
+image:
+- https://botc.app/assets/cerenovus_e-ARmVZpWA.webp
+- https://botc.app/assets/cerenovus_g-Dks6rbpA.webp
+jinxes:
+- id: goblin
+  reason: The Cerenovus may choose to make a player mad that they are the Goblin.
+name: Cerenovus
+otherNight: 27
+otherNightReminder: 'The Cerenovus chooses a player & a character. :reminder: Put
+  the Cerenovus to sleep. Wake the target. Show the *THIS CHARACTER SELECTED YOU*
+  token, the Cerenovus token, then the madness-character token.'
+reminders:
+- Mad
+setup: false
+team: minion

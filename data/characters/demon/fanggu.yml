@@ -1,0 +1,19 @@
+ability: 'Each night*, choose a player: they die. The 1st Outsider this kills becomes
+  an evil Fang Gu & you die instead. [+1 Outsider]'
+edition: snv
+flavor: Your walls and your weapons are but smoke in dreams.
+id: fanggu
+image:
+- https://botc.app/assets/fanggu_e-6DavSWxL.webp
+- https://botc.app/assets/fanggu_g-Dwai_VtD.webp
+name: Fang Gu
+otherNight: 44
+otherNightReminder: 'The Fang Gu chooses a player. :reminder: If they chose an Outsider
+  (once only): Replace the Outsider token with the spare Fang Gu token. Put the Fang
+  Gu to sleep. Wake the target. Show the *YOU ARE* and Fang Gu tokens & give a thumbs-down.
+  :reminder:'
+reminders:
+- Dead
+- Once
+setup: true
+team: demon

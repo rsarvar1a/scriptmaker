@@ -1,0 +1,16 @@
+ability: 'Each night, choose a player: they are poisoned tonight and tomorrow day.'
+edition: tb
+firstNight: 32
+firstNightReminder: 'The Poisoner chooses a player. :reminder:'
+flavor: Add compound Alpha to compound Beta... NOT TOO MUCH!
+id: poisoner
+image:
+- https://botc.app/assets/poisoner_e-Usf7TcoY.webp
+- https://botc.app/assets/poisoner_g-DHNIHhxZ.webp
+name: Poisoner
+otherNight: 16
+otherNightReminder: 'The Poisoner chooses a player. :reminder:'
+reminders:
+- Poisoned
+setup: false
+team: minion

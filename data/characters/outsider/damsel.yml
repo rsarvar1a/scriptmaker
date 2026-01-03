@@ -1,0 +1,19 @@
+ability: All Minions know a Damsel is in play. If a Minion publicly guesses you (once),
+  your team loses.
+edition: carousel
+firstNight: 49
+firstNightReminder: If the Damsel was chosen by the Huntsman, show them the *YOU ARE*
+  info token and their new character token.
+flavor: Don't touch the hair, honey.
+id: damsel
+image:
+- https://botc.app/assets/damsel_g-NwMWC09c.webp
+- https://botc.app/assets/damsel_e-fpsIFV1Z.webp
+name: Damsel
+otherNight: 67
+otherNightReminder: If the Damsel was chosen by the Huntsman, show them the *YOU ARE*
+  info token and their new character token.
+reminders:
+- Guess Used
+setup: false
+team: outsider

@@ -1,0 +1,15 @@
+ability: 'Each night, you learn which alignment the Storyteller believes is winning:
+  good, evil, or neither.'
+edition: carousel
+firstNight: 74
+firstNightReminder: Give a thumb signal.
+flavor: "I don\u2019t have time for quotes."
+id: general
+image:
+- https://botc.app/assets/general_g-BqvScIJc.webp
+- https://botc.app/assets/general_e-C4rC0GAq.webp
+name: General
+otherNight: 93
+otherNightReminder: Give a thumb signal.
+setup: false
+team: townsfolk

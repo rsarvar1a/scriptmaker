@@ -1,0 +1,14 @@
+ability: You start knowing if your closest evil player is clockwise or anti-clockwise.
+  If equidistant, this info is arbitrary.
+edition: carousel
+firstNight: 66
+firstNightReminder: Point clockwise or anticlockwise around the circle.
+flavor: "\u3053\u308C\u306F\u5922\u3002\u305D\u308C\u3082\u5922\u3002\u3059\u3079\u3066\
+  \u5922\u3067\u3059\u3002"
+id: shugenja
+image:
+- https://botc.app/assets/shugenja_g-DAlTPOOn.webp
+- https://botc.app/assets/shugenja_e-DQCYsHfD.webp
+name: Shugenja
+setup: false
+team: townsfolk

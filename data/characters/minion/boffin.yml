@@ -1,0 +1,34 @@
+ability: "The Demon (even if drunk or poisoned) has a not-in-play good character\u2019\
+  s ability. You both know which."
+edition: carousel
+firstNight: 13
+firstNightReminder: Wake the Boffin and the Demon. Show the not-in-play good character
+  token. Put the Boffin and the Demon to sleep.
+flavor: Stellar hydrogen, vast, inert; carbon, oxygen, neon gases, all ruined. Molecular
+  chaos, entropy, yields new cosmic phenomena, rebirth from atomic chaos, dense matter
+  collapsing. All in a teeny little bottle.
+id: boffin
+image:
+- https://botc.app/assets/boffin_e-Bks9yuea.webp
+- https://botc.app/assets/boffin_g-lws0h7cM.webp
+jinxes:
+- id: cultleader
+  reason: "If the Demon has the Cult Leader ability, they can\u2019t turn good due\
+    \ to this ability."
+- id: drunk
+  reason: The Demon cannot have the Drunk ability.
+- id: goon
+  reason: "If the Demon has the Goon ability, they can\u2019t turn good due to this\
+    \ ability."
+- id: heretic
+  reason: The Demon cannot have the Heretic ability.
+- id: ogre
+  reason: The Demon cannot have the Ogre ability.
+- id: politician
+  reason: The Demon cannot have the Politician ability.
+- id: villageidiot
+  reason: If there is a spare token, the Boffin can give the Demon the Village Idiot
+    ability.
+name: Boffin
+setup: false
+team: minion

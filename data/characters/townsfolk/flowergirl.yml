@@ -1,0 +1,15 @@
+ability: Each night*, you learn if a Demon voted today.
+edition: snv
+flavor: Yesterday's violets have withered and died, but today my poppies bloom.
+id: flowergirl
+image:
+- https://botc.app/assets/flowergirl_g-C3oZV2PZ.webp
+- https://botc.app/assets/flowergirl_e-DJcVSLWX.webp
+name: Flowergirl
+otherNight: 79
+otherNightReminder: Either nod or shake your head.
+reminders:
+- Demon Voted
+- Demon Not Voted
+setup: false
+team: townsfolk

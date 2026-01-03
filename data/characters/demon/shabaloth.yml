@@ -1,0 +1,18 @@
+ability: 'Each night*, choose 2 players: they die. A dead player you chose last night
+  might be regurgitated.'
+edition: bmr
+flavor: Blarg f'taag nm mataan! No sho gumtha m'sik na yuuu. Fluuuuuuuuurg h-sikkkh.
+id: shabaloth
+image:
+- https://botc.app/assets/shabaloth_e-DsCO_Txn.webp
+- https://botc.app/assets/shabaloth_g-BUwNFN-9.webp
+name: Shabaloth
+otherNight: 42
+otherNightReminder: 'A previously chosen player might be resurrected. :reminder: The
+  Shabaloth chooses 2 players. :reminder: :reminder:'
+reminders:
+- Dead
+- Dead
+- Alive
+setup: false
+team: demon

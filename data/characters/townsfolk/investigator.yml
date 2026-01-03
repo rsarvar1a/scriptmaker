@@ -1,0 +1,17 @@
+ability: You start knowing that 1 of 2 players is a particular Minion.
+edition: tb
+firstNight: 53
+firstNightReminder: Show the Minion character token. Point to both the *MINION* and
+  *WRONG* players.
+flavor: It is a fine night for a stroll, wouldn't you say, Mister Morozov? Or should
+  I say... BARON Morozov?
+id: investigator
+image:
+- https://botc.app/assets/investigator_g-DWSOiA6Q.webp
+- https://botc.app/assets/investigator_e-CR-lRqwj.webp
+name: Investigator
+reminders:
+- Minion
+- Wrong
+setup: false
+team: townsfolk

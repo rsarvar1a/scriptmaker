@@ -1,0 +1,24 @@
+ability: 'Once per game, at night, choose a living player: the Damsel, if chosen,
+  becomes a not-in-play Townsfolk. [+the Damsel]'
+edition: carousel
+firstNight: 48
+firstNightReminder: 'The Huntsman might choose a player. :reminder: If that player
+  was the Damsel: Put the Huntsman to sleep. Wake the Damsel and show them the *YOU
+  ARE* info token and their new character token.'
+flavor: "My cabin is warm and sturdy. My axe by the door, my boots drying by the fire,\
+  \ and elk stew a-simmering\u2026 Hark! A scream echoes through the valley! The rain\
+  \ and the mud and the cold, cold wind mask the scent of the wolves, but I know the\
+  \ path and my pace is steady. I am coming."
+id: huntsman
+image:
+- https://botc.app/assets/huntsman_g-1Nv97uqA.webp
+- https://botc.app/assets/huntsman_e-CN9kkQNR.webp
+name: Huntsman
+otherNight: 66
+otherNightReminder: 'The Huntsman might choose a player. :reminder: If that player
+  was the Damsel: Put the Huntsman to sleep. Wake the Damsel and show them the *YOU
+  ARE* info token and their new character token.'
+reminders:
+- No Ability
+setup: true
+team: townsfolk
